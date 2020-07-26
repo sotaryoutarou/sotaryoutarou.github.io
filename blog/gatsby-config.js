@@ -3,10 +3,13 @@ module.exports = {
     title: `ソタソタ草`,
     author: {
       name: `ソタリョウタロウ`,
-      summary: ``,
+      summary: `いんたーねっと`,
     },
     description: `ソタソタなるままに。いんたーねっとのお仕事してるエンジニアの雑多ブログ`,
-    siteUrl: `https://sotaryoutarou.github.io/`,
+    siteUrl: `https://sotaryoutarou.github.io`,
+    social: {
+      twitter: `kylemathews`,
+    },
   },
   plugins: [
     {
@@ -57,7 +60,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `ソタソタ草`,
+        name: `Gatsby Starter Blog`,
         short_name: `GatsbyJS`,
         start_url: `/`,
         background_color: `#ffffff`,

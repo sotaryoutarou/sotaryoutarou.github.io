@@ -1,0 +1,1 @@
+module.exports = require("/Users/osota/project/sotaryoutarou.github.io/src/utils/typography")

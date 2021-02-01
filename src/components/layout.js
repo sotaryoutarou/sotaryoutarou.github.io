@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import Image from './image'
 
 import { rhythm, scale } from "../utils/typography"
 
@@ -9,23 +10,7 @@ const Layout = ({ location, title, children }) => {
 
   if (location.pathname === rootPath) {
     header = (
-      <h1
-        style={{
-          ...scale(1.5),
-          marginBottom: rhythm(1.5),
-          marginTop: 0,
-        }}
-      >
-        <Link
-          style={{
-            boxShadow: `none`,
-            color: `inherit`,
-          }}
-          to={`/`}
-        >
-          {title}
-        </Link>
-      </h1>
+      <Image filename='header-noho.png' />
     )
   } else {
     header = (

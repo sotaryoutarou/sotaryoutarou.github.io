@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `ソタソタなるままに`,
+    title: `ソタのほほん横丁`,
     author: {
       name: `ソタリョウタロウ`,
-      summary: `ソタソタなるままに`,
+      summary: `ソタの雑多ブログ`,
     },
     description: `ソタの雑多ブログ`,
     siteUrl: `https://sotaryoutarou.github.io/`,

@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import Image from './image'
+import '../styles/global.css'
 
 import { rhythm, scale } from "../utils/typography"
 

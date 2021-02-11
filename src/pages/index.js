@@ -5,6 +5,7 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
+import Image from '../components/image'
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -47,6 +48,7 @@ const BlogIndex = ({ data, location }) => {
                 </Link>
               </h3>
               <small>{post.frontmatter.date}</small>
+              <Image filename='{post.frontmatter.topImage}' />
             </header>
             <section>
               <p
@@ -82,6 +84,7 @@ export const pageQuery = graphql`
           date(formatString: "YYYY/MM/DD")
           title
           description
+          topImage
         }
       }
     }

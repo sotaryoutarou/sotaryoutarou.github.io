@@ -4,8 +4,8 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { rhythm } from "../utils/typography"
 import Image from "gatsby-image";
+import '../styles/global.scss'
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -22,53 +22,55 @@ const BlogIndex = ({ data, location }) => {
   }
 
   return (
-    <Layout location={location} title={siteTitle}>
-      <SEO title="All posts" />
-      <Bio />
-      {posts.map((post) => {
-        const title = post.frontmatter.title || post.fields.slug
-        return (
-          <article
-            key={post.fields.slug}
-            itemScope
-            itemType="http://schema.org/Article"
-          >
-            <header>
-              <div className="posts__image_container">
-                <Link to={post.frontmatter.slug}>
-                  <Image
-                    className="posts__image"
-                    fluid={post.frontmatter.hero.childImageSharp.fluid}
+    <div>
+      <Layout location={location} title={siteTitle}>
+        <SEO title="All posts" />
+        <Bio />
+        {posts.map(({ node }) => {
+          console.log(node)
+          const title = node.frontmatter.title || node.fields.slug;
+          return (
+            <div className="posts">
+              <article key={node.fields.slug}>
+                <header>
+                  <h3 className="posts__title">
+                    <Link
+                      className="posts__title__a"
+                      to={node.frontmatter.slug}
+                    >
+                      {title}
+                    </Link>
+                  </h3>
+                  <small className="posts__date">{node.frontmatter.date}</small>
+                </header>
+                <div className="posts__image_container">
+                  <Link to={node.frontmatter.slug}>
+                    <Image
+                      className="posts__image"
+                      fluid={node.frontmatter.hero.childImageSharp.fluid}
+                    />
+                  </Link>
+                </div>
+
+                <section>
+                  <p
+                    className="posts__desc"
+                    dangerouslySetInnerHTML={{
+                      __html: node.frontmatter.description || node.excerpt,
+                    }}
                   />
-                </Link>
-              </div>
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
-                <Link
-                  style={{ boxShadow: `none` }}
-                  to={post.fields.slug}
-                  itemProp="url"
-                >
-                  <span itemProp="headline">{title}</span>
-                </Link>
-              </h3>
-              <small>{post.frontmatter.date}</small>
-            </header>
-            <section>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: post.frontmatter.description || post.excerpt,
-                }}
-                itemProp="description"
-              />
-            </section>
-          </article>
-        )
-      })}
-    </Layout>
+                  <div className="posts_more">
+                    <Link className="posts__more__a" to={node.frontmatter.slug}>
+                      続きを読む
+                    </Link>
+                  </div>
+                </section>
+              </article>
+            </div>
+          );
+        })}
+      </Layout>
+    </div>
   )
 }
 
@@ -88,7 +90,7 @@ export const pageQuery = graphql`
           slug
         }
         frontmatter {
-          date(formatString: "YYYY/MM/DD")
+          date(formatString: "YYYY-MM-DD")
           title
           description
           hero {

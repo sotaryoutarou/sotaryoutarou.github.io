@@ -5,7 +5,7 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
-import Image from '../components/image'
+import Image from "gatsby-image";
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -34,6 +34,14 @@ const BlogIndex = ({ data, location }) => {
             itemType="http://schema.org/Article"
           >
             <header>
+              <div className="posts__image_container">
+                <Link to={post.frontmatter.slug}>
+                  <Image
+                    className="posts__image"
+                    fluid={post.frontmatter.hero.childImageSharp.fluid}
+                  />
+                </Link>
+              </div>
               <h3
                 style={{
                   marginBottom: rhythm(1 / 4),
@@ -48,7 +56,6 @@ const BlogIndex = ({ data, location }) => {
                 </Link>
               </h3>
               <small>{post.frontmatter.date}</small>
-              <Image filename='{post.frontmatter.topImage}' />
             </header>
             <section>
               <p
@@ -84,7 +91,13 @@ export const pageQuery = graphql`
           date(formatString: "YYYY/MM/DD")
           title
           description
-          topImage
+          hero {
+            childImageSharp {
+              fluid(maxWidth: 1280) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
         }
       }
     }

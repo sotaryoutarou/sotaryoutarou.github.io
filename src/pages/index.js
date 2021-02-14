@@ -1,10 +1,11 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { rhythm } from "../utils/typography"
+import Image from "gatsby-image";
+import '../styles/global.scss'
+// import ImageStyles from '../styles/image.module.css'
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -14,52 +15,68 @@ const BlogIndex = ({ data, location }) => {
     return (
       <Layout location={location} title={siteTitle}>
         <SEO title="All posts" />
-        <Bio />
         <p>No blog posts found. Add markdown posts to "content/blog" (or the directory you specified for the "gatsby-source-filesystem" plugin in gatsby-config.js).</p>
       </Layout>
     )
   }
 
   return (
-    <Layout location={location} title={siteTitle}>
-      <SEO title="All posts" />
-      <Bio />
-      {posts.map((post) => {
-        const title = post.frontmatter.title || post.fields.slug
-        return (
-          <article
-            key={post.fields.slug}
-            itemScope
-            itemType="http://schema.org/Article"
-          >
-            <header>
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
-                <Link
-                  style={{ boxShadow: `none` }}
-                  to={post.fields.slug}
-                  itemProp="url"
-                >
-                  <span itemProp="headline">{title}</span>
-                </Link>
-              </h3>
-              <small>{post.frontmatter.date}</small>
-            </header>
-            <section>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: post.frontmatter.description || post.excerpt,
-                }}
-                itemProp="description"
-              />
-            </section>
-          </article>
-        )
-      })}
-    </Layout>
+    <div>
+      <Layout location={location} title={siteTitle}>
+        <SEO title="All posts" />
+
+        {posts.map(( node ) => {
+          const title = node.frontmatter.title || node.fields.slug;
+          console.log(node.fields.slug)
+          return (
+            <div className="posts">
+              <article key={node.fields.slug}>
+                <header>
+                  <h3 className="posts__title">
+                    <Link
+                      className="posts__title__a"
+                      to={node.fields.slug}
+                    >
+                      {title}
+                    </Link>
+                  </h3>
+                  <small className="posts__date">{node.frontmatter.date}</small>
+                </header>
+                <div className="posts__image_container">
+                  <Link to={node.fields.slug}>
+                    <Image
+                      className="posts__image"
+                      fluid={node.frontmatter.hero.childImageSharp.fluid}
+                      imgStyle={{
+                        elevation:4,
+                        shadowOffset: { width: 5, height: 5 },
+                        shadowColor: "grey",
+                        shadowOpacity: 0.5,
+                        shadowRadius: 10,
+                      }}
+                    />
+                  </Link>
+                </div>
+
+                <section>
+                  <p
+                    className="posts__desc"
+                    dangerouslySetInnerHTML={{
+                      __html: node.frontmatter.description || node.excerpt,
+                    }}
+                  />
+                  <div className="posts_more">
+                    <Link className="posts__more__a" to={node.fields.slug}>
+                      続きを読む
+                    </Link>
+                  </div>
+                </section>
+              </article>
+            </div>
+          );
+        })}
+      </Layout>
+    </div>
   )
 }
 
@@ -79,9 +96,16 @@ export const pageQuery = graphql`
           slug
         }
         frontmatter {
-          date(formatString: "MMMM DD, YYYY")
+          date(formatString: "YYYY-MM-DD")
           title
           description
+          hero {
+            childImageSharp {
+              fluid(maxWidth: 1280) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
         }
       }
     }

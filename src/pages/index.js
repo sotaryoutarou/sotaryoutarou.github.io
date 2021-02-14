@@ -6,6 +6,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Image from "gatsby-image";
 import '../styles/global.scss'
+// import ImageStyles from '../styles/image.module.css'
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -15,7 +16,6 @@ const BlogIndex = ({ data, location }) => {
     return (
       <Layout location={location} title={siteTitle}>
         <SEO title="All posts" />
-        <Bio />
         <p>No blog posts found. Add markdown posts to "content/blog" (or the directory you specified for the "gatsby-source-filesystem" plugin in gatsby-config.js).</p>
       </Layout>
     )
@@ -25,7 +25,7 @@ const BlogIndex = ({ data, location }) => {
     <div>
       <Layout location={location} title={siteTitle}>
         <SEO title="All posts" />
-        <Bio />
+
         {posts.map(( node ) => {
           const title = node.frontmatter.title || node.fields.slug;
           console.log(node.fields.slug)
@@ -48,6 +48,13 @@ const BlogIndex = ({ data, location }) => {
                     <Image
                       className="posts__image"
                       fluid={node.frontmatter.hero.childImageSharp.fluid}
+                      imgStyle={{
+                        elevation:4,
+                        shadowOffset: { width: 5, height: 5 },
+                        shadowColor: "grey",
+                        shadowOpacity: 0.5,
+                        shadowRadius: 10,
+                      }}
                     />
                   </Link>
                 </div>

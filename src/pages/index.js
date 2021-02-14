@@ -27,8 +27,8 @@ const BlogIndex = ({ data, location }) => {
         <SEO title="All posts" />
         <Bio />
         {posts.map(( node ) => {
-          console.log(node)
           const title = node.frontmatter.title || node.fields.slug;
+          console.log(node.fields.slug)
           return (
             <div className="posts">
               <article key={node.fields.slug}>
@@ -36,7 +36,7 @@ const BlogIndex = ({ data, location }) => {
                   <h3 className="posts__title">
                     <Link
                       className="posts__title__a"
-                      to={node.frontmatter.slug}
+                      to={node.fields.slug}
                     >
                       {title}
                     </Link>
@@ -44,7 +44,7 @@ const BlogIndex = ({ data, location }) => {
                   <small className="posts__date">{node.frontmatter.date}</small>
                 </header>
                 <div className="posts__image_container">
-                  <Link to={node.frontmatter.slug}>
+                  <Link to={node.fields.slug}>
                     <Image
                       className="posts__image"
                       fluid={node.frontmatter.hero.childImageSharp.fluid}
@@ -60,7 +60,7 @@ const BlogIndex = ({ data, location }) => {
                     }}
                   />
                   <div className="posts_more">
-                    <Link className="posts__more__a" to={node.frontmatter.slug}>
+                    <Link className="posts__more__a" to={node.fields.slug}>
                       続きを読む
                     </Link>
                   </div>

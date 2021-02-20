@@ -11,7 +11,7 @@ const Layout = ({ location, title, children }) => {
 
   if (location.pathname === rootPath) {
     header = (
-      <Image filename='header-noho.png' />
+      <Image filename='header-sota-noho.png' />
     )
   } else {
     header = (

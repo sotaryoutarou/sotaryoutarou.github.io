@@ -1,12 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `ソタのほほん横丁`,
+    title: `ソタのほほん地下貯蔵庫`,
     author: {
       name: `ソタリョウタロウ`,
       summary: `ソタの雑多ブログ`,
     },
-    description: `ソタの雑多ブログ`,
-    siteUrl: `https://sotaryoutarou.github.io/`,
+    description: `webエンジニアがのほほんなことを蓄積する雑多ブログ`,
+    siteUrl: `https://sotaryoutarou.github.io`,
     social: {
       twitter: `kylemathews`,
     },

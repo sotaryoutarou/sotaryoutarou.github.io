@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Image from "gatsby-image";
 import '../styles/global.scss'
-// import ImageStyles from '../styles/image.module.css'
+import PostStyles from '../styles/post.module.css'
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -35,7 +35,7 @@ const BlogIndex = ({ data, location }) => {
           const title_r = node[1].frontmatter.title || node[1].fields.slug;
 
           return (
-            <div className="column__container">
+            <div className={PostStyles.container}>
               <div className="posts">
                 <article key={node[0].fields.slug}>
                   <header>

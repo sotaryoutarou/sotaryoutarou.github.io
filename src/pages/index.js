@@ -9,12 +9,11 @@ import '../styles/global.scss'
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
-  const posts = data.allMarkdownRemark.nodes
-  var props = []
+  var posts = []
 
-  posts.map(( node, index ) => {
-    if (index%2 === 0){props[Math.floor(index/2)]=[]}
-    return props[Math.floor(index/2)].push(node)
+  data.allMarkdownRemark.nodes.map(( node, index ) => {
+    if (index%2 === 0){posts[Math.floor(index/2)]=[]}
+    return posts[Math.floor(index/2)].push(node)
   })
 
   if (posts.length === 0) {
@@ -32,28 +31,29 @@ const BlogIndex = ({ data, location }) => {
         <SEO title="All posts" />
 
         {posts.map(( node, index ) => {
-          const title = node.frontmatter.title || node.fields.slug;
+          const title_l = node[0].frontmatter.title || node[0].fields.slug;
+          const title_r = node[1].frontmatter.title || node[1].fields.slug;
 
           return (
             <div className="column__container">
               <div className="posts">
-                <article key={node.fields.slug}>
+                <article key={node[0].fields.slug}>
                   <header>
                     <h3 className="posts__title">
                       <Link
                         className="posts__title__a"
-                        to={node.fields.slug}
+                        to={node[0].fields.slug}
                       >
-                        {title}
+                        {title_l}
                       </Link>
                     </h3>
-                    <small className="posts__date">{node.frontmatter.date}</small>
+                    <small className="posts__date">{node[0].frontmatter.date}</small>
                   </header>
                   <div className="posts__image_container">
-                    <Link to={node.fields.slug}>
+                    <Link to={node[0].fields.slug}>
                       <Image
                         className="posts__image"
-                        fluid={node.frontmatter.hero.childImageSharp.fluid}
+                        fluid={node[0].frontmatter.hero.childImageSharp.fluid}
                         imgStyle={{
                           elevation:4,
                           shadowOffset: { width: 5, height: 5 },
@@ -69,11 +69,55 @@ const BlogIndex = ({ data, location }) => {
                     <p
                       className="posts__desc"
                       dangerouslySetInnerHTML={{
-                        __html: node.frontmatter.description || node.excerpt,
+                        __html: node[0].frontmatter.description || node[0].excerpt,
                       }}
                     />
                     <div className="posts_more">
-                      <Link className="posts__more__a" to={node.fields.slug}>
+                      <Link className="posts__more__a" to={node[0].fields.slug}>
+                        続きを読む
+                      </Link>
+                    </div>
+                  </section>
+                </article>
+              </div>
+              <div className="posts">
+                <article key={node[1].fields.slug}>
+                  <header>
+                    <h3 className="posts__title">
+                      <Link
+                        className="posts__title__a"
+                        to={node[1].fields.slug}
+                      >
+                        {title_r}
+                      </Link>
+                    </h3>
+                    <small className="posts__date">{node[1].frontmatter.date}</small>
+                  </header>
+                  <div className="posts__image_container">
+                    <Link to={node[1].fields.slug}>
+                      <Image
+                        className="posts__image"
+                        fluid={node[1].frontmatter.hero.childImageSharp.fluid}
+                        imgStyle={{
+                          elevation:4,
+                          shadowOffset: { width: 5, height: 5 },
+                          shadowColor: "grey",
+                          shadowOpacity: 0.5,
+                          shadowRadius: 10,
+                        }}
+                      />
+                    </Link>
+                  </div>
+
+                    <section>
+                    <p
+                      className="posts__desc"
+                      dangerouslySetInnerHTML={{
+                        __html: node[1].frontmatter.description || node[1].excerpt,
+                      }}
+                    />
+                    <div className="posts_more">
+                      <Link className="posts__more__a" to={node[1].fields.slug}>
                         続きを読む
                       </Link>
                     </div>

@@ -27,7 +27,6 @@ const BlogIndex = ({ data, location }) => {
 
         {posts.map(( node ) => {
           const title = node.frontmatter.title || node.fields.slug;
-          console.log(node.fields.slug)
           return (
             <div className="posts">
               <article key={node.fields.slug}>

@@ -4,12 +4,10 @@
 }
 
 .column__l__container {
-    width: 100%;
     background-color: #fefefe;
 }
 
 .column__r__container {
-    width: 100%;
     background-color: #fefefe;
 }
 
@@ -29,12 +27,18 @@ a {
     text-decoration: none;
 }
   
+@media (max-width: 1023px) {
+    [class*="column__"] {
+        width: 100%;
+    }
+}
+
 @media (min-width: 1024px) {
     .column__l__container {
         width: 35%;
         margin: 30px 5% 0px 10%;
     }
-
+    
     .column__r__container {
         width: 35%;
         margin: 30px 10% 0px 5%;

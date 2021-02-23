@@ -26,6 +26,10 @@ a:hover {
 a {
     text-decoration: none;
 }
+
+.more__text__content {
+    text-align: end;
+}
   
 @media (max-width: 1023px) {
     [class*="column__"] {

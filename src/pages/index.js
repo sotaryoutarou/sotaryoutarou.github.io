@@ -70,8 +70,8 @@ const BlogIndex = ({ data, location }) => {
                         __html: node[0].frontmatter.description || node[0].excerpt,
                       }}
                     />
-                    <div className="posts_more">
-                      <Link className="posts__more__a" to={node[0].fields.slug}>
+                    <div className={PostStyles.more__text__content}>
+                      <Link to={node[0].fields.slug}>
                         続きを読む
                       </Link>
                     </div>
@@ -113,8 +113,8 @@ const BlogIndex = ({ data, location }) => {
                         __html: node[1].frontmatter.description || node[1].excerpt,
                       }}
                     />
-                    <div className="posts_more">
-                      <Link className="posts__more__a" to={node[1].fields.slug}>
+                    <div className={PostStyles.more__text__content}>
+                      <Link  to={node[1].fields.slug}>
                         続きを読む
                       </Link>
                     </div>

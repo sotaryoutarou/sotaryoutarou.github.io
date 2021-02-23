@@ -1,21 +1,42 @@
 .posts__container {
     display: flex;
     flex-wrap: wrap;
-    padding-top: 20px;
 }
 
 .column__l__container {
     width: 100%;
-    padding: 30px 15px 0px 30px;
+    background-color: #fefefe;
 }
 
 .column__r__container {
     width: 100%;
-    padding: 30px 30px 0px 15px;
+    background-color: #fefefe;
+}
+
+.title__content {
+    color: #444444;
+}
+
+a:link, a:visited, a:active {
+    color: #444444;
+}
+
+a:hover {
+    color: #777777;
+}
+
+a {
+    text-decoration: none;
 }
   
 @media (min-width: 1024px) {
-    [class*="column__"] {
-    width: 50%;
-  }
+    .column__l__container {
+        width: 35%;
+        margin: 30px 5% 0px 10%;
+    }
+
+    .column__r__container {
+        width: 35%;
+        margin: 30px 10% 0px 5%;
+    }
 }

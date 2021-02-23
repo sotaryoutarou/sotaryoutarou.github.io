@@ -54,7 +54,7 @@ const BlogIndex = ({ data, location }) => {
                   </div>
                   <small className="posts__date">{node[0].frontmatter.date}</small>
                   <header>
-                    <h3 className="posts__title">
+                    <h3 className={PostStyles.title__content}>
                       <Link
                         className="posts__title__a"
                         to={node[0].fields.slug}
@@ -97,7 +97,7 @@ const BlogIndex = ({ data, location }) => {
                   </div>
                   <small className="posts__date">{node[1].frontmatter.date}</small>
                   <header>
-                    <h3 className="posts__title">
+                    <h3 className={PostStyles.title__content}>
                       <Link
                         className="posts__title__a"
                         to={node[1].fields.slug}

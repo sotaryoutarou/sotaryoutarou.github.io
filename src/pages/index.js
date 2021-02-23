@@ -29,25 +29,14 @@ const BlogIndex = ({ data, location }) => {
       <Layout location={location} title={siteTitle}>
         <SEO title="All posts" />
 
-        {posts.map(( node, index ) => {
+        {posts.map(( node ) => {
           const title_l = node[0].frontmatter.title || node[0].fields.slug;
           const title_r = node[1].frontmatter.title || node[1].fields.slug;
 
           return (
-            <div className={PostStyles.container}>
-              <div className={PostStyles.column}>
+            <div className={PostStyles.posts__container}>
+              <div className={PostStyles.column__l__container}>
                 <article key={node[0].fields.slug}>
-                  <header>
-                    <h3 className="posts__title">
-                      <Link
-                        className="posts__title__a"
-                        to={node[0].fields.slug}
-                      >
-                        {title_l}
-                      </Link>
-                    </h3>
-                    <small className="posts__date">{node[0].frontmatter.date}</small>
-                  </header>
                   <div className="posts__image_container">
                     <Link to={node[0].fields.slug}>
                       <Image
@@ -63,7 +52,17 @@ const BlogIndex = ({ data, location }) => {
                       />
                     </Link>
                   </div>
-
+                  <small className="posts__date">{node[0].frontmatter.date}</small>
+                  <header>
+                    <h3 className="posts__title">
+                      <Link
+                        className="posts__title__a"
+                        to={node[0].fields.slug}
+                      >
+                        {title_l}
+                      </Link>
+                    </h3>
+                  </header>
                     <section>
                     <p
                       className="posts__desc"
@@ -79,19 +78,8 @@ const BlogIndex = ({ data, location }) => {
                   </section>
                 </article>
               </div>
-              <div className={PostStyles.column}>
+              <div className={PostStyles.column__r__container}>
                 <article key={node[1].fields.slug}>
-                  <header>
-                    <h3 className="posts__title">
-                      <Link
-                        className="posts__title__a"
-                        to={node[1].fields.slug}
-                      >
-                        {title_r}
-                      </Link>
-                    </h3>
-                    <small className="posts__date">{node[1].frontmatter.date}</small>
-                  </header>
                   <div className="posts__image_container">
                     <Link to={node[1].fields.slug}>
                       <Image
@@ -107,7 +95,17 @@ const BlogIndex = ({ data, location }) => {
                       />
                     </Link>
                   </div>
-
+                  <small className="posts__date">{node[1].frontmatter.date}</small>
+                  <header>
+                    <h3 className="posts__title">
+                      <Link
+                        className="posts__title__a"
+                        to={node[1].fields.slug}
+                      >
+                        {title_r}
+                      </Link>
+                    </h3>
+                  </header>
                     <section>
                     <p
                       className="posts__desc"

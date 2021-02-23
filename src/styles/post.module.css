@@ -37,11 +37,11 @@ a {
 @media (min-width: 1024px) {
     .column__l__container {
         width: 40%;
-        margin: 0px calc( 20% / 6) calc( 20% / 3) calc( 20% / 3);
+        margin: 0px calc( 20% / 6 ) calc( 20% / 3 ) calc( 20% / 3 );
     }
     
     .column__r__container {
         width: 40%;
-        margin: 0px calc( 20% / 3) calc( 20% / 3) calc( 20% / 6);
+        margin: 0px calc( 20% / 3 ) calc( 20% / 3 ) calc( 20% / 6 );
     }
 }

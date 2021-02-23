@@ -6,3 +6,7 @@
     background-color: #F4F5F7;
     color: #444;
 }
+
+.header {
+    margin-bottom: calc( 20% / 3 );
+}

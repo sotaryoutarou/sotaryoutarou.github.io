@@ -35,7 +35,7 @@ const Layout = ({ location, title, children }) => {
     <div
       className={GlocalStyle.main}
     >
-      <header>{header}</header>
+      <header className={GlocalStyle.header}>{header}</header>
       <main>{children}</main>
       <footer style={{ textAlign: 'center' }}>
         © {new Date().getFullYear()}, Built with

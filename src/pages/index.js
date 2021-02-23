@@ -4,7 +4,6 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Image from "gatsby-image";
-import '../styles/global.scss'
 import PostStyles from '../styles/post.module.css'
 
 const BlogIndex = ({ data, location }) => {

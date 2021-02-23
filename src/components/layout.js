@@ -1,9 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import Image from './image'
-import '../styles/global.scss'
-
-import { rhythm } from "../utils/typography"
+import GlocalStyle from '../styles/global.module.css'
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
@@ -35,12 +33,7 @@ const Layout = ({ location, title, children }) => {
   }
   return (
     <div
-      style={{
-        marginLeft: `auto`,
-        marginRight: `auto`,
-        maxWidth: rhythm(60),
-        paddingBottom: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-      }}
+      className={GlocalStyle.main}
     >
       <header>{header}</header>
       <main>{children}</main>

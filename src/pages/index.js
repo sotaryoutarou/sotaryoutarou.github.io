@@ -36,7 +36,7 @@ const BlogIndex = ({ data, location }) => {
 
           return (
             <div className={PostStyles.container}>
-              <div className="posts">
+              <div className={PostStyles.column}>
                 <article key={node[0].fields.slug}>
                   <header>
                     <h3 className="posts__title">
@@ -80,7 +80,7 @@ const BlogIndex = ({ data, location }) => {
                   </section>
                 </article>
               </div>
-              <div className="posts">
+              <div className={PostStyles.column}>
                 <article key={node[1].fields.slug}>
                   <header>
                     <h3 className="posts__title">

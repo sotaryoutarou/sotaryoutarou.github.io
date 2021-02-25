@@ -3,12 +3,10 @@
     flex-wrap: wrap;
 }
 
-.column__l__container {
+[class*="column__"] {
     background-color: #fefefe;
-}
-
-.column__r__container {
-    background-color: #fefefe;
+    border-radius: 10px 10px 10px 10px;
+    overflow: hidden;
 }
 
 .title__content {

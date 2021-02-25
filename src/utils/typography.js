@@ -11,6 +11,16 @@ const typography = new Typography({
     "メイリオ",
     "sans-serif",
   ],
+  bodyFontFamily: [
+    "Hiragino Kaku Gothic Pro",
+    "ヒラギノ角ゴ Pro",
+    "Yu Gothic Medium",
+    "游ゴシック Medium",
+    "YuGothic",
+    "游ゴシック体",
+    "メイリオ",
+    "sans-serif",
+  ],
 })
 
 // Hot reload typography in development.

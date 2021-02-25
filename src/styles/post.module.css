@@ -30,7 +30,11 @@ a {
 .more__text__content {
     text-align: end;
 }
-  
+
+.text__container {
+    margin: 0.75rem 1.75rem;;
+}
+
 @media (max-width: 1023px) {
     [class*="column__"] {
         width: 80%;

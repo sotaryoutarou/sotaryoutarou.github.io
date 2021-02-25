@@ -52,30 +52,32 @@ const BlogIndex = ({ data, location }) => {
                       />
                     </Link>
                   </div>
-                  <small className="posts__date">{node[0].frontmatter.date}</small>
-                  <header>
-                    <h3 className={PostStyles.title__content}>
-                      <Link
-                        className="posts__title__a"
-                        to={node[0].fields.slug}
-                      >
-                        {title_l}
-                      </Link>
-                    </h3>
-                  </header>
+                  <div className={PostStyles.text__container}>
+                    <small className="posts__date">{node[0].frontmatter.date}</small>
+                    <header>
+                      <h3 className={PostStyles.title__content}>
+                        <Link
+                          className="posts__title__a"
+                          to={node[0].fields.slug}
+                        >
+                          {title_l}
+                        </Link>
+                      </h3>
+                    </header>
                     <section>
-                    <p
-                      className="posts__desc"
-                      dangerouslySetInnerHTML={{
-                        __html: node[0].frontmatter.description || node[0].excerpt,
-                      }}
-                    />
-                    <div className={PostStyles.more__text__content}>
-                      <Link to={node[0].fields.slug}>
-                        続きを読む
-                      </Link>
-                    </div>
-                  </section>
+                      <p
+                        className="posts__desc"
+                        dangerouslySetInnerHTML={{
+                          __html: node[0].frontmatter.description || node[0].excerpt,
+                        }}
+                      />
+                      <div className={PostStyles.more__text__content}>
+                        <Link to={node[0].fields.slug}>
+                          続きを読む
+                        </Link>
+                      </div>
+                    </section>
+                  </div>
                 </article>
               </div>
               <div className={PostStyles.column__r__container}>
@@ -95,30 +97,32 @@ const BlogIndex = ({ data, location }) => {
                       />
                     </Link>
                   </div>
-                  <small className="posts__date">{node[1].frontmatter.date}</small>
-                  <header>
-                    <h3 className={PostStyles.title__content}>
-                      <Link
-                        className="posts__title__a"
-                        to={node[1].fields.slug}
-                      >
-                        {title_r}
-                      </Link>
-                    </h3>
-                  </header>
+                  <div className={PostStyles.text__container}>
+                    <small className="posts__date">{node[1].frontmatter.date}</small>
+                    <header>
+                      <h3 className={PostStyles.title__content}>
+                        <Link
+                          className="posts__title__a"
+                          to={node[1].fields.slug}
+                        >
+                          {title_r}
+                        </Link>
+                      </h3>
+                    </header>
                     <section>
-                    <p
-                      className="posts__desc"
-                      dangerouslySetInnerHTML={{
-                        __html: node[1].frontmatter.description || node[1].excerpt,
-                      }}
-                    />
-                    <div className={PostStyles.more__text__content}>
-                      <Link  to={node[1].fields.slug}>
-                        続きを読む
-                      </Link>
-                    </div>
-                  </section>
+                      <p
+                        className="posts__desc"
+                        dangerouslySetInnerHTML={{
+                          __html: node[1].frontmatter.description || node[1].excerpt,
+                        }}
+                      />
+                      <div className={PostStyles.more__text__content}>
+                        <Link  to={node[1].fields.slug}>
+                          続きを読む
+                        </Link>
+                      </div>
+                    </section>
+                  </div>
                 </article>
               </div>
             </div>

@@ -21,7 +21,6 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           <h1
             itemProp="headline"
             style={{
-              marginTop: rhythm(1),
               marginBottom: 0,
             }}
           >

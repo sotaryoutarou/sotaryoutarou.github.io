@@ -9,33 +9,17 @@ const Layout = ({ location, title, children }) => {
 
   if (location.pathname === rootPath) {
     header = (
-      <Image filename='header-sota-noho.png' />
-    )
-  } else {
-    header = (
-      <h3
-        style={{
-          fontFamily: `Montserrat, sans-serif`,
-          marginTop: 0,
-        }}
-      >
-        <Link
-          style={{
-            boxShadow: `none`,
-            color: `inherit`,
-          }}
-          to={`/`}
-        >
-          {title}
-        </Link>
-      </h3>
+      <header className={GlocalStyle.header}>
+        <Image filename='header-sota-noho.png' />
+      </header>
     )
   }
+
   return (
     <div
       className={GlocalStyle.main}
     >
-      <header className={GlocalStyle.header}>{header}</header>
+      {header}
       <main>{children}</main>
       <footer style={{ textAlign: 'center' }}>
         © {new Date().getFullYear()}, Built with

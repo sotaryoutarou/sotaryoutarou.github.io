@@ -51,6 +51,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sass`,
+    `gatsby-background-image`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {

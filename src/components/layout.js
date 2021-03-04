@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import Image from './image'
 import GlocalStyle from '../styles/global.module.css'
 

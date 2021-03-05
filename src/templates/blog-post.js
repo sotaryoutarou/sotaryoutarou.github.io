@@ -4,11 +4,17 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
+import BloglStyle from '../styles/blog.module.css'
+import headerImage from '../images/post-header.png'
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = pageContext
+
+  const headerBackgroundImage = {
+    backgroundImage: `url(${headerImage})`, 
+  }
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -17,7 +23,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         description={post.frontmatter.description || post.excerpt}
       />
       <article itemScope itemType="http://schema.org/Article">
-        <header>
+        <header className={BloglStyle.header__image}>
           <h1
             itemProp="headline"
             style={{

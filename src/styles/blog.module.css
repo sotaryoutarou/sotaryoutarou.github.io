@@ -17,3 +17,15 @@
 .posts__image__container {
     margin: 5% 10%;
 }
+
+@media (max-width: 1023px) {
+    .posts__image__container {
+        margin: 5% 3%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .posts__image__container {
+        margin: 5% 10%;
+    }
+}

@@ -1,0 +1,31 @@
+.header__image {
+    position: relative;
+	height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__title {
+    color: #fff;
+}
+
+.post__content {
+    margin: 10px 10% 0 10%;
+}
+
+.posts__image__container {
+    margin: 5% 10%;
+}
+
+@media (max-width: 1023px) {
+    .posts__image__container {
+        margin: 5% 3%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .posts__image__container {
+        margin: 5% 10%;
+    }
+}

@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import Image from './image'
 import GlocalStyle from '../styles/global.module.css'
 
@@ -9,38 +8,20 @@ const Layout = ({ location, title, children }) => {
 
   if (location.pathname === rootPath) {
     header = (
-      <Image filename='header-sota-noho.png' />
-    )
-  } else {
-    header = (
-      <h3
-        style={{
-          fontFamily: `Montserrat, sans-serif`,
-          marginTop: 0,
-        }}
-      >
-        <Link
-          style={{
-            boxShadow: `none`,
-            color: `inherit`,
-          }}
-          to={`/`}
-        >
-          {title}
-        </Link>
-      </h3>
+      <header className={GlocalStyle.header}>
+        <Image filename='header-sota-noho.png' />
+      </header>
     )
   }
+
   return (
     <div
       className={GlocalStyle.main}
     >
-      <header className={GlocalStyle.header}>{header}</header>
+      {header}
       <main>{children}</main>
       <footer style={{ textAlign: 'center' }}>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.com">Gatsby</a>
+        Copyright © 2021. ソタ
       </footer>
     </div>
   )

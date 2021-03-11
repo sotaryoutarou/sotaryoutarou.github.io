@@ -7,7 +7,7 @@ import Image from "gatsby-image";
 import PostStyles from '../styles/post.module.css'
 
 const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || `Title`
+  const siteTitle = data.site.siteMetadata?.title
   var posts = []
 
   data.allMarkdownRemark.nodes.map(( node, index ) => {
@@ -18,7 +18,7 @@ const BlogIndex = ({ data, location }) => {
   if (posts.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>
-        <SEO title="All posts" />
+        <SEO title={siteTitle} />
         <p>No blog posts found. Add markdown posts to "content/blog" (or the directory you specified for the "gatsby-source-filesystem" plugin in gatsby-config.js).</p>
       </Layout>
     )
@@ -27,7 +27,7 @@ const BlogIndex = ({ data, location }) => {
   return (
     <div>
       <Layout location={location} title={siteTitle}>
-        <SEO title="All posts" />
+        <SEO title={siteTitle} />
 
         {posts.map(( node ) => {
           const title_l = node[0].frontmatter.title || node[0].fields.slug;

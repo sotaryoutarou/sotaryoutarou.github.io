@@ -24,23 +24,15 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
       />
       <article itemScope itemType="http://schema.org/Article">
         <header className={BloglStyle.header__image} style={headerBackgroundImage}>
-          <h1
-            itemProp="headline"
-            style={{
-              marginBottom: 0,
-            }}
-          >
-            {post.frontmatter.title}
-          </h1>
-          <p
-            style={{
-              ...scale(-1 / 5),
-              display: `block`,
-              marginBottom: rhythm(1),
-            }}
-          >
-            {post.frontmatter.date}
-          </p>
+          <div className={BloglStyle.title__container}>
+            <h1
+              itemProp="headline"
+              className={BloglStyle.header__title}
+            >
+              {post.frontmatter.title}
+            </h1>
+            <p className={BloglStyle.header__title}>{post.frontmatter.date}</p>
+          </div>
         </header>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}

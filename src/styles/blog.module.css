@@ -1,4 +1,15 @@
 .header__image {
     position: relative;
 	height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__title {
+    color: #fff;
+}
+
+.title__container {
+
 }

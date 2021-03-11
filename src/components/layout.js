@@ -21,9 +21,7 @@ const Layout = ({ location, title, children }) => {
       {header}
       <main>{children}</main>
       <footer style={{ textAlign: 'center' }}>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.com">Gatsby</a>
+        Copyright © 2021. ソタ
       </footer>
     </div>
   )

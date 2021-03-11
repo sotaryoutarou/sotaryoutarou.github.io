@@ -23,7 +23,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         description={post.frontmatter.description || post.excerpt}
       />
       <article itemScope itemType="http://schema.org/Article">
-        <header className={BloglStyle.header__image}>
+        <header className={BloglStyle.header__image} style={headerBackgroundImage}>
           <h1
             itemProp="headline"
             style={{

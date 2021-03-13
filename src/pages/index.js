@@ -29,9 +29,13 @@ const BlogIndex = ({ data, location }) => {
       <Layout location={location} title={siteTitle}>
         <SEO title={siteTitle} />
 
-        {posts.map(( node ) => {
-          const title_l = node[0].frontmatter.title || node[0].fields.slug;
-          const title_r = node[1].frontmatter.title || node[1].fields.slug;
+        {posts.map(( nodes ) => {
+          const title_l = nodes[0].frontmatter.title || node[0].fields.slug;
+          const title_r = nodes[1].frontmatter.title || node[1].fields.slug;
+
+          return nodes.map(( post ) => {
+            return null;
+          })
 
           return (
             <div className={PostStyles.posts__container}>

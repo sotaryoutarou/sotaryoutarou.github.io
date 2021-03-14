@@ -9,37 +9,30 @@ export default ({ posts }) => (
     let columnContainerStyle;
     if (index === 0) {
       columnContainerStyle = PostStyles.column__l__container
-      console.log("lllllllll");
     } else {
-      console.log("rrrrrrrrrrr");
       columnContainerStyle = PostStyles.column__r__container
     }
-
 
     return (
         <div className={columnContainerStyle}>
           <article key={post.fields.slug}>
-            <div className="posts__image_container">
-              <Link to={post.fields.slug}>
-                <Image
-                  className="posts__image"
-                  fluid={post.frontmatter.hero.childImageSharp.fluid}
-                  imgStyle={{
-                    elevation:4,
-                    shadowOffset: { width: 5, height: 5 },
-                    shadowColor: "grey",
-                    shadowOpacity: 0.5,
-                    shadowRadius: 10,
-                  }}
-                />
-              </Link>
-            </div>
+            <Link to={post.fields.slug}>
+              <Image
+                fluid={post.frontmatter.hero.childImageSharp.fluid}
+                imgStyle={{
+                  elevation:4,
+                  shadowOffset: { width: 5, height: 5 },
+                  shadowColor: "grey",
+                  shadowOpacity: 0.5,
+                  shadowRadius: 10,
+                }}
+              />
+            </Link>
             <div className={PostStyles.text__container}>
-              <small className="posts__date">{post.frontmatter.date}</small>
+              <small>{post.frontmatter.date}</small>
               <header>
                 <h3 className={PostStyles.title__content}>
                   <Link
-                    className="posts__title__a"
                     to={post.fields.slug}
                   >
                     {post.frontmatter.title}
@@ -48,7 +41,6 @@ export default ({ posts }) => (
               </header>
               <section>
                 <p
-                  className="posts__desc"
                   dangerouslySetInnerHTML={{
                     __html: post.frontmatter.description || post.excerpt,
                   }}

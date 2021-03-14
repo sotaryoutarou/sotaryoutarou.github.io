@@ -1,10 +1,10 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Image from "gatsby-image";
 import PostStyles from '../styles/post.module.css'
+import RowPosts from "../components/row-posts"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title
@@ -28,71 +28,12 @@ const BlogIndex = ({ data, location }) => {
     <div>
       <Layout location={location} title={siteTitle}>
         <SEO title={siteTitle} />
-
         {posts.map(( nodes ) => {
-          const title_l = nodes[0].frontmatter.title || nodes[0].fields.slug;
-          const title_r = nodes[1].frontmatter.title || nodes[1].fields.slug;
-
-          return nodes.map(( post, index ) => {
-            let columnContainerStyle;
-            if (index == 0) {
-              columnContainerStyle = PostStyles.column__l__container
-              console.log("lllllllll");
-            } else {
-              console.log("rrrrrrrrrrr");
-              columnContainerStyle = PostStyles.column__r__container
-            }
-
-            return (
-              <div className={PostStyles.posts__container}>
-                <div className={columnContainerStyle}>
-                  <article key={post.fields.slug}>
-                    <div className="posts__image_container">
-                      <Link to={post.fields.slug}>
-                        <Image
-                          className="posts__image"
-                          fluid={post.frontmatter.hero.childImageSharp.fluid}
-                          imgStyle={{
-                            elevation:4,
-                            shadowOffset: { width: 5, height: 5 },
-                            shadowColor: "grey",
-                            shadowOpacity: 0.5,
-                            shadowRadius: 10,
-                          }}
-                        />
-                      </Link>
-                    </div>
-                    <div className={PostStyles.text__container}>
-                      <small className="posts__date">{post.frontmatter.date}</small>
-                      <header>
-                        <h3 className={PostStyles.title__content}>
-                          <Link
-                            className="posts__title__a"
-                            to={post.fields.slug}
-                          >
-                            {nodes[0].frontmatter.title}
-                          </Link>
-                        </h3>
-                      </header>
-                      <section>
-                        <p
-                          className="posts__desc"
-                          dangerouslySetInnerHTML={{
-                            __html: post.frontmatter.description || post.excerpt,
-                          }}
-                        />
-                        <div className={PostStyles.more__text__content}>
-                          <Link to={post.fields.slug}>
-                            続きを読む
-                          </Link>
-                        </div>
-                      </section>
-                    </div>
-                  </article>
-                </div>
-              </div>
-            );
-          })
+          return (
+            <div className={PostStyles.posts__container}>
+              <RowPosts posts={nodes}/>
+            </div>
+          )
         })}
       </Layout>
     </div>

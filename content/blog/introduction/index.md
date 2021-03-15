@@ -2,7 +2,7 @@
 title: Gatsbyでブログ始めました
 date: "2021-03-14T22:40:32.169Z"
 description: はじめの第一歩
-hero: ./thumbnail.png
+hero: ./thumbnail_pc.png
 ---
 
 ブログ始めました

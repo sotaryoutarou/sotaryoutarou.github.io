@@ -18,7 +18,7 @@ const BlogIndex = ({ data, location }) => {
   return (
     <div>
       <Layout location={location} title={siteTitle}>
-        <SEO title={siteTitle} />
+        <SEO title={siteTitle} image={data.fileName.publicURL}/>
         {posts.map(( nodes ) => {
           return (
             <div className={PostStyles.posts__container}>
@@ -59,6 +59,9 @@ export const pageQuery = graphql`
           }
         }
       }
+    }
+    fileName: file(relativePath: {eq: "header-sota-noho.png"}) {
+      publicURL
     }
   }
 `

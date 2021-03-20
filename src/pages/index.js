@@ -15,15 +15,6 @@ const BlogIndex = ({ data, location }) => {
     return posts[Math.floor(index/2)].push(node)
   })
 
-  if (posts.length === 0) {
-    return (
-      <Layout location={location} title={siteTitle}>
-        <SEO title={siteTitle} />
-        <p>No blog posts found. Add markdown posts to "content/blog" (or the directory you specified for the "gatsby-source-filesystem" plugin in gatsby-config.js).</p>
-      </Layout>
-    )
-  }
-
   return (
     <div>
       <Layout location={location} title={siteTitle}>

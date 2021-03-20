@@ -314,7 +314,92 @@ PHPなので楽に処理できたのもありますが、それでも日付を�
 クラスにuseして使ってね。
 
 ```php
+<?php
+/**
+ * PHPUnitでテストケースの日付を取得するtrait
+ *
+ * $this->getTestMonths() で直近の28~31まである月からテストケースを作成する
+ *
+ * @author ソタ <sotaryoutarou@gmail.com>
+ * @category Test
+ */
+trait DateTimeTestCase {
 
+    /**
+     * 月またぎ、年またぎのテストケースを返却する関数
+     *
+     * @access public
+     * @param  boolean $hasAddLastDayOfTheYear 当年の大晦日を含めるか
+     * @param  boolean $inclueCurrentMonth     当月をテストケースに含めるか
+     *
+     * @return array   テストケース
+     */
+    public function getTestMonths($hasAddLastDayOfTheYear = true, $inclueCurrentMonth = false): array
+    {
+        $date = new DateTime();
+        $testDates = [
+            28 => false,
+            29 => false,
+            30 => false,
+            31 => false,
+        ];
+        
+        if ($inclueCurrentMonth) {
+            $testDates[$date->format('t')] = clone $date;
+        }
 
+        if ($hasAddLastDayOfTheYear) {
+            $testDates[1231] = new DateTime($date->format('Y') . '-12-31T' . $date->format('H:i:s.u'));
+        }
+    
+        while(1) {
+            $this->addDays($date);
+            
+            if (!$testDates[$date->format('t')]) {
+                $testDates[$date->format('t')] = clone $date;
+            }
+            
+            if (!in_array(false, $testDates, true)) {
+                break;
+            }
+        }
+        
+        return $testDates;
+    }
+    
+    /**
+     * 引数で渡ってくるDateTimeインスタンスを翌月まで加算する
+     *
+     * @access private
+     * @param  DateTime $date
+     *
+     * @return void
+     */
+    private function addDays($date)
+    {
+        $now = new DateTime();
+        $nextMonthDate = clone $date;
 
+        $nextMonthDate->modify('+' . $date->format('t') . ' days');
+        $addDay = $date->format('t');
+        
+        // ２ヶ月後にいってしまったら戻す
+        if ($nextMonthDate->format('n') - $date->format('n') == 2) {
+            $addDay = $date->format('t') - $date->format('j') + $nextMonthDate->modify('-3 days')->format('t');
+        }
+
+        // 27日以前はこれだけで大丈夫
+        $date->modify('+' . $addDay . ' days');
+        
+        // 最終日調整の影響で増えすぎるパターンがあるので少なくするケースに対応
+        if ($now->format('j') < $date->format('j')) {
+             $date->modify('-' . $date->format('j') - $now->format('j') . ' days');
+        }
+        
+        // 今の日付より小さい かつ 対象月の最終日ではない時は最終日になるように調整
+        if ($now->format('j') > $date->format('j') && $date->format('j') != $date->format('t')) {
+            $date->modify('+' . $date->format('t') - $date->format('j') . ' days');
+        }
+    }
+}
 ```

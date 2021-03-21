@@ -98,10 +98,10 @@ const SEO = ({ description, lang, meta, title, image, path }) => {
           name: `twitter:site`,
           content: `@ryou____8`,
         },
-        // {
-        //   rel: `canonical`,
-        //   href: site.siteMetadata.siteUrl + path,
-        // },
+        {
+          rel: `canonical`,
+          href: site.siteMetadata.siteUrl + path,
+        },
       ].concat(meta)}
     />
   )

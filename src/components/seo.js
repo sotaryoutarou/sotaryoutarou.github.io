@@ -59,6 +59,14 @@ const SEO = ({ description, lang, meta, title, image, path }) => {
           content: site.siteMetadata.siteUrl + path,
         },
         {
+          property: `og:site_name`,
+          content: site.siteMetadata.title,
+        },
+        {
+          property: `og:locale`,
+          content: `ja_JP`,
+        },
+        {
           property: `og:image`,
           content: image,
         },

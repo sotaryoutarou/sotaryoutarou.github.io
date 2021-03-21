@@ -43,6 +43,10 @@ const SEO = ({ description, lang, meta, title, image, path }) => {
           content: metaDescription,
         },
         {
+          name: `image`,
+          content: site.siteMetadata.siteUrl + image,
+        },
+        {
           property: `og:title`,
           content: title,
         },
@@ -59,12 +63,20 @@ const SEO = ({ description, lang, meta, title, image, path }) => {
           content: site.siteMetadata.siteUrl + path,
         },
         {
+          property: `og:site_name`,
+          content: site.siteMetadata.title,
+        },
+        {
+          property: `og:locale`,
+          content: `ja_JP`,
+        },
+        {
           property: `og:image`,
-          content: image,
+          content: site.siteMetadata.siteUrl + image,
         },
         {
           name: `twitter:card`,
-          content: `summary`,
+          content: `summary_large_image`,
         },
         {
           name: `twitter:creator`,
@@ -80,7 +92,15 @@ const SEO = ({ description, lang, meta, title, image, path }) => {
         },
         {
           name: `twitter:image`,
-          content: image,
+          content: site.siteMetadata.siteUrl + image,
+        },
+        {
+          name: `twitter:site`,
+          content: `@ryou____8`,
+        },
+        {
+          rel: `canonical`,
+          href: site.siteMetadata.siteUrl + path,
         },
       ].concat(meta)}
     />

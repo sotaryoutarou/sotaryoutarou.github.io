@@ -43,6 +43,10 @@ const SEO = ({ description, lang, meta, title, image, path }) => {
           content: metaDescription,
         },
         {
+          name: `image`,
+          content: site.siteMetadata.siteUrl + image,
+        },
+        {
           property: `og:title`,
           content: title,
         },
@@ -93,6 +97,10 @@ const SEO = ({ description, lang, meta, title, image, path }) => {
         {
           name: `twitter:site`,
           content: `@ryou____8`,
+        },
+        {
+          rel: `canonical`,
+          href: site.siteMetadata.siteUrl + path,
         },
       ].concat(meta)}
     />

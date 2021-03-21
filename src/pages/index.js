@@ -18,7 +18,7 @@ const BlogIndex = ({ data, location }) => {
   return (
     <div>
       <Layout location={location} title={siteTitle}>
-        <SEO title={siteTitle} image={data.fileName.publicURL}/>
+        <SEO title={siteTitle} image={data.fileName.publicURL} path={location.pathname}/>
         {posts.map(( nodes ) => {
           return (
             <div className={PostStyles.posts__container}>

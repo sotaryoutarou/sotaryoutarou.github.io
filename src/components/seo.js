@@ -72,7 +72,7 @@ const SEO = ({ description, lang, meta, title, image, path }) => {
         },
         {
           name: `twitter:card`,
-          content: `summary`,
+          content: `summary_large_image`,
         },
         {
           name: `twitter:creator`,
@@ -89,6 +89,10 @@ const SEO = ({ description, lang, meta, title, image, path }) => {
         {
           name: `twitter:image`,
           content: site.siteMetadata.siteUrl + image,
+        },
+        {
+          name: `twitter:site`,
+          content: `@ryou____8`,
         },
       ].concat(meta)}
     />

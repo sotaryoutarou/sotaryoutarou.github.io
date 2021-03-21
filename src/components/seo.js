@@ -68,7 +68,7 @@ const SEO = ({ description, lang, meta, title, image, path }) => {
         },
         {
           property: `og:image`,
-          content: image,
+          content: site.siteMetadata.siteUrl + image,
         },
         {
           name: `twitter:card`,
@@ -88,7 +88,7 @@ const SEO = ({ description, lang, meta, title, image, path }) => {
         },
         {
           name: `twitter:image`,
-          content: image,
+          content: site.siteMetadata.siteUrl + image,
         },
       ].concat(meta)}
     />

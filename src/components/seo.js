@@ -43,10 +43,6 @@ const SEO = ({ description, lang, meta, title, image, path }) => {
           content: metaDescription,
         },
         {
-          name: `image`,
-          content: site.siteMetadata.siteUrl + image,
-        },
-        {
           property: `og:title`,
           content: title,
         },

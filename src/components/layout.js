@@ -1,6 +1,7 @@
 import React from "react"
 import Image from './image'
 import GlocalStyle from '../styles/global.module.css'
+import MediaQuery from "react-responsive";
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
@@ -9,7 +10,12 @@ const Layout = ({ location, title, children }) => {
   if (location.pathname === rootPath) {
     header = (
       <header className={GlocalStyle.header}>
-        <Image filename='header-sota-noho.png' />
+        <MediaQuery query="(max-width: 480px)">
+          <Image filename='header-sota-noho-SP.png' />
+        </MediaQuery>
+        <MediaQuery query="(min-width: 481px)">
+          <Image filename='header-sota-noho-desktop.png' />
+        </MediaQuery>
       </header>
     )
   }

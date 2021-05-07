@@ -60,7 +60,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    fileName: file(relativePath: {eq: "header-sota-noho.png"}) {
+    fileName: file(relativePath: {eq: "header-sota-noho-v2.png"}) {
       publicURL
     }
   }

@@ -24,6 +24,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         description={post.frontmatter.description || post.excerpt}
         image={post.frontmatter.hero.publicURL}
         path={location.pathname}
+        type='article'
       />
       <article itemScope itemType="http://schema.org/Article">
         <header className={BloglStyle.header__image} style={headerBackgroundImage}>

@@ -43,6 +43,12 @@ module.exports = {
             },
           },
           {
+            resolve: `gatsby-remark-prismjs-title`,
+            options: {
+              className: 'your-custom-class-name'
+            }
+          },
+          {
             resolve: `gatsby-remark-prismjs`,
             options: {
               classPrefix: "language-",
@@ -52,7 +58,6 @@ module.exports = {
               noInlineHighlight: false,
             },
           },
-          `gatsby-remark-prismjs-title`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
         ],

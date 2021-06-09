@@ -1,4 +1,207 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ソタのほほん地下貯蔵庫]]></title><description><![CDATA[webエンジニアがのほほんなことを蓄積する雑多ブログ]]></description><link>https://sotaryoutarou.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 09 Jun 2021 14:46:23 GMT</lastBuildDate><item><title><![CDATA[【PHP】直近の28/29/30/31まである月から1日ずつ取ってきた配列を作りたいんじゃ]]></title><description><![CDATA[これなに DateTimeを扱うメソッドのユニットテストではテストケースとして、月またぎ、年またぎのテストを押さえておきたいところだと思います。 CIを回しているのであれば日付のテストケースは動的に変えていった方がテストの恩恵を受けられると思い、直近の28/29/30/3…]]></description><link>https://sotaryoutarou.github.io/php-date-time-testcase/</link><guid isPermaLink="false">https://sotaryoutarou.github.io/php-date-time-testcase/</guid><pubDate>Thu, 18 Mar 2021 22:40:32 GMT</pubDate><content:encoded>&lt;h2&gt;これなに&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ソタのほほん地下貯蔵庫]]></title><description><![CDATA[webエンジニアがのほほんなことを蓄積する雑多ブログ]]></description><link>https://sotaryoutarou.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 09 Jun 2021 14:47:05 GMT</lastBuildDate><item><title><![CDATA[【Gatsby】Prismで良さげなコードハイライトにして行番号表示もいい感じに調整するで]]></title><description><![CDATA[これなに Starter Blogのデフォルトで用意されているコードハイライトがちょいダサなので、いい感じにしたい。  前提 GatsbyのテーマはStarter Blogを利用しています。 ちょい調べた結果 Prism JS…]]></description><link>https://sotaryoutarou.github.io/gatsby-prismjs/</link><guid isPermaLink="false">https://sotaryoutarou.github.io/gatsby-prismjs/</guid><pubDate>Sat, 15 May 2021 22:40:32 GMT</pubDate><content:encoded>&lt;h2&gt;これなに&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.gatsbyjs.com/starters/gatsbyjs/gatsby-starter-blog&quot;&gt;Starter Blog&lt;/a&gt;のデフォルトで用意されているコードハイライトがちょいダサなので、いい感じにしたい。&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/55b36ab5540a9e15b79ea84beea55e77/d9199/ASIS.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 36.486486486486484%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAABYlAAAWJQFJUiTwAAABK0lEQVQoz32Q2U7DMBBF8/8fhYSEQIJWgiLS0Cx1NjtxNsdLA0+XiStEBRUPx74jecZHE5h5ghINdNPC6QndMGCWEq5pYFcoD30J2aXoe4ZxKKnOYaYBJ63gqH9lzSvBcjIYU2p4i6GnFpujQB0fYXchdBRD7WOU9SsidoO0vEfOt2DVBmPXXh94cjQwq9DtE2gl8VI0EFkOG75DxynUIUXNQ8TFHY7VIyqxQ8GfMfXyH8OEDMPEG26ZAE/YhWHiDQ/5LRk+gNVPZLj9Y+jWvA60dKhaYBYCemxx4BJdxWEzBlNW0Ix21hXgbYimjdDKmPaZ0dv+x+6CwKgJRg1Y7Ox//DQKi6FsNTF7FqPxYYxn8eiz3RUCZy0cPbJaw/r7nN1af2OuYXzfb74AJOUNq3lCd0oAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;デフォルトのコードハイライト&quot;
+        title=&quot;デフォルトのコードハイライト&quot;
+        src=&quot;/static/55b36ab5540a9e15b79ea84beea55e77/fcda8/ASIS.png&quot;
+        srcset=&quot;/static/55b36ab5540a9e15b79ea84beea55e77/12f09/ASIS.png 148w,
+/static/55b36ab5540a9e15b79ea84beea55e77/e4a3f/ASIS.png 295w,
+/static/55b36ab5540a9e15b79ea84beea55e77/fcda8/ASIS.png 590w,
+/static/55b36ab5540a9e15b79ea84beea55e77/efc66/ASIS.png 885w,
+/static/55b36ab5540a9e15b79ea84beea55e77/d9199/ASIS.png 960w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;前提&lt;/h3&gt;
+&lt;p&gt;Gatsbyのテーマは&lt;a href=&quot;https://www.gatsbyjs.com/starters/gatsbyjs/gatsby-starter-blog&quot;&gt;Starter Blog&lt;/a&gt;を利用しています。&lt;/p&gt;
+&lt;h2&gt;ちょい調べた結果&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://prismjs.com/&quot;&gt;Prism JS&lt;/a&gt;というものを使っているらしいので、このパラメータをカスタマイズすれば良さそう。&lt;/p&gt;
+&lt;h2&gt;テーマ変更&lt;/h2&gt;
+&lt;p&gt;デフォルトで設定されているテーマのimportは削除しておきます。&lt;/p&gt;
+
+        &lt;div class=&quot;gatsby-code-title your-custom-class-name&quot;&gt;
+          &lt;span&gt;gatsby-browser.js&lt;/span&gt;
+        &lt;/div&gt;
+       
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-js line-numbers&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;prismjs/themes/prism.css&quot;&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;https://prismjs.com/&quot;&gt;Prism JS&lt;/a&gt;のページでお好きなテーマを探してください。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/c1db271571c9c368a8795597278ec9dd/prismjs.gif&quot; alt=&quot;prismjsのテーマ確認&quot;&gt;&lt;/p&gt;
+&lt;p&gt;今回はTOMORROW NIGHTを利用するので、以下のようにimportします。 &lt;code class=&quot;language-text&quot;&gt;&amp;quot;prismjs/themes/prism-{テーマ名}.css&amp;quot;&lt;/code&gt;&lt;/p&gt;
+
+        &lt;div class=&quot;gatsby-code-title your-custom-class-name&quot;&gt;
+          &lt;span&gt;gatsby-browser.js&lt;/span&gt;
+        &lt;/div&gt;
+       
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-js line-numbers&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;prismjs/themes/prism-tomorrow.css&quot;&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;ここまででテーマが変わります。&lt;/p&gt;
+&lt;h3&gt;&lt;a href=&quot;https://www.gatsbyjs.com/starters/gatsbyjs/gatsby-starter-blog&quot;&gt;Starter Blog&lt;/a&gt;を利用していない場合&lt;/h3&gt;
+&lt;p&gt;パッケージ導入&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-shell line-numbers&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; -S prismjs gatsby-remark-prismjs gatsby-remark-prismjs-title&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;gatsby-config&lt;/code&gt; の書き換え&lt;/p&gt;
+
+        &lt;div class=&quot;gatsby-code-title your-custom-class-name&quot;&gt;
+          &lt;span&gt;gatsby-config.js&lt;/span&gt;
+        &lt;/div&gt;
+       
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-js line-numbers&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;resolve&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;gatsby-transformer-remark&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+options&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  plugins&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;gatsby-remark-prismjs-title&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;gatsby-remark-prismjs&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;行番号付与&lt;/h2&gt;
+&lt;p&gt;ついでに行番号も付与します。 &lt;code class=&quot;language-text&quot;&gt;gatsby-remark-prismjs&lt;/code&gt; のオプションを設定していきます。&lt;/p&gt;
+&lt;p&gt;Before&lt;/p&gt;
+
+        &lt;div class=&quot;gatsby-code-title your-custom-class-name&quot;&gt;
+          &lt;span&gt;gatsby-config.js&lt;/span&gt;
+        &lt;/div&gt;
+       
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-js line-numbers&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      resolve&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;gatsby-transformer-remark&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      options&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        plugins&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+          &lt;span class=&quot;token comment&quot;&gt;/* ~略~ */&lt;/span&gt;
+          &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;gatsby-remark-prismjs&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;After&lt;/p&gt;
+
+        &lt;div class=&quot;gatsby-code-title your-custom-class-name&quot;&gt;
+          &lt;span&gt;gatsby-config.js&lt;/span&gt;
+        &lt;/div&gt;
+       
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-js line-numbers&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      resolve&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;gatsby-transformer-remark&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      options&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        plugins&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+          &lt;span class=&quot;token comment&quot;&gt;/* ~略~ */&lt;/span&gt;
+          &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+            resolve&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;gatsby-remark-prismjs&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            options&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+              classPrefix&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;language-&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+              inlineCodeMarker&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+              aliases&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+              showLineNumbers&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+              noInlineHighlight&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+          &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;次にCSSを読み込みます。&lt;/p&gt;
+
+        &lt;div class=&quot;gatsby-code-title your-custom-class-name&quot;&gt;
+          &lt;span&gt;gatsby-browser.js&lt;/span&gt;
+        &lt;/div&gt;
+       
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-js line-numbers&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;prismjs/plugins/line-numbers/prism-line-numbers.css&quot;&lt;/span&gt; &lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;ここで問題なのが、行番号の表示がずれてしまっています。こりゃいかん。&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/45f84914953a6e660bf568b49031c2c2/c6162/before-css.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 18.243243243243242%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAqUlEQVQY04XLuwqCYABAYV+joALxklqY5aWLBX8NpuVQq0P6i5Dv/wAnHYImG77tHKUoCpqmQcqaupadGvklJVXVkcP691WWvNsWZTIesQ08ok3I9eRwild4x4j1IWCxXKBpGrquDzIMA1VVcV0XRZ1NiXch8fZAfllxESHBOSYSe7y1hzW3sG17kOM4mKaJ7/soQgjueU6WZdw62Y807aV/9W2SJDweTz6f9o0HdHY58AAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;行番号CSS当てる前&quot;
+        title=&quot;行番号CSS当てる前&quot;
+        src=&quot;/static/45f84914953a6e660bf568b49031c2c2/fcda8/before-css.png&quot;
+        srcset=&quot;/static/45f84914953a6e660bf568b49031c2c2/12f09/before-css.png 148w,
+/static/45f84914953a6e660bf568b49031c2c2/e4a3f/before-css.png 295w,
+/static/45f84914953a6e660bf568b49031c2c2/fcda8/before-css.png 590w,
+/static/45f84914953a6e660bf568b49031c2c2/efc66/before-css.png 885w,
+/static/45f84914953a6e660bf568b49031c2c2/c83ae/before-css.png 1180w,
+/static/45f84914953a6e660bf568b49031c2c2/c6162/before-css.png 2166w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;CSSで調整します。今回はグローバルなCSSで当ててますがお好みでどうぞ。&lt;/p&gt;
+
+        &lt;div class=&quot;gatsby-code-title your-custom-class-name&quot;&gt;
+          &lt;span&gt;global.css&lt;/span&gt;
+        &lt;/div&gt;
+       
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;css&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-css line-numbers&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token selector&quot;&gt;.line-numbers .line-numbers-rows&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 1rem 0 1rem 0.5rem&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;グローバルCSSはこんな感じで読み込みました。&lt;/p&gt;
+
+        &lt;div class=&quot;gatsby-code-title your-custom-class-name&quot;&gt;
+          &lt;span&gt;gatsby-browser.js&lt;/span&gt;
+        &lt;/div&gt;
+       
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-js line-numbers&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;./src/styles/global.css&quot;&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;完成！なんとなくいい感じになった気がする&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/49c3277b9aaf6e59abc19cd4e8d01da8/38116/after-css.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 18.91891891891892%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAo0lEQVQY043DSwqCUABAUZfhKAklTRPNSvv4IEry0xpsIvlcRELtoFqCLfQGjYJAOnCUqqpomgYp5Wf9va45/1HKhrI80XUvlNFwwDyYEkcLDvGYtZjhixA/DLAsC13XMQyjt2maqKrKpW1RJpbBKorYxRuOO5/tfkW4jwnFEs/zsG0bx3F6u66LpmlcrzeUJEnI84Isy36m6X/zokAIwf3x5A3/LJCMLs767gAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;行番号CSS当てた後&quot;
+        title=&quot;行番号CSS当てた後&quot;
+        src=&quot;/static/49c3277b9aaf6e59abc19cd4e8d01da8/fcda8/after-css.png&quot;
+        srcset=&quot;/static/49c3277b9aaf6e59abc19cd4e8d01da8/12f09/after-css.png 148w,
+/static/49c3277b9aaf6e59abc19cd4e8d01da8/e4a3f/after-css.png 295w,
+/static/49c3277b9aaf6e59abc19cd4e8d01da8/fcda8/after-css.png 590w,
+/static/49c3277b9aaf6e59abc19cd4e8d01da8/efc66/after-css.png 885w,
+/static/49c3277b9aaf6e59abc19cd4e8d01da8/c83ae/after-css.png 1180w,
+/static/49c3277b9aaf6e59abc19cd4e8d01da8/38116/after-css.png 2086w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;参考記事&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.yo1000.com/gatsby-number-lines&quot;&gt;Gatsby Material Starterで行番号を表示する&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://kikunantoka.com/2019/12/03--install-syntax-highlight/&quot;&gt;GatsbyJSで作っているブログでシンタックスハイライトが適用されるようにした&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;PR&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/sotaryoutarou/sotaryoutarou.github.io/pull/44&quot;&gt;シンタックスハイライト導入&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[【PHP】直近の28/29/30/31まである月から1日ずつ取ってきた配列を作りたいんじゃ]]></title><description><![CDATA[これなに DateTimeを扱うメソッドのユニットテストではテストケースとして、月またぎ、年またぎのテストを押さえておきたいところだと思います。 CIを回しているのであれば日付のテストケースは動的に変えていった方がテストの恩恵を受けられると思い、直近の28/29/30/3…]]></description><link>https://sotaryoutarou.github.io/php-date-time-testcase/</link><guid isPermaLink="false">https://sotaryoutarou.github.io/php-date-time-testcase/</guid><pubDate>Thu, 18 Mar 2021 22:40:32 GMT</pubDate><content:encoded>&lt;h2&gt;これなに&lt;/h2&gt;
 &lt;p&gt;DateTimeを扱うメソッドのユニットテストではテストケースとして、月またぎ、年またぎのテストを押さえておきたいところだと思います。&lt;/p&gt;
 &lt;p&gt;CIを回しているのであれば日付のテストケースは動的に変えていった方がテストの恩恵を受けられると思い、直近の28/29/30/31まである月からテストケースを1日ずつ取得するメソッドを作ってみました。&lt;/p&gt;
 &lt;h2&gt;目指すもの&lt;/h2&gt;

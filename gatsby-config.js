@@ -7,9 +7,6 @@ module.exports = {
     },
     description: `webエンジニアがのほほんなことを蓄積する雑多ブログ`,
     siteUrl: `https://sotaryoutarou.github.io`,
-    social: {
-      twitter: `kylemathews`,
-    },
   },
   plugins: [
     {
@@ -67,6 +64,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sass`,
     `gatsby-background-image`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {

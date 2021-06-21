@@ -1,0 +1,17 @@
+.header__SP {
+    position: relative;
+	height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: calc( 20% / 3 );
+}
+
+.header__PC {
+    position: relative;
+	height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: calc( 20% / 3 );
+}

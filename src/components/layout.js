@@ -1,22 +1,32 @@
 import React from "react"
-import Image from './image'
 import * as GlocalStyle from '../styles/global.module.css'
+import * as TopPageStyle from '../styles/top.module.css'
 import MediaQuery from "react-responsive";
+import HeaderImageSP from '../images/header-sota-noho-SP.png'
+import HeaderImagePC from '../images/post-header.png'
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
+  const headerBackgroundImageSP = {
+    backgroundImage: `url(${HeaderImageSP})`, 
+  }
+  const headerBackgroundImagePC = {
+    backgroundImage: `url(${HeaderImagePC})`, 
+  }
   let header
 
   if (location.pathname === rootPath) {
     header = (
-      <header className={GlocalStyle.header}>
+      <React.Fragment>
         <MediaQuery query="(max-width: 480px)">
-          <Image filename='header-sota-noho-SP.png' />
+          <header className={TopPageStyle.header__SP} style={headerBackgroundImageSP}>
+          </header>
         </MediaQuery>
         <MediaQuery query="(min-width: 481px)">
-          <Image filename='header-sota-noho-desktop.png' />
+          <header className={TopPageStyle.header__PC} style={headerBackgroundImagePC}>
+          </header>
         </MediaQuery>
-      </header>
+      </React.Fragment>
     )
   }
 

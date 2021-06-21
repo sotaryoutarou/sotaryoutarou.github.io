@@ -1,10 +1,10 @@
 import React from 'react'
-import PostStyles from '../styles/post.module.css'
+import * as PostStyles from '../styles/post.module.css'
 import Image from "gatsby-image";
 import { Link } from "gatsby"
 
 // 画像ファイルパスをプロパティに取るようなコンポーネントを定義
-export default ({ posts }) => (
+const rowPosts = ({ posts }) => (
   posts.map(( post, index ) => {
     let columnContainerStyle;
     if (index === 0) {
@@ -57,3 +57,5 @@ export default ({ posts }) => (
     );
   })
 )
+
+export default rowPosts

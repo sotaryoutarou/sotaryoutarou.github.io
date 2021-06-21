@@ -1,6 +1,6 @@
 import React from "react"
 import Image from './image'
-import GlocalStyle from '../styles/global.module.css'
+import * as GlocalStyle from '../styles/global.module.css'
 import MediaQuery from "react-responsive";
 
 const Layout = ({ location, title, children }) => {

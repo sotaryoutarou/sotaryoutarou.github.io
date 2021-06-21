@@ -1,10 +1,9 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import { rhythm } from "../utils/typography"
-import BloglStyle from '../styles/blog.module.css'
+import * as BloglStyle from '../styles/blog.module.css'
 import headerImage from '../images/post-header.png'
 import Image from "gatsby-image"
 
@@ -19,7 +18,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO
+      <Seo
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
         image={post.frontmatter.hero.publicURL}
@@ -28,7 +27,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
       />
       <article itemScope itemType="http://schema.org/Article">
         <header className={BloglStyle.header__image} style={headerBackgroundImage}>
-          <div className={BloglStyle.title__container}>
+          <div>
             <h1
               itemProp="headline"
               className={BloglStyle.header__title}

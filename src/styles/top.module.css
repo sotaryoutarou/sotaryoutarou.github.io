@@ -1,6 +1,6 @@
 .header__SP {
     position: relative;
-	height: 70vh;
+	height: calc( 100vw / 3 * 4);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,9 +9,30 @@
 
 .header__PC {
     position: relative;
-	height: 70vh;
+	height: calc( 70vw / 1280 * 800);
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: calc( 20% / 3 );
+}
+
+.title__container {
+
+}
+
+.main__title__text {
+    color: white;
+    text-decoration: none;
+}
+
+.main__title__container {
+    text-align: center;
+}
+
+.sub__title__text {
+    color: white;
+}
+
+.sub__title__container {
+    text-align: center;
 }

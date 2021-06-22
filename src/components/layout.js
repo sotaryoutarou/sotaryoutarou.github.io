@@ -8,10 +8,12 @@ import HeaderImagePC from '../images/post-header.png'
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const headerBackgroundImageSP = {
-    backgroundImage: `url(${HeaderImageSP})`, 
+    backgroundImage: `url(${HeaderImageSP})`,
+    backgroundSize:  `contain`,
   }
   const headerBackgroundImagePC = {
-    backgroundImage: `url(${HeaderImagePC})`, 
+    backgroundImage: `url(${HeaderImagePC})`,
+    backgroundSize:  `contain`,
   }
   let header
 

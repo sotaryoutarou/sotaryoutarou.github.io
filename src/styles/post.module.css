@@ -14,15 +14,15 @@
     color: #444444;
 }
 
-a:link, a:visited, a:active {
+a.post__link:link, a.post__link:visited, a.post__link:active {
     color: #444444;
 }
 
-a:hover {
+a.post__link:hover {
     color: #777777;
 }
 
-a {
+a.post__link {
     text-decoration: none;
 }
 

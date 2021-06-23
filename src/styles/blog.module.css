@@ -18,6 +18,18 @@
     margin: 5% 10%;
 }
 
+.blog__title__text {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-family: 'Hachi Maru Pop', cursive;
+    letter-spacing: 0.05em;
+}
+
+.blog__title__container {
+    margin-bottom: 10%;
+}
+
 @media (max-width: 1023px) {
     .posts__image__container {
         margin: 5% 3%;

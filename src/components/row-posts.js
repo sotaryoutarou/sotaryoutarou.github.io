@@ -34,6 +34,7 @@ const rowPosts = ({ posts }) => (
                 <h3 className={PostStyles.title__content}>
                   <Link
                     to={post.fields.slug}
+                    className={PostStyles.post__link}
                   >
                     {post.frontmatter.title}
                   </Link>
@@ -46,7 +47,10 @@ const rowPosts = ({ posts }) => (
                   }}
                 />
                 <div className={PostStyles.more__text__content}>
-                  <Link to={post.fields.slug}>
+                  <Link 
+                    to={post.fields.slug}
+                    className={PostStyles.post__link}
+                  >
                     続きを読む
                   </Link>
                 </div>

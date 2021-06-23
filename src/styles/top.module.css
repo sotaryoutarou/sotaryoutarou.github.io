@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap');
+
+.header__SP {
+    position: relative;
+	height: calc( 100vw / 3 * 4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: calc( 20% / 3 );
+}
+
+.header__PC {
+    position: relative;
+	height: calc( 70vw / 1280 * 800);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: calc( 20% / 3 );
+}
+
+.title__container {
+
+}
+
+.main__title__text {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-family: 'Hachi Maru Pop', cursive;
+    letter-spacing: 0.05em;
+}
+
+.main__title__text span {
+    display: inline-block;
+}
+
+.main__title__container {
+    text-align: center;
+}
+
+.sub__title__text {
+    letter-spacing: 0.1em;
+    color: white;
+    font-family: 'Hachi Maru Pop', cursive;
+}
+
+.sub__title__container {
+    text-align: center;
+}

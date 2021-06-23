@@ -1,6 +1,15 @@
-.header__image {
+.header__image__SP {
     position: relative;
-	height: calc( 70vw / 1280 * 800);
+	height: calc( 100vw / 3 * 4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: calc( 20% / 3 );
+}
+
+.header__image__PC {
+    position: relative;
+	height: calc( 50vw / 1280 * 800);
     display: flex;
     justify-content: center;
     align-items: center;

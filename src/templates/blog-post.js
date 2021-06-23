@@ -4,16 +4,21 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { rhythm } from "../utils/typography"
 import * as BloglStyle from '../styles/blog.module.css'
-import headerImage from '../images/post-header.png'
+import headerImagePC from '../images/post-header.png'
+import HeaderImageSP from '../images/header-sota-noho-SP.png'
 import Image from "gatsby-image"
+import MediaQuery from "react-responsive";
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = pageContext
-
-  const headerBackgroundImage = {
-    backgroundImage: `url(${headerImage})`,
+  const headerBackgroundImageSP = {
+    backgroundImage: `url(${HeaderImageSP})`,
+    backgroundSize:  `contain`,
+  }
+  const headerBackgroundImagePC = {
+    backgroundImage: `url(${headerImagePC})`,
     backgroundSize:  `contain`,
   }
 
@@ -27,20 +32,44 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         type='article'
       />
       <article itemScope itemType="http://schema.org/Article">
-        <header className={BloglStyle.header__image} style={headerBackgroundImage}>
-          <div>
-            <div className={BloglStyle.blog__title__container}>
-              <Link to='/' className={BloglStyle.blog__title__text}><span>ソタのほほん地下貯蔵庫</span></Link>
+      <MediaQuery query="(max-width: 480px)">
+        <header className={BloglStyle.header__image__SP} style={headerBackgroundImageSP}>
+            <div>
+              <div className={BloglStyle.blog__title__container}>
+                <Link to='/' className={BloglStyle.blog__title__text}><span>ソタのほほん地下貯蔵庫</span></Link>
+              </div>
+              <h1
+                itemProp="headline"
+                className={BloglStyle.header__title}
+              >
+                {post.frontmatter.title}
+              </h1>
+              <p className={BloglStyle.header__title}>{post.frontmatter.date}</p>
             </div>
-            <h1
-              itemProp="headline"
-              className={BloglStyle.header__title}
-            >
-              {post.frontmatter.title}
-            </h1>
-            <p className={BloglStyle.header__title}>{post.frontmatter.date}</p>
-          </div>
-        </header>
+          </header>
+        </MediaQuery>
+        <MediaQuery query="(min-width: 481px)">
+          <header className={BloglStyle.header__image__PC} style={headerBackgroundImagePC}>
+            <div>
+              <div className={BloglStyle.blog__title__container}>
+                <Link to='/' className={BloglStyle.blog__title__text}><span>ソタのほほん地下貯蔵庫</span></Link>
+              </div>
+              <h1
+                itemProp="headline"
+                className={BloglStyle.header__title}
+              >
+                {post.frontmatter.title}
+              </h1>
+              <p className={BloglStyle.header__title}>{post.frontmatter.date}</p>
+            </div>
+          </header>
+        </MediaQuery>
+
+
+
+
+
+
         <div className={BloglStyle.posts__image__container}>
           <Image
             fluid={post.frontmatter.hero.childImageSharp.fluid}

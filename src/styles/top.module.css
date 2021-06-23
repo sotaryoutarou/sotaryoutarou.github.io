@@ -11,7 +11,7 @@
 
 .header__PC {
     position: relative;
-	height: calc( 70vw / 1280 * 800);
+	height: calc( 50vw / 1280 * 800);
     display: flex;
     justify-content: center;
     align-items: center;

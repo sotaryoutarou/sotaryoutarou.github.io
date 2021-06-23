@@ -28,6 +28,9 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
       <article itemScope itemType="http://schema.org/Article">
         <header className={BloglStyle.header__image} style={headerBackgroundImage}>
           <div>
+            <div className={BloglStyle.blog__title__container}>
+              <Link to='/' className={BloglStyle.blog__title__text}><span>ソタのほほん地下貯蔵庫</span></Link>
+            </div>
             <h1
               itemProp="headline"
               className={BloglStyle.header__title}

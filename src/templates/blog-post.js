@@ -13,7 +13,8 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
   const { previous, next } = pageContext
 
   const headerBackgroundImage = {
-    backgroundImage: `url(${headerImage})`, 
+    backgroundImage: `url(${headerImage})`,
+    backgroundSize:  `contain`,
   }
 
   return (

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+
 .header__SP {
     position: relative;
 	height: calc( 100vw / 3 * 4);
@@ -23,6 +25,8 @@
 .main__title__text {
     color: white;
     text-decoration: none;
+    font-size: 2em;
+    font-family: 'Yusei Magic', sans-serif;
 }
 
 .main__title__container {
@@ -31,6 +35,7 @@
 
 .sub__title__text {
     color: white;
+    font-family: 'Yusei Magic', sans-serif;
 }
 
 .sub__title__container {

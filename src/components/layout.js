@@ -23,8 +23,18 @@ const Layout = ({ location, title, children }) => {
       <React.Fragment>
         <MediaQuery query="(max-width: 480px)">
           <header className={TopPageStyle.header__SP} style={headerBackgroundImageSP}>
-            <Link to='/' className={TopPageStyle.main__title__text}>ソタのほほん地下貯蔵庫</Link>
-            <font size="3">のほほんなことを蓄積</font>
+            <div className={TopPageStyle.title__container}>
+                <div className={TopPageStyle.main__title__container}>
+                  <h1>
+                    <Link to='/' className={TopPageStyle.main__title__text}><span>ソタのほほん</span><span>地下貯蔵庫</span></Link>
+                  </h1>
+                </div>
+                <div className={TopPageStyle.sub__title__container}>
+                  <span className={TopPageStyle.sub__title__text}>
+                    〜のほほんなことを蓄積〜
+                  </span>
+                </div>
+              </div>
           </header>
         </MediaQuery>
         <MediaQuery query="(min-width: 481px)">
@@ -37,7 +47,7 @@ const Layout = ({ location, title, children }) => {
               </div>
               <div className={TopPageStyle.sub__title__container}>
                 <span className={TopPageStyle.sub__title__text}>
-                  のほほんなことを蓄積
+                  〜のほほんなことを蓄積〜
                 </span>
               </div>
             </div>

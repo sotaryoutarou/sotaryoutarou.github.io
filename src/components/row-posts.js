@@ -1,10 +1,10 @@
 import React from 'react'
-import PostStyles from '../styles/post.module.css'
+import * as PostStyles from '../styles/post.module.css'
 import Image from "gatsby-image";
 import { Link } from "gatsby"
 
 // 画像ファイルパスをプロパティに取るようなコンポーネントを定義
-export default ({ posts }) => (
+const rowPosts = ({ posts }) => (
   posts.map(( post, index ) => {
     let columnContainerStyle;
     if (index === 0) {
@@ -34,6 +34,7 @@ export default ({ posts }) => (
                 <h3 className={PostStyles.title__content}>
                   <Link
                     to={post.fields.slug}
+                    className={PostStyles.post__link}
                   >
                     {post.frontmatter.title}
                   </Link>
@@ -46,7 +47,10 @@ export default ({ posts }) => (
                   }}
                 />
                 <div className={PostStyles.more__text__content}>
-                  <Link to={post.fields.slug}>
+                  <Link 
+                    to={post.fields.slug}
+                    className={PostStyles.post__link}
+                  >
                     続きを読む
                   </Link>
                 </div>
@@ -57,3 +61,5 @@ export default ({ posts }) => (
     );
   })
 )
+
+export default rowPosts

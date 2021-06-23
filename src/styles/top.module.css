@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap');
 
 .header__SP {
     position: relative;
@@ -26,7 +26,7 @@
     color: white;
     text-decoration: none;
     font-size: 1.5em;
-    font-family: 'Yusei Magic', sans-serif;
+    font-family: 'Hachi Maru Pop', cursive;
     letter-spacing: 0.05em;
 }
 
@@ -41,7 +41,7 @@
 .sub__title__text {
     letter-spacing: 0.1em;
     color: white;
-    font-family: 'Yusei Magic', sans-serif;
+    font-family: 'Hachi Maru Pop', cursive;
 }
 
 .sub__title__container {

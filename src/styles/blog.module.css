@@ -27,6 +27,10 @@
     color: #444;
 }
 
+.post__content a:hover {
+    color: #777;
+}
+
 .posts__image__container {
     margin: 5% 10%;
 }
@@ -41,6 +45,10 @@
 
 .link a {
     color: #444;
+}
+
+.link a:hover {
+    color: #777;
 }
 
 .blog__title__container {

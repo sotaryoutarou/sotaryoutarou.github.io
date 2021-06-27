@@ -30,22 +30,10 @@ const rowPosts = ({ posts }) => (
             </Link>
             <div className={PostStyles.text__container}>
               <small>{post.frontmatter.date}</small>
-              <header>
-                <h3 className={PostStyles.title__content}>
-                  <Link
-                    to={post.fields.slug}
-                    className={PostStyles.post__link}
-                  >
-                    {post.frontmatter.title}
-                  </Link>
-                </h3>
-              </header>
               <section>
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: post.frontmatter.description || post.excerpt,
-                  }}
-                />
+                <Link to={post.fields.slug} className={PostStyles.post__link}>
+                  <p>{post.excerpt}</p>
+                </Link>
                 <div className={PostStyles.more__text__content}>
                   <Link 
                     to={post.fields.slug}

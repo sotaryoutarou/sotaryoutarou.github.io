@@ -64,12 +64,6 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             </div>
           </header>
         </MediaQuery>
-
-
-
-
-
-
         <div className={BloglStyle.posts__image__container}>
           <Image
             fluid={post.frontmatter.hero.childImageSharp.fluid}
@@ -79,8 +73,6 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
               shadowColor: "grey",
               shadowOpacity: 0.5,
               shadowRadius: 10,
-              // width: '60%',
-              // height: 'auto',
             }}
           />
         </div>
@@ -97,7 +89,6 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         <footer>
         </footer>
       </article>
-
       <nav>
         <ul
           style={{
@@ -108,14 +99,14 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             padding: 0,
           }}
         >
-          <li>
+          <li className={BloglStyle.link}>
             {previous && (
               <Link to={previous.fields.slug} rel="prev">
                 ← {previous.frontmatter.title}
               </Link>
             )}
           </li>
-          <li>
+          <li className={BloglStyle.link}>
             {next && (
               <Link to={next.fields.slug} rel="next">
                 {next.frontmatter.title} →

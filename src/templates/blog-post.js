@@ -99,14 +99,14 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             padding: 0,
           }}
         >
-          <li>
+          <li className={BloglStyle.link}>
             {previous && (
               <Link to={previous.fields.slug} rel="prev">
                 ← {previous.frontmatter.title}
               </Link>
             )}
           </li>
-          <li>
+          <li className={BloglStyle.link}>
             {next && (
               <Link to={next.fields.slug} rel="next">
                 {next.frontmatter.title} →

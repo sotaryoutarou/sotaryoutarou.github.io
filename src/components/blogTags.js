@@ -5,9 +5,11 @@ import kebabCase from 'lodash/kebabCase';
 import * as styles from '../styles/tag.module.css';
 
 const Tag = ({ tag }) => (
-  <Link to={`/tags/${kebabCase(tag)}/`}>
-    <li>{tag}</li>
-  </Link>
+  <li>
+    <Link to={`/tags/${kebabCase(tag)}/`}>
+      {tag}
+    </Link>
+  </li>
 );
 
 const Tags = ({ tags }) => (

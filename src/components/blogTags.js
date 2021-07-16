@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import kebabCase from 'lodash/kebabCase';
 
-// import styles from './../layout/tag.module.css';
+import * as styles from '../styles/tag.module.css';
 
 const Tag = ({ tag }) => (
   <Link to={`/tags/${kebabCase(tag)}/`}>
@@ -11,7 +11,7 @@ const Tag = ({ tag }) => (
 );
 
 const Tags = ({ tags }) => (
-  <ul>
+  <ul className={styles.tags}>
     {(tags || []).map(tag => (
       <Tag key={tag} tag={tag} />
     ))}

@@ -2,7 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import Tags from "../components/tags/blogTags"
+import Tags from "../components/blogTags"
 import { rhythm } from "../utils/typography"
 import * as BloglStyle from '../styles/blog.module.css'
 import headerImagePC from '../images/post-header.png'

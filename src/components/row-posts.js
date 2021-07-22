@@ -2,6 +2,7 @@ import React from 'react'
 import * as PostStyles from '../styles/post.module.css'
 import Image from "gatsby-image";
 import { Link } from "gatsby"
+import Tags from './TopPageTags.js'
 
 const rowPosts = ({ posts }) => (
   posts.map(( post, index ) => {
@@ -33,7 +34,8 @@ const rowPosts = ({ posts }) => (
                 <Link to={post.fields.slug} className={PostStyles.post__link}>
                   <p>{post.excerpt}</p>
                 </Link>
-                <div className={PostStyles.more__text__content}>
+                <div className={PostStyles.tags__container}>
+                  <Tags tags={post.frontmatter.tags}/>
                 </div>
               </section>
             </div>

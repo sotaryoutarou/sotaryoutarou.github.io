@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-import * as styles from '../styles/blogTag.module.css';
+import * as styles from '../styles/topPageTag.module.css';
 
 const Tag = ({ tag }) => (
   <li>

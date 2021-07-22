@@ -20,6 +20,9 @@ const TagPostTemplate = ({ data, pageContext, location }) => {
     <div>
       <Layout location={location} title={siteTitle}>
         <Seo title={siteTitle} type='website' />
+        <div className={PostStyles.tag__title__container}>
+          <h1 className={PostStyles.tag__title}>{tag}</h1>
+        </div>
         {posts.map(( nodes ) => {
           return (
             <div className={PostStyles.posts__container}>

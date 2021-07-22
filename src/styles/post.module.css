@@ -34,6 +34,19 @@ a.post__link {
     margin: 0.75rem 1.75rem;;
 }
 
+.tag__title__container {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.tag__title {
+    color: #444444;
+}
+
+.tag__title:before {
+    content:'#';
+}
+
 @media (max-width: 1023px) {
     [class*="column__"] {
         width: 80%;

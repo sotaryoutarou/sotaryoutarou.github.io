@@ -1,12 +1,11 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import kebabCase from 'lodash/kebabCase';
 
 import * as styles from '../styles/tag.module.css';
 
 const Tag = ({ tag }) => (
   <li>
-    <Link to={`/tags/${kebabCase(tag)}/`}>
+    <Link to={`/tags/${tag}/`}>
       {tag}
     </Link>
   </li>

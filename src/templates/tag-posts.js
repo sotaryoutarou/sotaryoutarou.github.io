@@ -8,7 +8,7 @@ import RowPosts from "../components/row-posts"
 const TagPostTemplate = ({ data, pageContext, location }) => {
 
   const { tag } = pageContext
-  const siteTitle = 'ソタのほほん地下貯蔵庫' + tag
+  const siteTitle = 'ソタのほほん地下貯蔵庫 | #' + tag
   var posts = []
 
   data.allMarkdownRemark.nodes.map(( node, index ) => {
@@ -59,6 +59,7 @@ export const pageQuery = graphql`
                       }
                     }
                   }
+                  tags
                 }
             }
         }

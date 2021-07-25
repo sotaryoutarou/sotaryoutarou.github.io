@@ -6,6 +6,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   // Define a template for blog post
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
+  const tagPosts  = path.resolve(`./src/templates/tag-posts.js`)
 
   // Get all markdown blog posts sorted by date
   const result = await graphql(
@@ -22,6 +23,12 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             frontmatter {
               title
             }
+          }
+        }
+        tags: allMarkdownRemark(limit: 1000) {
+          group(field: frontmatter___tags) {
+            tag: fieldValue
+            totalCount
           }
         }
       }
@@ -55,6 +62,16 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       })
     })
   }
+
+  result.data.tags.group.forEach(data => {
+    createPage({
+      path: `/tags/${data.tag}/`,
+      component: tagPosts,
+      context: {
+        tag: data.tag,
+      },
+    })
+  })
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {

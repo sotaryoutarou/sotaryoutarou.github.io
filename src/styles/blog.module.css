@@ -43,6 +43,10 @@
     letter-spacing: 0.05em;
 }
 
+.blog__title__text:hover {
+    text-decoration: underline;
+}
+
 .link a {
     color: #444;
 }
@@ -52,7 +56,7 @@
 }
 
 .blog__title__container {
-    margin-bottom: 10%;
+    margin: 3em 0 3em 0;
 }
 
 @media (max-width: 1023px) {

@@ -2,6 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import Tags from "../components/blogTags"
 import { rhythm } from "../utils/typography"
 import * as BloglStyle from '../styles/blog.module.css'
 import headerImagePC from '../images/post-header.png'
@@ -45,6 +46,9 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
                 {post.frontmatter.title}
               </h1>
               <p className={BloglStyle.header__title}>{post.frontmatter.date}</p>
+              <Tags
+                tags={post.frontmatter.tags}
+              />
             </div>
           </header>
         </MediaQuery>
@@ -61,6 +65,9 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
                 {post.frontmatter.title}
               </h1>
               <p className={BloglStyle.header__title}>{post.frontmatter.date}</p>
+              <Tags
+                tags={post.frontmatter.tags}
+              />
             </div>
           </header>
         </MediaQuery>
@@ -144,6 +151,7 @@ export const pageQuery = graphql`
           }
           publicURL
         }
+        tags
       }
     }
   }

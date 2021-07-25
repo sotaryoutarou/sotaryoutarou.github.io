@@ -26,12 +26,21 @@ a.post__link {
     text-decoration: none;
 }
 
-.more__text__content {
-    text-align: end;
-}
-
 .text__container {
     margin: 0.75rem 1.75rem;;
+}
+
+.tag__title__container {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.tag__title {
+    color: #444444;
+}
+
+.tag__title:before {
+    content:'#';
 }
 
 @media (max-width: 1023px) {
@@ -43,12 +52,12 @@ a.post__link {
 
 @media (min-width: 1024px) {
     .column__l__container {
-        width: 40%;
-        margin: 0px calc( 20% / 6 ) calc( 20% / 3 ) calc( 20% / 3 );
+        width: 45%;
+        margin: 0px calc( 10% / 6 ) calc( 10% / 3 ) calc( 10% / 3 );
     }
     
     .column__r__container {
-        width: 40%;
-        margin: 0px calc( 20% / 3 ) calc( 20% / 3 ) calc( 20% / 6 );
+        width: 45%;
+        margin: 0px calc( 10% / 3 ) calc( 10% / 3 ) calc( 10% / 6 );
     }
 }

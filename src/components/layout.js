@@ -18,7 +18,7 @@ const Layout = ({ location, title, children }) => {
   }
   let header
 
-  if (location.pathname === rootPath) {
+  if (location.pathname === rootPath || location.pathname.startsWith('/tags/')) {
     header = (
       <React.Fragment>
         <MediaQuery query="(max-width: 480px)">

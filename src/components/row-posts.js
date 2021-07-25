@@ -2,8 +2,8 @@ import React from 'react'
 import * as PostStyles from '../styles/post.module.css'
 import Image from "gatsby-image";
 import { Link } from "gatsby"
+import Tags from './TopPageTags.js'
 
-// 画像ファイルパスをプロパティに取るようなコンポーネントを定義
 const rowPosts = ({ posts }) => (
   posts.map(( post, index ) => {
     let columnContainerStyle;
@@ -34,14 +34,7 @@ const rowPosts = ({ posts }) => (
                 <Link to={post.fields.slug} className={PostStyles.post__link}>
                   <p>{post.excerpt}</p>
                 </Link>
-                <div className={PostStyles.more__text__content}>
-                  <Link 
-                    to={post.fields.slug}
-                    className={PostStyles.post__link}
-                  >
-                    続きを読む
-                  </Link>
-                </div>
+                <Tags tags={post.frontmatter.tags}/>
               </section>
             </div>
           </article>

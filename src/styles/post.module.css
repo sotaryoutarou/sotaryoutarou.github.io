@@ -52,12 +52,12 @@ a.post__link {
 
 @media (min-width: 1024px) {
     .column__l__container {
-        width: 40%;
-        margin: 0px calc( 20% / 6 ) calc( 20% / 3 ) calc( 20% / 3 );
+        width: 45%;
+        margin: 0px calc( 10% / 6 ) calc( 10% / 3 ) calc( 10% / 3 );
     }
     
     .column__r__container {
-        width: 40%;
-        margin: 0px calc( 20% / 3 ) calc( 20% / 3 ) calc( 20% / 6 );
+        width: 45%;
+        margin: 0px calc( 10% / 3 ) calc( 10% / 3 ) calc( 10% / 6 );
     }
 }

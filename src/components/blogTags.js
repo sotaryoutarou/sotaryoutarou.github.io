@@ -6,7 +6,7 @@ import * as styles from '../styles/blogTag.module.css';
 const Tag = ({ tag }) => (
   <li>
     <Link to={`/tags/${tag}/`}>
-      {tag}
+      #{tag}
     </Link>
   </li>
 );

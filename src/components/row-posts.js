@@ -34,9 +34,7 @@ const rowPosts = ({ posts }) => (
                 <Link to={post.fields.slug} className={PostStyles.post__link}>
                   <p>{post.excerpt}</p>
                 </Link>
-                <div className={PostStyles.tags__container}>
-                  <Tags tags={post.frontmatter.tags}/>
-                </div>
+                <Tags tags={post.frontmatter.tags}/>
               </section>
             </div>
           </article>

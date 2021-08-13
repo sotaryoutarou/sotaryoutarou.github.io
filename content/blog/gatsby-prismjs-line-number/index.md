@@ -1,5 +1,5 @@
 ---
-title: 【Gatsby】PrismJSの行番号を表示しようと試みたけど一筋縄ではいかなかった話
+title: 【Gatsby】PrismJSの行番号を表示しようと試みたけど崩れてしまったのでCSSでなんとかする
 date: "2021-08-13T22:40:32.169Z"
 description: コードブロックに行番号を表示したら表示崩れを起こしたのでCSSで調整する
 hero: ./images/thumbnail.png

@@ -3,7 +3,7 @@ title: 【Gatsby】Prismで良さげなコードハイライトにして行番�
 date: "2021-05-15T22:40:32.169Z"
 description: デフォルトのコードブロックの視認性が悪いので調整するよ
 hero: ./images/thumbnail.png
-tags: ['Gatsby', 'prism', 'Tech']
+tags: ['Tech', 'Gatsby', 'prism']
 
 ---
 
@@ -62,73 +62,9 @@ options: {
 },
 ```
 
-## 行番号付与
-
-ついでに行番号も付与します。 `gatsby-remark-prismjs` のオプションを設定していきます。
-
-Before
-
-```js:title=gatsby-config.js
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          /* ~略~ */
-          `gatsby-remark-prismjs`,
-```
-
-After
-
-```js:title=gatsby-config.js
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          /* ~略~ */
-          {
-            resolve: `gatsby-remark-prismjs`,
-            options: {
-              classPrefix: "language-",
-              inlineCodeMarker: null,
-              aliases: {},
-              showLineNumbers: true,
-              noInlineHighlight: false,
-            },
-          },
-```
-
-次にCSSを読み込みます。
-
-```js:title=gatsby-browser.js
-import "prismjs/plugins/line-numbers/prism-line-numbers.css" 
-```
-
-ここで問題なのが、行番号の表示がずれてしまっています。こりゃいかん。
-
-![行番号CSS当てる前](./images/before-css.png)
-
-CSSで調整します。今回はグローバルなCSSで当ててますがお好みでどうぞ。
-
-```css:title=global.css
-.line-numbers .line-numbers-rows {
-    padding: 1rem 0 1rem 0.5rem;
-}
-```
-
-グローバルCSSはこんな感じで読み込みました。
-
-```js:title=gatsby-browser.js
-import "./src/styles/global.css"
-```
-
-完成！なんとなくいい感じになった気がする
-
-![行番号CSS当てた後](./images/after-css.png)
-
 ## 参考記事
 
 - [Gatsby Material Starterで行番号を表示する](https://www.yo1000.com/gatsby-number-lines)
-- [GatsbyJSで作っているブログでシンタックスハイライトが適用されるようにした](https://kikunantoka.com/2019/12/03--install-syntax-highlight/)
 
 ## PR
 

@@ -1,0 +1,322 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:100%/1.45 'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro','Yu Gothic Medium','游ゴシック Medium','YuGothic','游ゴシック体','メイリオ',sans-serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.8);font-family:'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro','Yu Gothic Medium','游ゴシック Medium','YuGothic','游ゴシック体','メイリオ',sans-serif;font-weight:normal;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;color:inherit;font-family:'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro','Yu Gothic Medium','游ゴシック Medium','YuGothic','游ゴシック体','メイリオ',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:2rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;color:inherit;font-family:'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro','Yu Gothic Medium','游ゴシック Medium','YuGothic','游ゴシック体','メイリオ',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:1.51572rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;color:inherit;font-family:'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro','Yu Gothic Medium','游ゴシック Medium','YuGothic','游ゴシック体','メイリオ',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:1.31951rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;color:inherit;font-family:'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro','Yu Gothic Medium','游ゴシック Medium','YuGothic','游ゴシック体','メイリオ',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;color:inherit;font-family:'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro','Yu Gothic Medium','游ゴシック Medium','YuGothic','游ゴシック体','メイリオ',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:0.87055rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;color:inherit;font-family:'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro','Yu Gothic Medium','游ゴシック Medium','YuGothic','游ゴシック体','メイリオ',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:0.81225rem;line-height:1.1;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}ul{margin-left:1.45rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;list-style-position:outside;list-style-image:none;}ol{margin-left:1.45rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;font-size:0.85rem;line-height:1.45rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;font-size:1rem;line-height:1.45rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}blockquote{margin-left:1.45rem;margin-right:1.45rem;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.45rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}b{font-weight:bold;}strong{font-weight:bold;}dt{font-weight:bold;}th{font-weight:bold;}li{margin-bottom:calc(1.45rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.45rem;margin-bottom:calc(1.45rem / 2);margin-top:calc(1.45rem / 2);}li > ul{margin-left:1.45rem;margin-bottom:calc(1.45rem / 2);margin-top:calc(1.45rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.45rem / 2);}code{font-size:0.85rem;line-height:1.45rem;}kbd{font-size:0.85rem;line-height:1.45rem;}samp{font-size:0.85rem;line-height:1.45rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:0.96667rem;padding-right:0.96667rem;padding-top:0.725rem;padding-bottom:calc(0.725rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}</style><style data-href="/styles.28fc21eb9a347a954fb8.css" data-identity="gatsby-global-css">@import url(https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap);@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:100;src:local("Montserrat Thin "),local("Montserrat-Thin"),url(/static/montserrat-latin-100-8d7d79679b70dbe27172b6460e7a7910.woff2) format("woff2"),url(/static/montserrat-latin-100-ec38980a9e0119a379e2a9b3dbb1901a.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:100;src:local("Montserrat Thin italic"),local("Montserrat-Thinitalic"),url(/static/montserrat-latin-100italic-e279051046ba1286706adc886cf1c96b.woff2) format("woff2"),url(/static/montserrat-latin-100italic-3b325a3173c8207435cd1b76e19bf501.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:200;src:local("Montserrat Extra Light "),local("Montserrat-Extra Light"),url(/static/montserrat-latin-200-9d266fbbfa6cab7009bd56003b1eeb67.woff2) format("woff2"),url(/static/montserrat-latin-200-2d8ba08717110d27122e54c34b8a5798.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:200;src:local("Montserrat Extra Light italic"),local("Montserrat-Extra Lightitalic"),url(/static/montserrat-latin-200italic-6e5b3756583bb2263eb062eae992735e.woff2) format("woff2"),url(/static/montserrat-latin-200italic-a0d6f343e4b536c582926255367a57da.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:300;src:local("Montserrat Light "),local("Montserrat-Light"),url(/static/montserrat-latin-300-00b3e893aab5a8fd632d6342eb72551a.woff2) format("woff2"),url(/static/montserrat-latin-300-ea303695ceab35f17e7d062f30e0173b.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:300;src:local("Montserrat Light italic"),local("Montserrat-Lightitalic"),url(/static/montserrat-latin-300italic-56f34ea368f6aedf89583d444bbcb227.woff2) format("woff2"),url(/static/montserrat-latin-300italic-54b0bf2c8c4c12ffafd803be2466a790.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:400;src:local("Montserrat Regular "),local("Montserrat-Regular"),url(/static/montserrat-latin-400-b71748ae4f80ec8c014def4c5fa8688b.woff2) format("woff2"),url(/static/montserrat-latin-400-0659a9f4e90db5cf51b50d005bff1e41.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:400;src:local("Montserrat Regular italic"),local("Montserrat-Regularitalic"),url(/static/montserrat-latin-400italic-6eed6b4cbb809c6efc7aa7ddad6dbe3e.woff2) format("woff2"),url(/static/montserrat-latin-400italic-7583622cfde30ae49086d18447ab28e7.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:500;src:local("Montserrat Medium "),local("Montserrat-Medium"),url(/static/montserrat-latin-500-091b209546e16313fd4f4fc36090c757.woff2) format("woff2"),url(/static/montserrat-latin-500-edd311588712a96bbf435fad264fff62.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:500;src:local("Montserrat Medium italic"),local("Montserrat-Mediumitalic"),url(/static/montserrat-latin-500italic-c90ced68b46050061d1a41842d6dfb43.woff2) format("woff2"),url(/static/montserrat-latin-500italic-5146cbfe02b1deea5dffea27a5f2f998.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:600;src:local("Montserrat SemiBold "),local("Montserrat-SemiBold"),url(/static/montserrat-latin-600-0480d2f8a71f38db8633b84d8722e0c2.woff2) format("woff2"),url(/static/montserrat-latin-600-b77863a375260a05dd13f86a1cee598f.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:600;src:local("Montserrat SemiBold italic"),local("Montserrat-SemiBolditalic"),url(/static/montserrat-latin-600italic-cf46ffb11f3a60d7df0567f8851a1d00.woff2) format("woff2"),url(/static/montserrat-latin-600italic-c4fcfeeb057724724097167e57bd7801.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:700;src:local("Montserrat Bold "),local("Montserrat-Bold"),url(/static/montserrat-latin-700-7dbcc8a5ea2289d83f657c25b4be6193.woff2) format("woff2"),url(/static/montserrat-latin-700-99271a835e1cae8c76ef8bba99a8cc4e.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:700;src:local("Montserrat Bold italic"),local("Montserrat-Bolditalic"),url(/static/montserrat-latin-700italic-c41ad6bdb4bd504a843d546d0a47958d.woff2) format("woff2"),url(/static/montserrat-latin-700italic-6779372f04095051c62ed36bc1dcc142.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:800;src:local("Montserrat ExtraBold "),local("Montserrat-ExtraBold"),url(/static/montserrat-latin-800-db9a3e0ba7eaea32e5f55328ace6cf23.woff2) format("woff2"),url(/static/montserrat-latin-800-4e3c615967a2360f5db87d2f0fd2456f.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:800;src:local("Montserrat ExtraBold italic"),local("Montserrat-ExtraBolditalic"),url(/static/montserrat-latin-800italic-bf45bfa14805969eda318973947bc42b.woff2) format("woff2"),url(/static/montserrat-latin-800italic-fe82abb0bcede51bf724254878e0c374.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:900;src:local("Montserrat Black "),local("Montserrat-Black"),url(/static/montserrat-latin-900-e66c7edc609e24bacbb705175669d814.woff2) format("woff2"),url(/static/montserrat-latin-900-8211f418baeb8ec880b80ba3c682f957.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:900;src:local("Montserrat Black italic"),local("Montserrat-Blackitalic"),url(/static/montserrat-latin-900italic-4454c775e48152c1a72510ceed3603e2.woff2) format("woff2"),url(/static/montserrat-latin-900italic-efcaa0f6a82ee0640b83a0916e6e8d68.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:normal;font-weight:300;src:local("Merriweather Light "),local("Merriweather-Light"),url(/static/merriweather-latin-300-fc117160c69a8ea0851b26dd14748ee4.woff2) format("woff2"),url(/static/merriweather-latin-300-58b18067ebbd21fda77b67e73c241d3b.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:italic;font-weight:300;src:local("Merriweather Light italic"),local("Merriweather-Lightitalic"),url(/static/merriweather-latin-300italic-fe29961474f8dbf77c0aa7b9a629e4bc.woff2) format("woff2"),url(/static/merriweather-latin-300italic-23c3f1f88683618a4fb8d265d33d383a.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:normal;font-weight:400;src:local("Merriweather Regular "),local("Merriweather-Regular"),url(/static/merriweather-latin-400-d9479e8023bef9cbd9bf8d6eabd6bf36.woff2) format("woff2"),url(/static/merriweather-latin-400-040426f99ff6e00b86506452e0d1f10b.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:italic;font-weight:400;src:local("Merriweather Regular italic"),local("Merriweather-Regularitalic"),url(/static/merriweather-latin-400italic-2de7bfeaf08fb03d4315d49947f062f7.woff2) format("woff2"),url(/static/merriweather-latin-400italic-79db67aca65f5285964ab332bd65f451.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:normal;font-weight:700;src:local("Merriweather Bold "),local("Merriweather-Bold"),url(/static/merriweather-latin-700-4b08e01d805fa35d7bf777f1b24314ae.woff2) format("woff2"),url(/static/merriweather-latin-700-22fb8afba4ab1f093b6ef9e28a9b6e92.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:italic;font-weight:700;src:local("Merriweather Bold italic"),local("Merriweather-Bolditalic"),url(/static/merriweather-latin-700italic-cd92541b177652fffb6e3b952f1c33f1.woff2) format("woff2"),url(/static/merriweather-latin-700italic-f87f3d87cea0dd0979bfc8ac9ea90243.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:normal;font-weight:900;src:local("Merriweather Black "),local("Merriweather-Black"),url(/static/merriweather-latin-900-f813fc6a4bee46eda5224ac7ebf1b7be.woff2) format("woff2"),url(/static/merriweather-latin-900-5d4e42cb44410674acd99153d57df032.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:italic;font-weight:900;src:local("Merriweather Black italic"),local("Merriweather-Blackitalic"),url(/static/merriweather-latin-900italic-b7901d85486871c1779c0e93ddd85656.woff2) format("woff2"),url(/static/merriweather-latin-900italic-9647f9fdab98756989a8a5550eb205c3.woff) format("woff")}code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#ccc;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;text-align:left;white-space:pre;word-break:normal;word-spacing:normal}pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#2d2d2d}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#999}.token.punctuation{color:#ccc}.token.attr-name,.token.deleted,.token.namespace,.token.tag{color:#e2777a}.token.function-name{color:#6196cc}.token.boolean,.token.function,.token.number{color:#f08d49}.token.class-name,.token.constant,.token.property,.token.symbol{color:#f8c555}.token.atrule,.token.builtin,.token.important,.token.keyword,.token.selector{color:#cc99cd}.token.attr-value,.token.char,.token.regex,.token.string,.token.variable{color:#7ec699}.token.entity,.token.operator,.token.url{color:#67cdcc}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.inserted{color:green}pre[class*=language-].line-numbers{counter-reset:linenumber;padding-left:3.8em;position:relative}pre[class*=language-].line-numbers>code{position:relative;white-space:inherit}.line-numbers .line-numbers-rows{border-right:1px solid #999;font-size:100%;left:-3.8em;letter-spacing:-1px;pointer-events:none;position:absolute;top:0;-webkit-user-select:none;-ms-user-select:none;user-select:none;width:3em}.line-numbers-rows>span{counter-increment:linenumber;display:block}.line-numbers-rows>span:before{color:#999;content:counter(linenumber);display:block;padding-right:.8em;text-align:right}.line-numbers .line-numbers-rows{padding:1rem 0 1rem .5rem}.gatsby-code-title{background:#272822;border-top-right-radius:.3em;display:block;top:10px;width:100%}.gatsby-code-title,.gatsby-code-title span{border-top-left-radius:.3em;position:relative}.gatsby-code-title span{background:#777;border-bottom-right-radius:.3em;color:#eee;display:inline;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;padding:3px;top:1px}.gatsby-highlight{margin-bottom:10px}.global-module--main--1Kc2n{background-color:#f4f5f7;color:#444;margin-left:auto;margin-right:auto;padding-bottom:15px}.global-module--header--h-IJe{margin-bottom:6.66667%}.top-module--header__SP--Sts9b{height:133.33333vw}.top-module--header__PC--2Umpc,.top-module--header__SP--Sts9b{align-items:center;display:flex;justify-content:center;margin-bottom:6.66667%;position:relative}.top-module--header__PC--2Umpc{height:31.25vw}.top-module--main__title__text--2ao0U{color:#fff;font-family:Hachi Maru Pop,cursive;font-size:1.5em;letter-spacing:.05em;text-decoration:none}.top-module--main__title__text--2ao0U span{display:inline-block}.top-module--main__title__container--sfcee{text-align:center}.top-module--sub__title__text--2MJMf{color:#fff;font-family:Hachi Maru Pop,cursive;letter-spacing:.1em}.top-module--sub__title__container--6huJR{text-align:center}.post-module--posts__container--1Ndsd{display:flex;flex-wrap:wrap}[class*=column__]{background-color:#fefefe;border-radius:5px 5px 5px 5px;box-shadow:0 10px 10px -5px rgba(0,0,0,.5);overflow:hidden}.post-module--title__content--2Wa1K,a.post-module--post__link--2n1_o:active,a.post-module--post__link--2n1_o:link,a.post-module--post__link--2n1_o:visited{color:#444}a.post-module--post__link--2n1_o:hover{color:#777}a.post-module--post__link--2n1_o{text-decoration:none}.post-module--text__container--gc0BY{margin:.75rem 1.75rem}.post-module--tag__title__container--1hE9x{margin-bottom:2rem;text-align:center}.post-module--tag__title--3acaD{color:#444}.post-module--tag__title--3acaD:before{content:"#"}@media (max-width:1023px){[class*=column__]{margin:0 auto 6.66667%;width:80%}}@media (min-width:1024px){.post-module--column__l__container--3JKWW{margin:0 1.66667% 3.33333% 3.33333%;width:45%}.post-module--column__r__container--3X7kh{margin:0 3.33333% 3.33333% 1.66667%;width:45%}}.topPageTag-module--tags--3cL7h{list-style:none;margin-left:0;overflow:hidden}.topPageTag-module--tags--3cL7h li{float:left;text-align:center}.topPageTag-module--tags--3cL7h a{border:1px solid #ccc;border-radius:.5em 0 .5em 0;color:#444;display:inline-block;font-size:.75em;line-height:1;margin:0 .5em 0 0;padding:.6em;text-decoration:none}.topPageTag-module--tags--3cL7h a:hover{background-color:#fff;color:#777;text-decoration:underline}.blogTag-module--tags--38w6v{list-style:none;margin-left:0;overflow:hidden}.blogTag-module--tags--38w6v li{float:left;text-align:center}.blogTag-module--tags--38w6v a{border:1px solid #fff;border-radius:.5em 0 .5em 0;color:#fff;display:inline-block;font-size:.75em;line-height:1;margin:0 .5em 0 0;padding:.6em;text-decoration:none}.blogTag-module--tags--38w6v a:hover{background-color:#fff;color:#046d56}.blog-module--header__image__SP--1kE5q{align-items:center;display:flex;height:133.33333vw;justify-content:center;margin-bottom:6.66667%;position:relative}.blog-module--header__image__PC--3IXlz{align-items:center;display:flex;height:31.25vw;justify-content:center;position:relative}.blog-module--header__title--PQagB{color:#fff}.blog-module--post__content--29_dj{margin:10px 10% 0}.blog-module--post__content--29_dj a{color:#444}.blog-module--post__content--29_dj a:hover{color:#777}.blog-module--posts__image__container--1Cr3C{margin:5% 10%}.blog-module--blog__title__text--1_Zu2{color:#fff;font-family:Hachi Maru Pop,cursive;font-size:1.5em;letter-spacing:.05em;text-decoration:none}.blog-module--blog__title__text--1_Zu2:hover{text-decoration:underline}.blog-module--link--1vUq8 a{color:#444}.blog-module--link--1vUq8 a:hover{color:#777}.blog-module--blog__title__container--2gn83{margin:3em 0}@media (max-width:1023px){.blog-module--posts__image__container--1Cr3C{margin:5% 3%}}@media (min-width:1024px){.blog-module--posts__image__container--1Cr3C{margin:5% 10%}}</style><meta name="generator" content="Gatsby 3.7.2"/><link rel="sitemap" type="application/xml" href="/sitemap/sitemap-index.xml"/><link rel="preconnect" href="https://www.google-analytics.com"/><link rel="dns-prefetch" href="https://www.google-analytics.com"/><script>
+  
+  
+  if(true) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'UA-192153083-1', 'auto', {});
+      
+      
+      
+      
+      
+      }</script><link rel="alternate" type="application/rss+xml" href="/rss.xml"/><link rel="icon" href="/favicon-32x32.png?v=5cb46923cefa7c3a7c20787444baf282" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=5cb46923cefa7c3a7c20787444baf282"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=5cb46923cefa7c3a7c20787444baf282"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=5cb46923cefa7c3a7c20787444baf282"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=5cb46923cefa7c3a7c20787444baf282"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=5cb46923cefa7c3a7c20787444baf282"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=5cb46923cefa7c3a7c20787444baf282"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=5cb46923cefa7c3a7c20787444baf282"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=5cb46923cefa7c3a7c20787444baf282"/><title data-react-helmet="true">島根スサノオマジック21-22シーズン展望と注目チーム</title><meta data-react-helmet="true" name="description" content="島根スサノオマジック21-22シーズン展望と個人的注目チーム"/><meta data-react-helmet="true" name="image" content="https://sotaryoutarou.github.io/static/06868cb5f3e9c3025d3d1af905da34ef/thumbnail.png"/><meta data-react-helmet="true" property="og:title" content="島根スサノオマジック21-22シーズン展望と注目チーム"/><meta data-react-helmet="true" property="og:description" content="島根スサノオマジック21-22シーズン展望と個人的注目チーム"/><meta data-react-helmet="true" property="og:type" content="article"/><meta data-react-helmet="true" property="og:url" content="https://sotaryoutarou.github.io/shimane-susanoo-magic-21-22-prospect/"/><meta data-react-helmet="true" property="og:site_name" content="ソタのほほん地下貯蔵庫"/><meta data-react-helmet="true" property="og:locale" content="ja_JP"/><meta data-react-helmet="true" property="og:image" content="https://sotaryoutarou.github.io/static/06868cb5f3e9c3025d3d1af905da34ef/thumbnail.png"/><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"/><meta data-react-helmet="true" name="twitter:creator" content="kylemathews"/><meta data-react-helmet="true" name="twitter:title" content="島根スサノオマジック21-22シーズン展望と注目チーム"/><meta data-react-helmet="true" name="twitter:description" content="島根スサノオマジック21-22シーズン展望と個人的注目チーム"/><meta data-react-helmet="true" name="twitter:image" content="https://sotaryoutarou.github.io/static/06868cb5f3e9c3025d3d1af905da34ef/thumbnail.png"/><meta data-react-helmet="true" name="twitter:site" content="@ryou____8"/><link as="script" rel="preload" href="/webpack-runtime-9697dd70186213a37f96.js"/><link as="script" rel="preload" href="/framework-cbf72beb4922685f4182.js"/><link as="script" rel="preload" href="/app-9817efa31d9f118e3830.js"/><link as="script" rel="preload" href="/commons-1d874c2932fc6b7896b9.js"/><link as="script" rel="preload" href="/5fc4d471716da74c20cd415565d95c4380c7eb4b-c0b722680beead1e4161.js"/><link as="script" rel="preload" href="/component---src-templates-blog-post-js-336a0d6486579d9dfbd2.js"/><link as="fetch" rel="preload" href="/page-data/shimane-susanoo-magic-21-22-prospect/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/1324386404.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="global-module--main--1Kc2n"><main><article itemscope="" itemType="http://schema.org/Article"><div class="blog-module--posts__image__container--1Cr3C"><div class=" gatsby-image-wrapper" style="position:relative;overflow:hidden"><div aria-hidden="true" style="width:100%;padding-bottom:52.5%"></div><img aria-hidden="true" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAA7EAAAOxAGVKw4bAAACMElEQVQoz51TXVPaUBDNj+m/6Q/pv+irM23HcTp2xLZTndo6VmVQOloqilCQbwiBQISEhIQQiHwLKgXxdO6m2D70qQ+b3dnce3bP7rmcrd6hVb1BU3GsVb39L3NwbsGxT8+4x8B8wLABdI0ZrrQJOvoMHX1Kcbv2k/LMOzYlv/jH/AKU69fnCPky8O6eYfuDB8FvaZTSdRSSNYhJHcblAOWshVRIghBXUUwZ4C9k8mb5mnKKYBMwdTi0gMMvp3i3+glb7924OBUgJmvgowqykQpkoUUFwic8xZVck8BUsU1ALGb5R0DWJjND6hMV5tlhSxmjrTkUNbFDQIwaA4id5algLqrAqoxgq2yOd7AZILvADod8KQixKvxfo4ic8IgHROq0zFuI+HOIBQp0bm/rCGsrm9hw7eBoP4B4WIatz9FUxk6HbPAMvSaNoEs9GFIPWrELs3KNWrGLenlIXTMWljwiRbBYEZqw9AeIH12Q3TsYtOF0eMmbKERFbB+c49nyIaqlPgoJDb6DMM30/DgJvzdKC5IyJkK+NBXqMgUYc5iRLBo/wijE8jAlG5xrbQMvl19j8+0Knr9ahWfXC1mwkY+rSAZLRLNRGRGdK3VCCzKkgaM7ZQy7DnS1PoTPSzAScXAv1j1YerOH4PcUksEM8gmZltOpTR+1txAts64++0t3v5chD9DZfwqbj4FTij209RkG5hwd/Z4E/ecF3PzzNSxiNrOWOoGtjjF2P0E7e4xf3zANWDwVqSkAAAAASUVORK5CYII=" alt="" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition-delay:500ms;elevation:4px;shadow-offset:[object Object];shadow-color:grey;shadow-opacity:0.5px;shadow-radius:10px"/><noscript><picture><source srcset="/static/06868cb5f3e9c3025d3d1af905da34ef/dd5bb/thumbnail.png 320w,
+/static/06868cb5f3e9c3025d3d1af905da34ef/f3dec/thumbnail.png 640w,
+/static/06868cb5f3e9c3025d3d1af905da34ef/f3583/thumbnail.png 1200w" sizes="(max-width: 1200px) 100vw, 1200px" /><img loading="lazy" sizes="(max-width: 1200px) 100vw, 1200px" srcset="/static/06868cb5f3e9c3025d3d1af905da34ef/dd5bb/thumbnail.png 320w,
+/static/06868cb5f3e9c3025d3d1af905da34ef/f3dec/thumbnail.png 640w,
+/static/06868cb5f3e9c3025d3d1af905da34ef/f3583/thumbnail.png 1200w" src="/static/06868cb5f3e9c3025d3d1af905da34ef/f3583/thumbnail.png" alt="" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/></picture></noscript></div></div><section itemProp="articleBody" class="blog-module--post__content--29_dj"><h2>なにこれ</h2>
+<p>Bリーグ開幕まで40日を切りました！！</p>
+<p>ここまで開幕が待ち遠しかったことはないでしょう！</p>
+<p>はやる気持ちを抑えきれずブログ記事を綴ってみます！</p>
+<h2>ロスター</h2>
+<p>今年のロスターはこんな感じですね！大きくは昨シーズンと変わりないですが（すごいこと）代表選手がチラホラ見えますね。。。</p>
+<table>
+<thead>
+<tr>
+<th>No</th>
+<th>Name</th>
+<th>Position</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>後藤 翔平</td>
+<td>SG</td>
+</tr>
+<tr>
+<td>2</td>
+<td>ぺリン・ビュフォード</td>
+<td>SF</td>
+</tr>
+<tr>
+<td>3</td>
+<td>安藤 誓哉</td>
+<td>PG</td>
+</tr>
+<tr>
+<td>4</td>
+<td>ニック・ケイ</td>
+<td>PF/C</td>
+</tr>
+<tr>
+<td>5</td>
+<td>山下 泰弘</td>
+<td>PG</td>
+</tr>
+<tr>
+<td>6</td>
+<td>北川 弘</td>
+<td>PG</td>
+</tr>
+<tr>
+<td>8</td>
+<td>リード・トラビス</td>
+<td>PF</td>
+</tr>
+<tr>
+<td>13</td>
+<td>阿部 諒</td>
+<td>SG</td>
+</tr>
+<tr>
+<td>14</td>
+<td>金丸 晃輔</td>
+<td>SG/SF</td>
+</tr>
+<tr>
+<td>15</td>
+<td>白濱 僚祐</td>
+<td>SG/SF</td>
+</tr>
+<tr>
+<td>22</td>
+<td>小阪 彰久</td>
+<td>PF</td>
+</tr>
+<tr>
+<td>28</td>
+<td>ウィリアムス ニカ</td>
+<td>C</td>
+</tr>
+</tbody>
+</table>
+<h3>移籍について</h3>
+<p>杉浦/ブルックス/神里が退団し、金丸/安藤/ケイが加入しました。</p>
+<p>ポジション別にみると、</p>
+<ul>
+<li>神里→安藤</li>
+<li>杉浦→金丸</li>
+<li>ブルックス→ケイ</li>
+</ul>
+<p>のような変化がありました。まさに補強ですね！！</p>
+<p>ただ、杉浦の方がサイズがあってリバウンドにはアドバンテージがあったり、ビュフォード→ブルックスの超速ハイローが見れなくなったり、失ったものも確かにあるのでどう補っていくか注目です！</p>
+<h3>ヘッドコーチについて</h3>
+<p>前香川HCのポールヘナレさんが今シーズン島根を率いてくれます。ニュージーランド代表のHCを務めた経歴もあり、国際的な経験もあるコーチです。</p>
+<p>香川ではトランジションと5アウトオフェンスがメインの戦術のようで、島根お得意のトランジションに5アウトオフェンスをどう組み合わせていくのか注目ですね！個人的にオフェンス面ではニカと金丸がキーマンになりそうな気がします。</p>
+<h2>スタメン予想してみる</h2>
+<p>✨<em>無難バージョン</em></p>
+<ul>
+<li>1st 安藤/金丸/白濱/トラビス/ケイ</li>
+<li>2nd 北川/阿部/ビュフォード/ニカ</li>
+<li>3rd 山下/後藤/小坂</li>
+</ul>
+<p>一番オーソドックスな構成だと思います。1stユニットでは金丸中心のセットオフェンス、2ndユニットはビュフォードのペイントアタックからのキックアウトor自分で決める。といった強力なファーストオプションが2度楽しめますね。</p>
+<p>💨<em>攻めバージョン</em></p>
+<ul>
+<li>1st ビュフォード/阿部/金丸/ケイ/ニカ</li>
+<li>2nd 安藤/北川/白濱/トラビス</li>
+<li>3rd 山下/後藤/小坂</li>
+</ul>
+<p>今シーズンは多くのチームが帰化枠/アジア枠を取っているので、スターターのサイズアップが予想されます。そこに対抗するためにon3スタートもありかなと。安藤/トラビスをシックスマンで起用するのも面白そうですよね。</p>
+<h2>今シーズン気になる選手</h2>
+<h3>ビュフォード</h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/f5f5cf8df27714b746830e8828275614/29114/Perrin-Buford.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 56.08108108108109%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsTAAALEwEAmpwYAAACqklEQVQozwGfAmD9AAAIKkFHWWZyfBIjRgAXSAEpeAAngQk5o2FgbhZEmQBD1QA9xABAywA8wwAphwAXVgMbVAofTwgiUAIiTQACCikeKUUcJ0YHGEAAFkMBKnUAMZ0kXLhPWXU7QZgcTrwQWt0ARd8BQdEAK5EVK2MZLF8VKFcMJ1QAHEoAAAkqAAUrAAgyABRBAB1NADmOAEOrc2GEOjC+Jy2yjW56YmKVAD3BAUHIBDanKDtvFy5jEDFjK059MFSAAAAIKQELMQIPOgEURAAaUAA2lwdJs1pTfRcPyhQdwS5VlyxopQBV2QFJ2ABAyxA0dRlJhDtnmlR9smKHuAACI0sAEjsAFkMAHVAAJ2YCQZcARqhJdr5gXMUhH6sgleYAwPcBadc0bNFScrI3XJVUd6JmhKpOdKU3baYAGUZsBDBcACJUACJYATx9AU6iAFa+AFrCJVLJQVC3F0lqAbfhApXqIojINHivL2ieM2edO2ybP3KfQ3ykABVEdQQnTgAOMQAKMgASTAAtlgE7sANQyQNk2E5rlx8gJjtjgBWn7Rye4CuD0CFapRVNmxZUohNaqxxlsQALTJ8DNnwAIl0BHl0BMYcCOaMFP6cGS7UCX84SXrlLX4Q+VnshaqwXbMQnY7cRQJoMLXwEKXECKGoAJGUAK3/QG2zCCUqjCE+tCUuqCk+vDVW3EmzNF3fSHGa8WaXXPVR6ImWwJGO1KVmoLVqmEDiJBCNqAhVKAg45ADGC3SV92AlmzAhcxgRNwQNIvQQ1mgZf0Q6R9BqF16Pn/5emx2+YxG7K7VOBtEdio0BnrylJmAAWZAAQUgAJUNEBRrgCPaoCPcIANa8AIXMAG3sANM4ANL8AHXkNN6AYWdMVTs8RVuIANKYADGEAEmYAG5QAFYIAB0z0tNJBu5poqwAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="ぺリンビュフォード"
+        title="ぺリンビュフォード"
+        src="/static/f5f5cf8df27714b746830e8828275614/fcda8/Perrin-Buford.png"
+        srcset="/static/f5f5cf8df27714b746830e8828275614/12f09/Perrin-Buford.png 148w,
+/static/f5f5cf8df27714b746830e8828275614/e4a3f/Perrin-Buford.png 295w,
+/static/f5f5cf8df27714b746830e8828275614/fcda8/Perrin-Buford.png 590w,
+/static/f5f5cf8df27714b746830e8828275614/efc66/Perrin-Buford.png 885w,
+/static/f5f5cf8df27714b746830e8828275614/c83ae/Perrin-Buford.png 1180w,
+/static/f5f5cf8df27714b746830e8828275614/29114/Perrin-Buford.png 1920w"
+        sizes="(max-width: 590px) 100vw, 590px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>昨季の島根の中心選手です。特にトラビス帰国後に8連勝に導いた活躍は本当にハンパなく、ベスト5に入る実力はあるように感じています。今シーズンはビュフォードが牽引できればCSも夢ではない反面、ちょっと空回るようだったら難しい気がしています。強力なメンバーが加入しましたが、なんだかんだビュフォードの出来に左右されるのではないかと思っています！</p>
+<h3>ケイ</h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/c36f4cd7a7662c8c8b058e39c577840f/e5166/Kay-Nick.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 56.08108108108109%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAQCAwX/xAAWAQEBAQAAAAAAAAAAAAAAAAAEAgP/2gAMAwEAAhADEAAAAcxyFyzrCRnf/8QAGxAAAQQDAAAAAAAAAAAAAAAAAQADETICE0H/2gAIAQEAAQUCAEutida65TK3/8QAFhEBAQEAAAAAAAAAAAAAAAAAABES/9oACAEDAQE/AdVH/8QAFREBAQAAAAAAAAAAAAAAAAAAERD/2gAIAQIBAT8BCf/EABsQAAIBBQAAAAAAAAAAAAAAAAABECIyUWHh/9oACAEBAAY/AuFOC5QnqP/EABoQAAIDAQEAAAAAAAAAAAAAAAABESExkcH/2gAIAQEAAT8hiLb4ImiTsJY9x5zRFUuBsf/aAAwDAQACAAMAAAAQk/8A/8QAFxEBAAMAAAAAAAAAAAAAAAAAAAEhsf/aAAgBAwEBPxCcF3//xAAXEQEBAQEAAAAAAAAAAAAAAAARAQBR/9oACAECAQE/EGY91hv/xAAcEAEBAAMAAwEAAAAAAAAAAAABEQAhMWFxkcH/2gAIAQEAAT8Qn4gmwE+4BZo08TTkjX6H7m4psThhpTdUvbcAAAHjP//Z'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="ニックケイ"
+        title="ニックケイ"
+        src="/static/c36f4cd7a7662c8c8b058e39c577840f/1c72d/Kay-Nick.jpg"
+        srcset="/static/c36f4cd7a7662c8c8b058e39c577840f/a80bd/Kay-Nick.jpg 148w,
+/static/c36f4cd7a7662c8c8b058e39c577840f/1c91a/Kay-Nick.jpg 295w,
+/static/c36f4cd7a7662c8c8b058e39c577840f/1c72d/Kay-Nick.jpg 590w,
+/static/c36f4cd7a7662c8c8b058e39c577840f/a8a14/Kay-Nick.jpg 885w,
+/static/c36f4cd7a7662c8c8b058e39c577840f/fbd2c/Kay-Nick.jpg 1180w,
+/static/c36f4cd7a7662c8c8b058e39c577840f/e5166/Kay-Nick.jpg 1200w"
+        sizes="(max-width: 590px) 100vw, 590px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>オリンピック銅メダリストが島根にやってきました！！何度も部活で通った鹿島体育館でオリンピック銅メダリストが練習していると思うと胸熱です！</p>
+<p>外からも打てて献身的なプレイで周りを引き立てることもできるのでチームとしての幅が広がることが期待できますね！</p>
+<h3>安藤</h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/8e8345f721b0798608051842d80fab79/eea4a/Seiya-Ando.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 56.08108108108109%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAQBAwX/xAAVAQEBAAAAAAAAAAAAAAAAAAADBP/aAAwDAQACEAMQAAABzLpYsnXEwk//xAAaEAACAwEBAAAAAAAAAAAAAAABAgADETNB/9oACAEBAAEFAgsYbBUue2c2J3//xAAVEQEBAAAAAAAAAAAAAAAAAAARAP/aAAgBAwEBPwFYv//EABYRAQEBAAAAAAAAAAAAAAAAABEAAf/aAAgBAgEBPwEMIv/EABgQAQADAQAAAAAAAAAAAAAAAAARMUEB/9oACAEBAAY/ArVDXE6t/8QAGxAAAgMBAQEAAAAAAAAAAAAAAAERITFRYaH/2gAIAQEAAT8huVHHgnMSrdGZfA3y3hDFUEKsf//aAAwDAQACAAMAAAAQeC//xAAYEQADAQEAAAAAAAAAAAAAAAAAARFBcf/aAAgBAwEBPxB2vCnp/8QAFhEBAQEAAAAAAAAAAAAAAAAAAAER/9oACAECAQE/EIS4f//EAB0QAQADAAEFAAAAAAAAAAAAAAEAESFRMUFhccH/2gAIAQEAAT8QAJrqKR82b9Wteqd4a189EdKqJHHMOhAKU9xwAOBon//Z'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="安藤 誓哉"
+        title="安藤 誓哉"
+        src="/static/8e8345f721b0798608051842d80fab79/1c72d/Seiya-Ando.jpg"
+        srcset="/static/8e8345f721b0798608051842d80fab79/a80bd/Seiya-Ando.jpg 148w,
+/static/8e8345f721b0798608051842d80fab79/1c91a/Seiya-Ando.jpg 295w,
+/static/8e8345f721b0798608051842d80fab79/1c72d/Seiya-Ando.jpg 590w,
+/static/8e8345f721b0798608051842d80fab79/a8a14/Seiya-Ando.jpg 885w,
+/static/8e8345f721b0798608051842d80fab79/fbd2c/Seiya-Ando.jpg 1180w,
+/static/8e8345f721b0798608051842d80fab79/eea4a/Seiya-Ando.jpg 1280w"
+        sizes="(max-width: 590px) 100vw, 590px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>優勝経験もあるアルバルク東京のエースPGが島根に来てくれました！</p>
+<p>島根に一番足りない勝者のメンタリティーを持つプレイヤーが加入したということで、シーズンの戦い方やチーム状況が悪いタイミングで打破する力もあると思います！期待！！！</p>
+<h3>小阪</h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/ab4e3741fb58fff6872fc8bc85d184f5/29114/Akihisa-Kosaka.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 56.08108108108109%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsTAAALEwEAmpwYAAACqklEQVQozwGfAmD9AAAKMUFJXGZzfhInTwAZVAEylQEwlQI8uAAnoGpof1BejwAusQM5sAAzqAAjcQkdTQcaSgocRwcfRwAeRQACDjUdLU4cKlAHHU8AGlIAMpEBQ70AQs9Kdsh6kLY1WqgAPcwAPMUUQrEYNHsXJlMYJlEYJ00QJ04BIEgAAAs0AAg3AAs+ABhQACFhAEWtAU7HADyydXSMSGSyV3S+GFHTADi4JV+uG1icGUN1GkFtJEdtOFuAO16GAAAdUAEnYAImYQEdWgAiZwBIvgJdzQZPxgIORxAVNWRmfZiFkTBfugdQwAhOrxBOhjBikD9lkll9q2yOuQABK14AH1IAIFYAI2IAI24ANqkDU8IOTrMMLJUSR6AabbdDQXAkRJg1YLlJYpw8WYRVcpZrhKVQdKFGeKsAARtAAQwvAAkyABFHABtlAUGxA2LXBlm2GVW9MVetHGu4AH/8A1jLLGywM2ebNmKQN2GPP2mUPWyYQHafAAk3cAAcSwAURAAKPwAWYQFAuwJU0wVw5whDfgEhQAQgQgWH0ACS8hx50S1wvSVWlxNCgxlMjyVjqi5ztgBLgsQ7b60VVJQAQIsDTKgBSMMBSbwGbdQGPWEOWYkRTGgENXsCW8kTS6cgTqISMnwDHl8INXAUUYsXUYgAUJ3gQIzXGXHJCHHNC2XGCWLHCGDOCGC9DzhZKp3kGld6AC14EGHLIU2eJUmVKEeJDDF4BCZjARhIABA8AC2E3SCC2Qlw1BFu1A9w3BN04A9s2xZPiz5okH7b/1J4lhtXmR+P8jZ2zFRqnEpZhkZemixGhwESUAIORgAIVdYBT8UBSL0BTtkASs8AL6UAQr4imNJJsNFpwfVfoM9/zeoPovwAcvYANKYADFkAFWUAIY8AGoEACEqgXdZ+wVGyIwAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="小阪 彰久"
+        title="小阪 彰久"
+        src="/static/ab4e3741fb58fff6872fc8bc85d184f5/fcda8/Akihisa-Kosaka.png"
+        srcset="/static/ab4e3741fb58fff6872fc8bc85d184f5/12f09/Akihisa-Kosaka.png 148w,
+/static/ab4e3741fb58fff6872fc8bc85d184f5/e4a3f/Akihisa-Kosaka.png 295w,
+/static/ab4e3741fb58fff6872fc8bc85d184f5/fcda8/Akihisa-Kosaka.png 590w,
+/static/ab4e3741fb58fff6872fc8bc85d184f5/efc66/Akihisa-Kosaka.png 885w,
+/static/ab4e3741fb58fff6872fc8bc85d184f5/c83ae/Akihisa-Kosaka.png 1180w,
+/static/ab4e3741fb58fff6872fc8bc85d184f5/29114/Akihisa-Kosaka.png 1920w"
+        sizes="(max-width: 590px) 100vw, 590px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>なんだかんだキーマンだと思っています。。！！</p>
+<p>ニカがファウルトラブルでゲーム終盤に不在になったり、杉浦が抜けたことでゲーム終盤、日本人選手の長身プレイヤーが手薄になっている状況です。</p>
+<p>昨シーズン悩まされた膝を治したので覚醒してくれることに期待！！頑張れ〜！！</p>
+<h2>気になるチーム（西地区）</h2>
+<h3>🏝琉球</h3>
+<p>コーフリッピン、ヒューくん、小寺、アレンが加入しましたね。。今年も西地区優勝筆頭の大戦力といって良いでしょう！（去年より強い気がする。。）</p>
+<p>CS出場を目指すに当たって星を吸われないことが重要なポイントになってくる気がします。少なくとも1勝3敗、イーブンで終えられたら御の字ではないでしょうか。</p>
+<h3>🐻富山</h3>
+<p>今年もマブンガ・宇都のゲームメイクからの、スミスのラインが軸になってくると思います。</p>
+<p>去年と違うところとしては、松脇・岡田・前田の若手三銃士が移籍して松井KJ・小野龍猛といったベテラン選手が加入しました。ただ、PTの制限があるため去年よりパワーダウンが予想されます。</p>
+<p>昨シーズンは1勝もできなかった相手だけに、今シーズンは勝ち越しを期待したいところです！</p>
+<h3>🍁広島</h3>
+<p>島根と同じく今シーズンに大補強を行ったチームです。ジャクソン/メイヨ/辻/寺嶋/マーフィー あたりが中心になってきそうです。チームケミストリーが出来上がっていない中どこまでやれるか、正直予想できないですが。。。bjリーグ時代からのライバルチームなだけに今シーズンも勝ち越したいですね！</p>
+<h3>🐙大阪</h3>
+<p>移籍してきた竹内、攻撃力の高いニュービス、身体能力の高いアイラブラウン、日本国籍持ちのザックムーア、ジョセフといった国際色強いチームです。高さもかなりありCS出場を争うチーム筆頭です。</p>
+<h2>順位予想</h2>
+<p>ブースター補正ありでこんな感じになると予想しています。ワイルドカードか3位争いでCS出場ができれば！！</p>
+<ol>
+<li>
+<p>🏝琉球</p>
+</li>
+<li>
+<p>🐬名古屋</p>
+</li>
+<li>
+<p>🐙大阪</p>
+</li>
+<li>
+<p>🐉<strong>島根</strong></p>
+</li>
+<li>
+<p>🏇三河</p>
+</li>
+<li>
+<p>🍁広島</p>
+</li>
+<li>
+<p>🧸富山</p>
+</li>
+<li>
+<p>🐥三遠</p>
+</li>
+<li>
+<p>💧滋賀</p>
+</li>
+<li>
+<p>⛰信州</p>
+</li>
+<li>
+<p>⛩京都</p>
+</li>
+</ol>
+<h2>あとがき</h2>
+<p>毎回恒例で後半力尽きました！ライバルチームも強いが島根も強い！</p>
+<p>変化の大きいシーズンですが今シーズンも楽しんでいきましょう！！！٩(๑❛ᴗ❛๑)۶</p></section><hr style="margin-bottom:1.45rem"/><footer></footer></article><nav><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li class="blog-module--link--1vUq8"><a rel="prev" href="/gatsby-prismjs-line-number/">← <!-- -->【Gatsby】PrismJSの行番号がずれる現象。CSSでなんとかする</a></li><li class="blog-module--link--1vUq8"></li></ul></nav></main><footer style="text-align:center">Copyright © 2021. ソタ</footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/shimane-susanoo-magic-21-22-prospect/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-de6f229c0a3977155403.js"],"app":["/app-9817efa31d9f118e3830.js"],"component---src-pages-404-js":["/component---src-pages-404-js-96cbfd42055761e6cea8.js"],"component---src-pages-index-js":["/component---src-pages-index-js-08ebc0848c409e8bd1f3.js"],"component---src-pages-using-typescript-tsx":["/component---src-pages-using-typescript-tsx-9dce888ec2db9d6a13b2.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-336a0d6486579d9dfbd2.js"],"component---src-templates-tag-posts-js":["/component---src-templates-tag-posts-js-39fe51218466f497e95e.js"]};/*]]>*/</script><script src="/polyfill-de6f229c0a3977155403.js" nomodule=""></script><script src="/component---src-templates-blog-post-js-336a0d6486579d9dfbd2.js" async=""></script><script src="/5fc4d471716da74c20cd415565d95c4380c7eb4b-c0b722680beead1e4161.js" async=""></script><script src="/commons-1d874c2932fc6b7896b9.js" async=""></script><script src="/app-9817efa31d9f118e3830.js" async=""></script><script src="/framework-cbf72beb4922685f4182.js" async=""></script><script src="/webpack-runtime-9697dd70186213a37f96.js" async=""></script></body></html>

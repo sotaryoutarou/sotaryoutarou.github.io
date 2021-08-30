@@ -1,5 +1,5 @@
 ---
-title: 【Gatsby】PrismJSの行番号が崩れた。CSSでなんとかする
+title: 【Gatsby】PrismJSの行番号がずれる現象。CSSでなんとかする
 date: "2021-08-13T22:40:32.169Z"
 description: コードブロックに行番号を表示したら表示崩れを起こしたため、CSSで力ずくで調整する
 hero: ./images/thumbnail.png

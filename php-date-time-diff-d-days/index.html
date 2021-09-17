@@ -30,7 +30,7 @@
     
     <span class="token keyword">echo</span> <span class="token variable">$currentDate</span><span class="token operator">-></span><span class="token function">diff</span><span class="token punctuation">(</span><span class="token variable">$compareDate</span><span class="token punctuation">)</span><span class="token operator">-></span><span class="token property">d</span><span class="token punctuation">;</span></span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <p><em>出力結果</em></p>
-<p>30</p>
+<p><code class="language-text">30</code></p>
 <p>30となるので正常動作</p>
 <h3>dで問題あるパターン</h3>
 <p>現在時刻2月15日で30日後との差分を計算</p>
@@ -40,7 +40,7 @@
     
     <span class="token keyword">echo</span> <span class="token variable">$currentDate</span><span class="token operator">-></span><span class="token function">diff</span><span class="token punctuation">(</span><span class="token variable">$compareDate</span><span class="token punctuation">)</span><span class="token operator">-></span><span class="token property">d</span><span class="token punctuation">;</span></span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <p><em>出力結果</em></p>
-<p>2</p>
+<p><code class="language-text">2</code></p>
 <p>30となってほしいところ、2となってしまう</p>
 <h2>なぜ</h2>
 <p>dプロパティを使うと比較月の1日からカウントを始めるため、2月1日から30日をカウントすると月が繰り上がってしまう</p>
@@ -50,7 +50,7 @@
     
     <span class="token keyword">echo</span> <span class="token variable">$currentDate</span><span class="token operator">-></span><span class="token function">diff</span><span class="token punctuation">(</span><span class="token variable">$compareDate</span><span class="token punctuation">)</span><span class="token operator">-></span><span class="token property">m</span> <span class="token operator">.</span> <span class="token string single-quoted-string">'ヶ月と'</span> <span class="token operator">.</span> <span class="token variable">$currentDate</span><span class="token operator">-></span><span class="token function">diff</span><span class="token punctuation">(</span><span class="token variable">$compareDate</span><span class="token punctuation">)</span><span class="token operator">-></span><span class="token property">d</span> <span class="token operator">.</span> <span class="token string single-quoted-string">'日'</span><span class="token punctuation">;</span></span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <p><em>出力結果</em></p>
-<p>1ヶ月と2日</p>
+<p><code class="language-text">1ヶ月と2日</code></p>
 <h4>ちなみに</h4>
 <p>27日前からは桁上がりが起こらない</p>
 <div class="gatsby-highlight" data-language="php"><pre style="counter-reset: linenumber NaN" class="language-php line-numbers"><code class="language-php"><span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
@@ -59,7 +59,7 @@
     
     <span class="token keyword">echo</span> <span class="token variable">$currentDate</span><span class="token operator">-></span><span class="token function">diff</span><span class="token punctuation">(</span><span class="token variable">$compareDate</span><span class="token punctuation">)</span><span class="token operator">-></span><span class="token property">m</span> <span class="token operator">.</span> <span class="token string single-quoted-string">'ヶ月と'</span> <span class="token operator">.</span> <span class="token variable">$currentDate</span><span class="token operator">-></span><span class="token function">diff</span><span class="token punctuation">(</span><span class="token variable">$compareDate</span><span class="token punctuation">)</span><span class="token operator">-></span><span class="token property">d</span> <span class="token operator">.</span> <span class="token string single-quoted-string">'日'</span><span class="token punctuation">;</span></span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <p><em>出力結果</em></p>
-<p>0ヶ月と27日</p>
+<p><code class="language-text">0ヶ月と27日</code></p>
 <h2>対処法</h2>
 <p>基本 d ではなく days を利用する</p>
 <div class="gatsby-highlight" data-language="php"><pre style="counter-reset: linenumber NaN" class="language-php line-numbers"><code class="language-php"><span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
@@ -67,6 +67,6 @@
     <span class="token variable">$compareDate</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">DateTime</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'2021-03-17'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 2月15日の30日後</span>
     <span class="token keyword">echo</span> <span class="token variable">$currentDate</span><span class="token operator">-></span><span class="token function">diff</span><span class="token punctuation">(</span><span class="token variable">$compareDate</span><span class="token punctuation">)</span><span class="token operator">-></span><span class="token property">days</span><span class="token punctuation">;</span></span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span></span></pre></div>
 <p><em>出力結果</em></p>
-<p>30</p>
+<p><code class="language-text">30</code></p>
 <h2>あとがき</h2>
 <p>daysの方が比較もとの月の影響を受けず、dの上位互換と言えると思います。</p></section><hr style="margin-bottom:1.45rem"/><footer></footer></article><nav><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li class="blog-module--link--1vUq8"><a rel="prev" href="/laravel-login-on-tinker/">← <!-- -->【Laravel】tinker上でログイン状態にしてAuthファサードからUserモデルを取得したい</a></li><li class="blog-module--link--1vUq8"></li></ul></nav></main><footer style="text-align:center">Copyright © 2021. ソタ</footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/php-date-time-diff-d-days/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-de6f229c0a3977155403.js"],"app":["/app-9817efa31d9f118e3830.js"],"component---src-pages-404-js":["/component---src-pages-404-js-96cbfd42055761e6cea8.js"],"component---src-pages-index-js":["/component---src-pages-index-js-08ebc0848c409e8bd1f3.js"],"component---src-pages-using-typescript-tsx":["/component---src-pages-using-typescript-tsx-9dce888ec2db9d6a13b2.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-336a0d6486579d9dfbd2.js"],"component---src-templates-tag-posts-js":["/component---src-templates-tag-posts-js-39fe51218466f497e95e.js"]};/*]]>*/</script><script src="/polyfill-de6f229c0a3977155403.js" nomodule=""></script><script src="/component---src-templates-blog-post-js-336a0d6486579d9dfbd2.js" async=""></script><script src="/5fc4d471716da74c20cd415565d95c4380c7eb4b-c0b722680beead1e4161.js" async=""></script><script src="/commons-1d874c2932fc6b7896b9.js" async=""></script><script src="/app-9817efa31d9f118e3830.js" async=""></script><script src="/framework-cbf72beb4922685f4182.js" async=""></script><script src="/webpack-runtime-9697dd70186213a37f96.js" async=""></script></body></html>

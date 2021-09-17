@@ -1,7 +1,7 @@
 ---
-title: 【PHP】DateTime::diff()で日数差を取得するには絶対にdaysプロパティを使って欲しい（dはダメ）
+title: 【PHP】DateTime::diff()で日数差を取得するにはdaysプロパティを使う（dはダメ）
 date: "2021-09-17T22:40:32.169Z"
-description: コードブロックに行番号を表示したら表示崩れを起こしたため、CSSで力ずくで調整する
+description: 【PHP】DateTime::diff()で日数差を取得するにはdaysプロパティを使う（dはダメ）
 hero: ./images/thumbnail.png
 tags: ['Tech', 'PHP', 'Date']
 
@@ -51,7 +51,7 @@ tags: ['Tech', 'PHP', 'Date']
 
 2
 
-30となってほしいところ、2となるので異常動作
+30となってほしいところ、2となってしまう
 
 
 ## なぜ

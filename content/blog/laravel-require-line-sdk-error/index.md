@@ -68,7 +68,7 @@ Installation failed, reverting ./composer.json and ./composer.lock to their orig
 
 モジュール追加をします。
 
-doccker環境でphp公式のイメージを使ってい他ので、Dockerfileに
+doccker環境でphp公式のイメージを使っている場合、Dockerfileに
 
 ```Dockerfile:title=Dockerfile
 docker-php-ext-install sockets
@@ -76,7 +76,9 @@ docker-php-ext-install sockets
 
 を追加でビルドしてあげると導入できました。
 
-Docker環境ではない場合は
+複数のモジュールを追加する場合はスペース区切りです。
+
+Ubuntuなどで直接コマンドからモジュールを導入する場合は
 
 ```shell
 $ sudo apt-get update -y

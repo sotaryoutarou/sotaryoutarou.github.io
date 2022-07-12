@@ -40,8 +40,9 @@ export default TagPostTemplate
 export const pageQuery = graphql`
   query TagTemplate($tag: String!) {
         allMarkdownRemark(
-          limit: 2000
           filter: { frontmatter: { tags: { in: [$tag] } } }
+          sort: { fields: [frontmatter___date], order: DESC }
+          limit: 1000
         ) {
             nodes {
                 excerpt(truncate: true)

@@ -1,0 +1,818 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:100%/1.45 'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro','Yu Gothic Medium','游ゴシック Medium','YuGothic','游ゴシック体','メイリオ',sans-serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.8);font-family:'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro','Yu Gothic Medium','游ゴシック Medium','YuGothic','游ゴシック体','メイリオ',sans-serif;font-weight:normal;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;color:inherit;font-family:'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro','Yu Gothic Medium','游ゴシック Medium','YuGothic','游ゴシック体','メイリオ',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:2rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;color:inherit;font-family:'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro','Yu Gothic Medium','游ゴシック Medium','YuGothic','游ゴシック体','メイリオ',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:1.51572rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;color:inherit;font-family:'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro','Yu Gothic Medium','游ゴシック Medium','YuGothic','游ゴシック体','メイリオ',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:1.31951rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;color:inherit;font-family:'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro','Yu Gothic Medium','游ゴシック Medium','YuGothic','游ゴシック体','メイリオ',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;color:inherit;font-family:'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro','Yu Gothic Medium','游ゴシック Medium','YuGothic','游ゴシック体','メイリオ',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:0.87055rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;color:inherit;font-family:'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro','Yu Gothic Medium','游ゴシック Medium','YuGothic','游ゴシック体','メイリオ',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:0.81225rem;line-height:1.1;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}ul{margin-left:1.45rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;list-style-position:outside;list-style-image:none;}ol{margin-left:1.45rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;font-size:0.85rem;line-height:1.45rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;font-size:1rem;line-height:1.45rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}blockquote{margin-left:1.45rem;margin-right:1.45rem;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.45rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}b{font-weight:bold;}strong{font-weight:bold;}dt{font-weight:bold;}th{font-weight:bold;}li{margin-bottom:calc(1.45rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.45rem;margin-bottom:calc(1.45rem / 2);margin-top:calc(1.45rem / 2);}li > ul{margin-left:1.45rem;margin-bottom:calc(1.45rem / 2);margin-top:calc(1.45rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.45rem / 2);}code{font-size:0.85rem;line-height:1.45rem;}kbd{font-size:0.85rem;line-height:1.45rem;}samp{font-size:0.85rem;line-height:1.45rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:0.96667rem;padding-right:0.96667rem;padding-top:0.725rem;padding-bottom:calc(0.725rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}</style><style data-href="/styles.971898365c976e03315d.css" data-identity="gatsby-global-css">@import url(https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap);@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:100;src:local("Montserrat Thin "),local("Montserrat-Thin"),url(/static/montserrat-latin-100-8d7d79679b70dbe27172b6460e7a7910.woff2) format("woff2"),url(/static/montserrat-latin-100-ec38980a9e0119a379e2a9b3dbb1901a.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:100;src:local("Montserrat Thin italic"),local("Montserrat-Thinitalic"),url(/static/montserrat-latin-100italic-e279051046ba1286706adc886cf1c96b.woff2) format("woff2"),url(/static/montserrat-latin-100italic-3b325a3173c8207435cd1b76e19bf501.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:200;src:local("Montserrat Extra Light "),local("Montserrat-Extra Light"),url(/static/montserrat-latin-200-9d266fbbfa6cab7009bd56003b1eeb67.woff2) format("woff2"),url(/static/montserrat-latin-200-2d8ba08717110d27122e54c34b8a5798.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:200;src:local("Montserrat Extra Light italic"),local("Montserrat-Extra Lightitalic"),url(/static/montserrat-latin-200italic-6e5b3756583bb2263eb062eae992735e.woff2) format("woff2"),url(/static/montserrat-latin-200italic-a0d6f343e4b536c582926255367a57da.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:300;src:local("Montserrat Light "),local("Montserrat-Light"),url(/static/montserrat-latin-300-00b3e893aab5a8fd632d6342eb72551a.woff2) format("woff2"),url(/static/montserrat-latin-300-ea303695ceab35f17e7d062f30e0173b.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:300;src:local("Montserrat Light italic"),local("Montserrat-Lightitalic"),url(/static/montserrat-latin-300italic-56f34ea368f6aedf89583d444bbcb227.woff2) format("woff2"),url(/static/montserrat-latin-300italic-54b0bf2c8c4c12ffafd803be2466a790.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:400;src:local("Montserrat Regular "),local("Montserrat-Regular"),url(/static/montserrat-latin-400-b71748ae4f80ec8c014def4c5fa8688b.woff2) format("woff2"),url(/static/montserrat-latin-400-0659a9f4e90db5cf51b50d005bff1e41.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:400;src:local("Montserrat Regular italic"),local("Montserrat-Regularitalic"),url(/static/montserrat-latin-400italic-6eed6b4cbb809c6efc7aa7ddad6dbe3e.woff2) format("woff2"),url(/static/montserrat-latin-400italic-7583622cfde30ae49086d18447ab28e7.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:500;src:local("Montserrat Medium "),local("Montserrat-Medium"),url(/static/montserrat-latin-500-091b209546e16313fd4f4fc36090c757.woff2) format("woff2"),url(/static/montserrat-latin-500-edd311588712a96bbf435fad264fff62.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:500;src:local("Montserrat Medium italic"),local("Montserrat-Mediumitalic"),url(/static/montserrat-latin-500italic-c90ced68b46050061d1a41842d6dfb43.woff2) format("woff2"),url(/static/montserrat-latin-500italic-5146cbfe02b1deea5dffea27a5f2f998.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:600;src:local("Montserrat SemiBold "),local("Montserrat-SemiBold"),url(/static/montserrat-latin-600-0480d2f8a71f38db8633b84d8722e0c2.woff2) format("woff2"),url(/static/montserrat-latin-600-b77863a375260a05dd13f86a1cee598f.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:600;src:local("Montserrat SemiBold italic"),local("Montserrat-SemiBolditalic"),url(/static/montserrat-latin-600italic-cf46ffb11f3a60d7df0567f8851a1d00.woff2) format("woff2"),url(/static/montserrat-latin-600italic-c4fcfeeb057724724097167e57bd7801.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:700;src:local("Montserrat Bold "),local("Montserrat-Bold"),url(/static/montserrat-latin-700-7dbcc8a5ea2289d83f657c25b4be6193.woff2) format("woff2"),url(/static/montserrat-latin-700-99271a835e1cae8c76ef8bba99a8cc4e.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:700;src:local("Montserrat Bold italic"),local("Montserrat-Bolditalic"),url(/static/montserrat-latin-700italic-c41ad6bdb4bd504a843d546d0a47958d.woff2) format("woff2"),url(/static/montserrat-latin-700italic-6779372f04095051c62ed36bc1dcc142.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:800;src:local("Montserrat ExtraBold "),local("Montserrat-ExtraBold"),url(/static/montserrat-latin-800-db9a3e0ba7eaea32e5f55328ace6cf23.woff2) format("woff2"),url(/static/montserrat-latin-800-4e3c615967a2360f5db87d2f0fd2456f.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:800;src:local("Montserrat ExtraBold italic"),local("Montserrat-ExtraBolditalic"),url(/static/montserrat-latin-800italic-bf45bfa14805969eda318973947bc42b.woff2) format("woff2"),url(/static/montserrat-latin-800italic-fe82abb0bcede51bf724254878e0c374.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:normal;font-weight:900;src:local("Montserrat Black "),local("Montserrat-Black"),url(/static/montserrat-latin-900-e66c7edc609e24bacbb705175669d814.woff2) format("woff2"),url(/static/montserrat-latin-900-8211f418baeb8ec880b80ba3c682f957.woff) format("woff")}@font-face{font-display:swap;font-family:Montserrat;font-style:italic;font-weight:900;src:local("Montserrat Black italic"),local("Montserrat-Blackitalic"),url(/static/montserrat-latin-900italic-4454c775e48152c1a72510ceed3603e2.woff2) format("woff2"),url(/static/montserrat-latin-900italic-efcaa0f6a82ee0640b83a0916e6e8d68.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:normal;font-weight:300;src:local("Merriweather Light "),local("Merriweather-Light"),url(/static/merriweather-latin-300-fc117160c69a8ea0851b26dd14748ee4.woff2) format("woff2"),url(/static/merriweather-latin-300-58b18067ebbd21fda77b67e73c241d3b.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:italic;font-weight:300;src:local("Merriweather Light italic"),local("Merriweather-Lightitalic"),url(/static/merriweather-latin-300italic-fe29961474f8dbf77c0aa7b9a629e4bc.woff2) format("woff2"),url(/static/merriweather-latin-300italic-23c3f1f88683618a4fb8d265d33d383a.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:normal;font-weight:400;src:local("Merriweather Regular "),local("Merriweather-Regular"),url(/static/merriweather-latin-400-d9479e8023bef9cbd9bf8d6eabd6bf36.woff2) format("woff2"),url(/static/merriweather-latin-400-040426f99ff6e00b86506452e0d1f10b.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:italic;font-weight:400;src:local("Merriweather Regular italic"),local("Merriweather-Regularitalic"),url(/static/merriweather-latin-400italic-2de7bfeaf08fb03d4315d49947f062f7.woff2) format("woff2"),url(/static/merriweather-latin-400italic-79db67aca65f5285964ab332bd65f451.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:normal;font-weight:700;src:local("Merriweather Bold "),local("Merriweather-Bold"),url(/static/merriweather-latin-700-4b08e01d805fa35d7bf777f1b24314ae.woff2) format("woff2"),url(/static/merriweather-latin-700-22fb8afba4ab1f093b6ef9e28a9b6e92.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:italic;font-weight:700;src:local("Merriweather Bold italic"),local("Merriweather-Bolditalic"),url(/static/merriweather-latin-700italic-cd92541b177652fffb6e3b952f1c33f1.woff2) format("woff2"),url(/static/merriweather-latin-700italic-f87f3d87cea0dd0979bfc8ac9ea90243.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:normal;font-weight:900;src:local("Merriweather Black "),local("Merriweather-Black"),url(/static/merriweather-latin-900-f813fc6a4bee46eda5224ac7ebf1b7be.woff2) format("woff2"),url(/static/merriweather-latin-900-5d4e42cb44410674acd99153d57df032.woff) format("woff")}@font-face{font-display:swap;font-family:Merriweather;font-style:italic;font-weight:900;src:local("Merriweather Black italic"),local("Merriweather-Blackitalic"),url(/static/merriweather-latin-900italic-b7901d85486871c1779c0e93ddd85656.woff2) format("woff2"),url(/static/merriweather-latin-900italic-9647f9fdab98756989a8a5550eb205c3.woff) format("woff")}code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#ccc;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;text-align:left;white-space:pre;word-break:normal;word-spacing:normal}pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#2d2d2d}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#999}.token.punctuation{color:#ccc}.token.attr-name,.token.deleted,.token.namespace,.token.tag{color:#e2777a}.token.function-name{color:#6196cc}.token.boolean,.token.function,.token.number{color:#f08d49}.token.class-name,.token.constant,.token.property,.token.symbol{color:#f8c555}.token.atrule,.token.builtin,.token.important,.token.keyword,.token.selector{color:#cc99cd}.token.attr-value,.token.char,.token.regex,.token.string,.token.variable{color:#7ec699}.token.entity,.token.operator,.token.url{color:#67cdcc}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.inserted{color:green}pre[class*=language-].line-numbers{counter-reset:linenumber;padding-left:3.8em;position:relative}pre[class*=language-].line-numbers>code{position:relative;white-space:inherit}.line-numbers .line-numbers-rows{border-right:1px solid #999;font-size:100%;left:-3.8em;letter-spacing:-1px;pointer-events:none;position:absolute;top:0;-webkit-user-select:none;-ms-user-select:none;user-select:none;width:3em}.line-numbers-rows>span{counter-increment:linenumber;display:block}.line-numbers-rows>span:before{color:#999;content:counter(linenumber);display:block;padding-right:.8em;text-align:right}.line-numbers .line-numbers-rows{padding:1rem 0 1rem .5rem}.gatsby-code-title{background:#272822;border-top-right-radius:.3em;display:block;top:10px;width:100%}.gatsby-code-title,.gatsby-code-title span{border-top-left-radius:.3em;position:relative}.gatsby-code-title span{background:#777;border-bottom-right-radius:.3em;color:#eee;display:inline;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;padding:3px;top:1px}.gatsby-highlight{margin-bottom:10px}.global-module--main--1Kc2n{background-color:#f4f5f7;color:#444;margin-left:auto;margin-right:auto;padding-bottom:15px}.global-module--header--h-IJe{margin-bottom:6.66667%}.global-module--main--1Kc2n h2{border-bottom:3px solid #dadada;margin-bottom:1.5rem;margin-top:3rem;padding-bottom:.5rem;position:relative}.global-module--main--1Kc2n h2:before{background-color:#006d56;bottom:-3px;content:" ";height:3px;position:absolute;width:100px}.global-module--main--1Kc2n h3{border-bottom:1px solid #dadada;border-left:3px solid #006d56;padding-bottom:.3rem;padding-left:.5rem}.top-module--header__SP--Sts9b{height:133.33333vw}.top-module--header__PC--2Umpc,.top-module--header__SP--Sts9b{align-items:center;display:flex;justify-content:center;margin-bottom:6.66667%;position:relative}.top-module--header__PC--2Umpc{height:31.25vw}.top-module--main__title__text--2ao0U{color:#fff;font-family:Hachi Maru Pop,cursive;font-size:1.5em;letter-spacing:.05em;text-decoration:none}.top-module--main__title__text--2ao0U span{display:inline-block}.top-module--main__title__container--sfcee{text-align:center}.top-module--sub__title__text--2MJMf{color:#fff;font-family:Hachi Maru Pop,cursive;letter-spacing:.1em}.top-module--sub__title__container--6huJR{text-align:center}.post-module--posts__container--1Ndsd{display:flex;flex-wrap:wrap}[class*=column__]{background-color:#fefefe;border-radius:5px 5px 5px 5px;box-shadow:0 10px 10px -5px rgba(0,0,0,.5);overflow:hidden}.post-module--title__content--2Wa1K,a.post-module--post__link--2n1_o:active,a.post-module--post__link--2n1_o:link,a.post-module--post__link--2n1_o:visited{color:#444}a.post-module--post__link--2n1_o:hover{color:#777}a.post-module--post__link--2n1_o{text-decoration:none}.post-module--text__container--gc0BY{margin:.75rem 1.75rem}.post-module--tag__title__container--1hE9x{margin-bottom:2rem;text-align:center}.post-module--tag__title--3acaD{color:#444}.post-module--tag__title--3acaD:before{content:"#"}@media (max-width:1023px){[class*=column__]{margin:0 auto 6.66667%;width:80%}}@media (min-width:1024px){.post-module--column__l__container--3JKWW{margin:0 1.66667% 3.33333% 3.33333%;width:45%}.post-module--column__r__container--3X7kh{margin:0 3.33333% 3.33333% 1.66667%;width:45%}}.topPageTag-module--tags--3cL7h{list-style:none;margin-left:0;overflow:hidden}.topPageTag-module--tags--3cL7h li{float:left;text-align:center}.topPageTag-module--tags--3cL7h a{border:1px solid #ccc;border-radius:.5em 0 .5em 0;color:#444;display:inline-block;font-size:.75em;line-height:1;margin:0 .5em 0 0;padding:.6em;text-decoration:none}.topPageTag-module--tags--3cL7h a:hover{background-color:#fff;color:#777;text-decoration:underline}.blogTag-module--tags--38w6v{list-style:none;margin-left:0;overflow:hidden}.blogTag-module--tags--38w6v li{float:left;text-align:center}.blogTag-module--tags--38w6v a{border:1px solid #fff;border-radius:.5em 0 .5em 0;color:#fff;display:inline-block;font-size:.75em;line-height:1;margin:0 .5em 0 0;padding:.6em;text-decoration:none}.blogTag-module--tags--38w6v a:hover{background-color:#fff;color:#046d56}.blog-module--header__image__SP--1kE5q{align-items:center;display:flex;height:133.33333vw;justify-content:center;margin-bottom:6.66667%;position:relative}.blog-module--header__image__PC--3IXlz{align-items:center;display:flex;height:31.25vw;justify-content:center;position:relative}.blog-module--header__title--PQagB{color:#fff}.blog-module--post__content--29_dj{margin:10px 10% 0}.blog-module--post__content--29_dj a{color:#444}.blog-module--post__content--29_dj a:hover{color:#777}.blog-module--posts__image__container--1Cr3C{margin:5% 10%}.blog-module--blog__title__text--1_Zu2{color:#fff;font-family:Hachi Maru Pop,cursive;font-size:1.5em;letter-spacing:.05em;text-decoration:none}.blog-module--blog__title__text--1_Zu2:hover{text-decoration:underline}.blog-module--link--1vUq8 a{color:#444}.blog-module--link--1vUq8 a:hover{color:#777}.blog-module--blog__title__container--2gn83{margin:3em 0}@media (max-width:1023px){.blog-module--posts__image__container--1Cr3C{margin:5% 3%}}@media (min-width:1024px){.blog-module--posts__image__container--1Cr3C{margin:5% 10%}}</style><meta name="generator" content="Gatsby 3.7.2"/><link rel="sitemap" type="application/xml" href="/sitemap/sitemap-index.xml"/><link rel="preconnect" href="https://www.google-analytics.com"/><link rel="dns-prefetch" href="https://www.google-analytics.com"/><script>
+  
+  
+  if(true) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'UA-192153083-1', 'auto', {});
+      
+      
+      
+      
+      
+      }</script><link rel="alternate" type="application/rss+xml" href="/rss.xml"/><link rel="icon" href="/favicon-32x32.png?v=5cb46923cefa7c3a7c20787444baf282" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=5cb46923cefa7c3a7c20787444baf282"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=5cb46923cefa7c3a7c20787444baf282"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=5cb46923cefa7c3a7c20787444baf282"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=5cb46923cefa7c3a7c20787444baf282"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=5cb46923cefa7c3a7c20787444baf282"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=5cb46923cefa7c3a7c20787444baf282"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=5cb46923cefa7c3a7c20787444baf282"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=5cb46923cefa7c3a7c20787444baf282"/><title data-react-helmet="true">今さら島根スサノオマジック20~21シーズンをざっくり振り返る</title><meta data-react-helmet="true" name="description" content="山あり谷ありの20~21シーズンをざっくり振り返る"/><meta data-react-helmet="true" name="image" content="https://sotaryoutarou.github.io/static/a5c0b83fb054b5ceab61aa7dda5732d6/thumbnail.png"/><meta data-react-helmet="true" property="og:title" content="今さら島根スサノオマジック20~21シーズンをざっくり振り返る"/><meta data-react-helmet="true" property="og:description" content="山あり谷ありの20~21シーズンをざっくり振り返る"/><meta data-react-helmet="true" property="og:type" content="article"/><meta data-react-helmet="true" property="og:url" content="https://sotaryoutarou.github.io/shimane-susanoo-magic-21-22/"/><meta data-react-helmet="true" property="og:site_name" content="ソタのほほん地下貯蔵庫"/><meta data-react-helmet="true" property="og:locale" content="ja_JP"/><meta data-react-helmet="true" property="og:image" content="https://sotaryoutarou.github.io/static/a5c0b83fb054b5ceab61aa7dda5732d6/thumbnail.png"/><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"/><meta data-react-helmet="true" name="twitter:creator" content="kylemathews"/><meta data-react-helmet="true" name="twitter:title" content="今さら島根スサノオマジック20~21シーズンをざっくり振り返る"/><meta data-react-helmet="true" name="twitter:description" content="山あり谷ありの20~21シーズンをざっくり振り返る"/><meta data-react-helmet="true" name="twitter:image" content="https://sotaryoutarou.github.io/static/a5c0b83fb054b5ceab61aa7dda5732d6/thumbnail.png"/><meta data-react-helmet="true" name="twitter:site" content="@ryou____8"/><link as="script" rel="preload" href="/webpack-runtime-79c9b8c642a4b5b914d8.js"/><link as="script" rel="preload" href="/framework-cbf72beb4922685f4182.js"/><link as="script" rel="preload" href="/app-9817efa31d9f118e3830.js"/><link as="script" rel="preload" href="/commons-1d874c2932fc6b7896b9.js"/><link as="script" rel="preload" href="/5fc4d471716da74c20cd415565d95c4380c7eb4b-c0b722680beead1e4161.js"/><link as="script" rel="preload" href="/component---src-templates-blog-post-js-336a0d6486579d9dfbd2.js"/><link as="fetch" rel="preload" href="/page-data/shimane-susanoo-magic-21-22/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/1324386404.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="global-module--main--1Kc2n"><main><article itemscope="" itemType="http://schema.org/Article"><div class="blog-module--posts__image__container--1Cr3C"><div class=" gatsby-image-wrapper" style="position:relative;overflow:hidden"><div aria-hidden="true" style="width:100%;padding-bottom:52.5%"></div><img aria-hidden="true" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAA7EAAAOxAGVKw4bAAACH0lEQVQoz32STU8TURiF5y+48T+4NHFjXLv0B/gvNCbujPiBCwwJKVYExYTYVirYFqyWST+mnXbaIqSlFCwttDDFfiIEBSIEymPuLSVlIYuTec879557zr2v8tYV4+krB7EahMunEpFNLoVc8xP8hX186TIv3QmefJojVgXl9rWbPLj3mPgWaBsn54Ld4p26G6JvHZtk0GJhZGiAnn4rbiOHcvXKdYYsdpLboJmtSwUuJDCP6XOE6HnnxW0UUOcK+PN7KLdu3MGlLRFrQGj9mNDGsYwvIuldECJ6pQ1Ra+YJmnlKvAlGAyLV9jrFpa8yMO7nkcXGw74RXnsMPhpFbJEVbOEVvv3YZWK2zLD3O854ifF4iQ/hHK75Cr7cHxx6AU+qTrQiErRQZndg3Cgyqqax63m+LP7Cl/uNf+1QIlA8RC0c4M1uEygdyciCB4pHBEtH+Nf+ymSdK1FEo3PadKYp3XhSNclnVvZwp2rYI3m5WRz8bHiCqYUG05ktBpxBnPF1aULvOBSCjuiqbIo4YpN3aUc6UvP7eNJ1KSq4WPd8ZJKphSaf5zZ5MeqRBgSPSoegCKvRs8s26vB1eZexwLLknb58GMGryEeInv1LNJGzp9dg2dVLMptFOR8N84RwDQK+GdT++6iLDfQqhM3WhfHRuriszRZaHQq9d8k4h9oOJcotgjVIx7PU3w/iXz2Qzv43h/J7BmFk3vqGhJrkH7gh8kLxdDlaAAAAAElFTkSuQmCC" alt="" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition-delay:500ms;elevation:4px;shadow-offset:[object Object];shadow-color:grey;shadow-opacity:0.5px;shadow-radius:10px"/><noscript><picture><source srcset="/static/a5c0b83fb054b5ceab61aa7dda5732d6/dd5bb/thumbnail.png 320w,
+/static/a5c0b83fb054b5ceab61aa7dda5732d6/f3dec/thumbnail.png 640w,
+/static/a5c0b83fb054b5ceab61aa7dda5732d6/f3583/thumbnail.png 1200w" sizes="(max-width: 1200px) 100vw, 1200px" /><img loading="lazy" sizes="(max-width: 1200px) 100vw, 1200px" srcset="/static/a5c0b83fb054b5ceab61aa7dda5732d6/dd5bb/thumbnail.png 320w,
+/static/a5c0b83fb054b5ceab61aa7dda5732d6/f3dec/thumbnail.png 640w,
+/static/a5c0b83fb054b5ceab61aa7dda5732d6/f3583/thumbnail.png 1200w" src="/static/a5c0b83fb054b5ceab61aa7dda5732d6/f3583/thumbnail.png" alt="" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/></picture></noscript></div></div><section itemProp="articleBody" class="blog-module--post__content--29_dj"><h2>ナニコレ</h2>
+<p>恒例になりつつある、シーズン終了して大体余韻が冷めた約1ヶ月後に振り返るやつ</p>
+<p>そして尻すぼみ</p>
+<h2>総括</h2>
+<p>言葉で表せないくらい最高なシーズンだったと思います</p>
+<p>超田舎な町にホームを置くチームが、ド派手なゲーム展開で関東の強豪を倒していく姿はこの10年間島根ブースターが夢に見ていた景色だったのではないでしょうか、もしくはそれ以上かもしれません</p>
+<p>2年前の島根ブースターに「2年後アルバルク東京とCSのQFで戦ってセミファイナルに進みます、相手は琉球です」って言っても冗談にすらならなかった</p>
+<h3>未来の松江市長、安藤誓哉</h3>
+<p>シーズン開始前、メディア取材で彼は「優勝を目指します、ブースターの皆さん覚悟を持って下さい」と言いました。
+それまで降格争い、昇格争いを経験してB1自体にステータスを感じていた島根ブースターは「優勝???覚悟??ﾅﾆｽﾙﾉｿﾚ….??」といった反応だったと思います。</p>
+<p>若者は県外に出る、遊ぶところは無い、都会へのコンプレックス、染み付いた負け癖、どこか諦めた街の雰囲気、けど居心地はいい</p>
+<p>安藤はそんな街の島根ブースターを勝負の舞台に叩き上げてくれたと思っています</p>
+<h2>個人的お気に入りの試合</h2>
+<p>40勝もした今シーズンのゲームの中で、印象深かったものをピックアップ</p>
+<p>（画像をクリックでYouTubeへ飛べます）</p>
+<h3>VS 🥜千葉 GAME1</h3>
+<p><a href="https://www.youtube.com/watch?v=f9HX9lakLeQ"><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMEBf/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAGNM2gjxgf/xAAbEAEAAgIDAAAAAAAAAAAAAAACAQQAAxETFP/aAAgBAQABBQJ1x2DXGV68MJ8r0iI03gB//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAGRABAAMBAQAAAAAAAAAAAAAAAQARMQIS/9oACAEBAAY/Amu/JcB53GN8Y1FrWAGFSm5//8QAGxABAAMAAwEAAAAAAAAAAAAAAQARITFBUWH/2gAIAQEAAT8hZXYgq6lTSWkXN+xA7wL9ljLyE5lF2j5P/9oADAMBAAIAAwAAABBk3//EABYRAQEBAAAAAAAAAAAAAAAAAAEAEf/aAAgBAwEBPxBcNi//xAAWEQEBAQAAAAAAAAAAAAAAAAABERD/2gAIAQIBAT8QCsz/xAAdEAEAAgIDAQEAAAAAAAAAAAABABEhUTFBYYGx/9oACAEBAAE/EKxYrPA1vZFklQhL01r39mXvbWLoPfZkGAa9lfnMt7GwSKOWDmwqjg67n//Z'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="shimane chiba"
+        title="shimane chiba"
+        src="/static/415ef47820d6878297d98ab81f4bb255/1c72d/shimane-chiba.jpg"
+        srcset="/static/415ef47820d6878297d98ab81f4bb255/a80bd/shimane-chiba.jpg 148w,
+/static/415ef47820d6878297d98ab81f4bb255/1c91a/shimane-chiba.jpg 295w,
+/static/415ef47820d6878297d98ab81f4bb255/1c72d/shimane-chiba.jpg 590w,
+/static/415ef47820d6878297d98ab81f4bb255/c08c5/shimane-chiba.jpg 640w"
+        sizes="(max-width: 590px) 100vw, 590px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></a></p>
+<p>　</p>
+<p>〜開幕前〜</p>
+<p>Bリーグ「島根さん、開幕戦は昨シーズン優勝の千葉ジェッツです、島根ホームです、Bリーグ盛り上げてください」</p>
+<p>島根「ええっ。。。」</p>
+<p>〜蓋を開けてみると〜</p>
+<p>島根「うわあああああぁぁぁぁぁっ」</p>
+<p>千葉「うわあああああぁぁぁぁぁぁぁぁぁぁぁ！！！」</p>
+<p>島根「うわあああああぁぁぁぁぁぁぁぁぁぁぁぁぁぁぁぁ安藤！！！！」</p>
+<p>という感じで終始ノーガードの殴り合いの末100-94の100点ゲームで千葉に殴り勝ちました。</p>
+<p>Bリーグに突きつけた強烈なアンサー、痺れました</p>
+<p>千葉もトランジションチームですが、終盤千葉の多くの選手が膝に手をついたりコートに倒れるシーンが多くなっていたのが印象的でした</p>
+<h3>VS 🍁広島 GAME2</h3>
+<p><a href="https://www.youtube.com/watch?v=AO1LGxwnMUk"><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAQBAgMF/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhADEAAAAU6KdaINg//EABkQAAMBAQEAAAAAAAAAAAAAAAECAwQRE//aAAgBAQABBQJ86eizBSGZKIz9Ya5BZ7ZTX//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABwQAAMAAgMBAAAAAAAAAAAAAAABERIxAhMhQf/aAAgBAQAGPwJzniqTr9lpZ9G5sxxeoRJn/8QAGhAAAgMBAQAAAAAAAAAAAAAAAREAITFBUf/aAAgBAQABPyExZSATUWtLDeQyPygOwEm9gjRsneW8n//aAAwDAQACAAMAAAAQTO//xAAVEQEBAAAAAAAAAAAAAAAAAAABEP/aAAgBAwEBPxAn/8QAFREBAQAAAAAAAAAAAAAAAAAAARD/2gAIAQIBAT8QZ//EABsQAQADAAMBAAAAAAAAAAAAAAEAESFBUWEx/9oACAEBAAE/EKxorPBrvyBlKlNBdONKI5xpYXMHv2fIzlSypct414A4cbMKtkpte3Z//9k='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="shimane hiroshima"
+        title="shimane hiroshima"
+        src="/static/ad5fe2a50d0f291714a08e5ca783f3da/1c72d/shimane-hiroshima.jpg"
+        srcset="/static/ad5fe2a50d0f291714a08e5ca783f3da/a80bd/shimane-hiroshima.jpg 148w,
+/static/ad5fe2a50d0f291714a08e5ca783f3da/1c91a/shimane-hiroshima.jpg 295w,
+/static/ad5fe2a50d0f291714a08e5ca783f3da/1c72d/shimane-hiroshima.jpg 590w,
+/static/ad5fe2a50d0f291714a08e5ca783f3da/c08c5/shimane-hiroshima.jpg 640w"
+        sizes="(max-width: 590px) 100vw, 590px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></a></p>
+<p>　</p>
+<p>島根が大勝したGAME1とは対象に強烈なカムバックを果たした広島</p>
+<p>GAME1ではペース落としてディフェンス重視というゲームプランっぽかったのですが、終始島根ペースで試合が進んでいきました</p>
+<p>GAME2では個人技とトランジションで殴り勝つプランでリズムが生まれました</p>
+<p>試合は96-96で決着が着かずOTに突入、勝敗を分けたのは残り50秒1点ビハインド、TOになりそうな局面をギリギリで凌ぎながらメイクした金丸のオープンスリーでした。</p>
+<p>（そしてニックケイが45分フル出場、この辺りから鉄人伝説は始まります）</p>
+<h3>VS🏝 琉球 GAME1</h3>
+<p><a href="https://www.youtube.com/watch?v=86ynTaGzQu8"><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMEAQX/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAAGOVbToGh//xAAaEAEAAwADAAAAAAAAAAAAAAACAQMEABET/9oACAEBAAEFAnnHoDHM9AtCfaDJjPrrpr//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAbEAACAgMBAAAAAAAAAAAAAAAAAREhAhIxQf/aAAgBAQAGPwJxnqpOSPLT0bjo1dmtuz//xAAaEAADAQEBAQAAAAAAAAAAAAABESEAUTFB/9oACAEBAAE/ITF0QCaxzZrzIwiwnA+4Em+6MPQ0vNRK3//aAAwDAQACAAMAAAAQSO//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAXEQADAQAAAAAAAAAAAAAAAAABEBFB/9oACAECAQE/EBNX/8QAHhABAAEDBQEAAAAAAAAAAAAAAREAITFBUWFxgbH/2gAIAQEAAT8QjFik7DG/FS2dgkhznq1KJhDCsBp7STSGnUVOqemMN5AOzL8qeFFE5feK/9k='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="shimane ryukyu"
+        title="shimane ryukyu"
+        src="/static/bfccd8632774e18c17f68019fbaa265b/1c72d/shimane-ryukyu.jpg"
+        srcset="/static/bfccd8632774e18c17f68019fbaa265b/a80bd/shimane-ryukyu.jpg 148w,
+/static/bfccd8632774e18c17f68019fbaa265b/1c91a/shimane-ryukyu.jpg 295w,
+/static/bfccd8632774e18c17f68019fbaa265b/1c72d/shimane-ryukyu.jpg 590w,
+/static/bfccd8632774e18c17f68019fbaa265b/c08c5/shimane-ryukyu.jpg 640w"
+        sizes="(max-width: 590px) 100vw, 590px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></a></p>
+<p>　</p>
+<p>琉球のB1記録、20連勝を止めたゲーム</p>
+<p>序盤から並里に永遠とミドルを打たせて、琉球のストロングポイントであるハイレベルなチームオフェンスの機能を奪うことに成功</p>
+<p>トラビスと金丸が不在の大ピンチな状況で</p>
+<p>ビュフォード「ギア・・セカンド！！ﾄﾞﾝｯ!!」</p>
+<h3>VS 🏇三河 GAME4</h3>
+<p><a href="https://www.youtube.com/watch?v=nZYrAkyqbk0"><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQFAv/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAU9TqZRFA//EABkQAQEBAQEBAAAAAAAAAAAAAAIDBBMBEf/aAAgBAQABBQJ5x0AnzOWC8S+qOoTzw2iY/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAHBAAAgMAAwEAAAAAAAAAAAAAAREAAhIxMlGB/9oACAEBAAY/Air5DlXR+mdX9hK5MwXqKwLc/8QAGxAAAgIDAQAAAAAAAAAAAAAAAREAITFBYVH/2gAIAQEAAT8hMXUgE1AiPekfArkB3gJvMIAGV4rkdRJjU//aAAwDAQACAAMAAAAQcB//xAAVEQEBAAAAAAAAAAAAAAAAAAABEP/aAAgBAwEBPxAn/8QAFREBAQAAAAAAAAAAAAAAAAAAERD/2gAIAQIBAT8QGf/EAB0QAQACAgIDAAAAAAAAAAAAAAERIQBhMUFRgcH/2gAIAQEAAT8QjEik6GPOshpjJuydUNhjE8nKP3HukJUsriwCZB6R21jlhogl+9Z//9k='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="shimane mikawa"
+        title="shimane mikawa"
+        src="/static/7f46e1a71795c9496fb62492622843cb/1c72d/shimane-mikawa.jpg"
+        srcset="/static/7f46e1a71795c9496fb62492622843cb/a80bd/shimane-mikawa.jpg 148w,
+/static/7f46e1a71795c9496fb62492622843cb/1c91a/shimane-mikawa.jpg 295w,
+/static/7f46e1a71795c9496fb62492622843cb/1c72d/shimane-mikawa.jpg 590w,
+/static/7f46e1a71795c9496fb62492622843cb/c08c5/shimane-mikawa.jpg 640w"
+        sizes="(max-width: 590px) 100vw, 590px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></a></p>
+<p>　</p>
+<p>終始三河ペースで試合が進み食らいつく展開</p>
+<p>残り30秒で5点差、スリーが1本は必要、オフェンス失敗したら詰む</p>
+<p>この状況で古巣との対戦に静かに燃える金丸先生がやってくれました</p>
+<p>金丸がスリーをねじ込み、三河のオフェンスを凌ぎ、残り数秒ビュフォードの個人技で同点</p>
+<p>OTでは安藤がディープスリーを2本決め流れをたぐり寄せて勝利</p>
+<p>負け試合になってもおかしくない試合をなんとか拾い、CSに向けてめちゃくちゃデカい勝利でした</p>
+<h3>VS 🚗東京 CS QF</h3>
+<p><a href="https://www.youtube.com/watch?v=R_xnCzn11H4"><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMEAf/EABYBAQEBAAAAAAAAAAAAAAAAAAECA//aAAwDAQACEAMQAAABnTK1HmE6f//EABgQAAMBAQAAAAAAAAAAAAAAAAECAwAT/9oACAEBAAEFAuEmIirLOII6ndRhdN//xAAYEQACAwAAAAAAAAAAAAAAAAAAAQIRMf/aAAgBAwEBPwFiiq0//8QAFhEBAQEAAAAAAAAAAAAAAAAAAAIR/9oACAECAQE/AZa//8QAGxAAAgIDAQAAAAAAAAAAAAAAAAERIQISMbH/2gAIAQEABj8CbVKSu+l4jS4xRJex/8QAGRABAQEBAQEAAAAAAAAAAAAAAREAIUEx/9oACAEBAAE/IVEdgGZTz8Mbwez3S9I26ZxQDJqir5v/2gAMAwEAAgADAAAAEO8f/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQARIf/aAAgBAwEBPxDQcmhc3//EABgRAQADAQAAAAAAAAAAAAAAAAEAESEx/9oACAECAQE/EALS1HXJ/8QAHBABAAMAAgMAAAAAAAAAAAAAAQARITFBYXGB/9oACAEBAAE/EOASDXCKKW2IqGq79xZUHpxhEbUQoFb+ZkRlpR4uje5oERoN+eZ//9k='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="shimane tokyo"
+        title="shimane tokyo"
+        src="/static/01cd754cfa14be6d482e56abda19a158/1c72d/shimane-tokyo.jpg"
+        srcset="/static/01cd754cfa14be6d482e56abda19a158/a80bd/shimane-tokyo.jpg 148w,
+/static/01cd754cfa14be6d482e56abda19a158/1c91a/shimane-tokyo.jpg 295w,
+/static/01cd754cfa14be6d482e56abda19a158/1c72d/shimane-tokyo.jpg 590w,
+/static/01cd754cfa14be6d482e56abda19a158/c08c5/shimane-tokyo.jpg 640w"
+        sizes="(max-width: 590px) 100vw, 590px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></a>
+　</p>
+<p>安藤の恩返し</p>
+<ul>
+<li>QFの中で唯一GAME3までもつれ込む緊迫した展開</li>
+<li>序盤から安藤が爆発、序盤から1on1で得点を重ねる
+<ul>
+<li>相手（東京）ベンチを煽る煽る</li>
+<li>会場も煽る煽る</li>
+</ul>
+</li>
+<li>個人的今シーズンのNo.1ハイライト、3Q終わりにトラビスの3連続3P</li>
+<li>松江が揺れた</li>
+</ul>
+<h2>ざっくり対戦チーム毎の振り返り</h2>
+<p>西から行きます</p>
+<h3>🏝琉球</h3>
+<ul>
+<li><strong>1勝5敗</strong></li>
+<li>20連敗を止めた次の試合からCSまで5連敗を喫してしまいます</li>
+<li>トラビス不在の試合が多く島根が一番欲しかったインサイドでのスピード的優位が持てなかった</li>
+<li>CSではリードしている時間は島根の方が長かったけど、最後までDF強度の落ちなかった琉球
+<ul>
+<li>沖縄アリーナは本当にすごい、島根にも欲しい</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Score</th>
+<th>W/L</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3/11（金）</td>
+<td>87 - 76</td>
+<td>W</td>
+</tr>
+<tr>
+<td>3/12（日）</td>
+<td>74 - 92</td>
+<td>L</td>
+</tr>
+<tr>
+<td>4/23（土）</td>
+<td>82 - 92</td>
+<td>L</td>
+</tr>
+<tr>
+<td>4/24（日）</td>
+<td>68 - 71</td>
+<td>L</td>
+</tr>
+<tr>
+<td>👑5/21（土）</td>
+<td>85 - 94</td>
+<td>L</td>
+</tr>
+<tr>
+<td>👑5/22（日）</td>
+<td>70 - 72</td>
+<td>L</td>
+</tr>
+</tbody>
+</table>
+<h3>🍁 広島</h3>
+<ul>
+<li><strong>3勝1敗</strong></li>
+<li>ライバル広島に勝ち越し</li>
+<li>2節とも島根快勝→広島カムバックの流れ</li>
+<li>4/10は寺嶋にキャリアハイをかまされ敗北
+<ul>
+<li>3Pの精度が高く守りにくそうだった</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Score</th>
+<th>W/L</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>11/6（土）</td>
+<td>81 - 102</td>
+<td>W</td>
+</tr>
+<tr>
+<td>11/7（日）</td>
+<td>109 - 113</td>
+<td>W</td>
+</tr>
+<tr>
+<td>4/9（土）</td>
+<td>89 - 67</td>
+<td>W</td>
+</tr>
+<tr>
+<td>4/10（日）</td>
+<td>84 - 91</td>
+<td>L</td>
+</tr>
+</tbody>
+</table>
+<h3>⛩京都</h3>
+<ul>
+<li><strong>2勝1敗</strong></li>
+<li>実は3勝したかった相手</li>
+<li>シーズン最終戦でもあった5/8のゲームは京都が積極的でハイリスクなプレーを立て続けに決めてた印象、画面越しでも気迫が伝わった</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Score</th>
+<th>W/L</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10/27（水）</td>
+<td>100 - 66</td>
+<td>W</td>
+</tr>
+<tr>
+<td>3/9（水）</td>
+<td>95 - 74</td>
+<td>W</td>
+</tr>
+<tr>
+<td>5/8（日）</td>
+<td>79 - 82</td>
+<td>L</td>
+</tr>
+</tbody>
+</table>
+<h3>🐙大阪</h3>
+<ul>
+<li><strong>2勝2敗</strong></li>
+<li>負けた試合は理不尽シュートを入れられまくってリズムを崩した
+<ul>
+<li>ニュービルがヤバすぎる、怪獣</li>
+<li>特指の高嶋くん、3P入れすぎ</li>
+</ul>
+</li>
+<li>高さとフィジカルで勝負する大阪は3Pが入ると島根は対応が難しい</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Score</th>
+<th>W/L</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10/16（土）</td>
+<td>88 - 77</td>
+<td>W</td>
+</tr>
+<tr>
+<td>10/17（日）</td>
+<td>77 - 92</td>
+<td>L</td>
+</tr>
+<tr>
+<td>3/5（土）</td>
+<td>77 - 69</td>
+<td>W</td>
+</tr>
+<tr>
+<td>3/6（日）</td>
+<td>85 - 68</td>
+<td>L</td>
+</tr>
+</tbody>
+</table>
+<h3>💧滋賀</h3>
+<ul>
+<li><strong>4勝0敗</strong></li>
+<li>ペースがめちゃくちゃ早い滋賀との対戦</li>
+<li>フィリピンからの刺客、キーファー・ラベナが身体能力生かしたペイントアタックをしてきたのが印象的</li>
+<li>ディフェンスが良くないのでかなり点は取れていた</li>
+<li>面白い補強をしたので来季が楽しみ</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Score</th>
+<th>W/L</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>11/10（水）</td>
+<td>102 - 94</td>
+<td>W</td>
+</tr>
+<tr>
+<td>3/16（水）</td>
+<td>82 - 74</td>
+<td>W</td>
+</tr>
+<tr>
+<td>4/29（金）</td>
+<td>97 - 56</td>
+<td>W</td>
+</tr>
+<tr>
+<td>4/30（土）</td>
+<td>102 - 79</td>
+<td>W</td>
+</tr>
+</tbody>
+</table>
+<h3>🐬 名古屋</h3>
+<ul>
+<li><strong>2勝2敗</strong></li>
+<li>島根と似たようなスタイルの名古屋</li>
+<li>身体能力高いウィングが優秀すぎる</li>
+<li>そして曲者PGの斎藤たくみんが嫌なところでスクープショットや3Pを沈めてくる</li>
+<li>インサイド陣も走る走る</li>
+<li>オフェンスのチームって聞いてたけどディフェンス本当に固い</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Score</th>
+<th>W/L</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>12/4（土）</td>
+<td>73 - 82</td>
+<td>L</td>
+</tr>
+<tr>
+<td>12/5（日）</td>
+<td>94 - 86</td>
+<td>W</td>
+</tr>
+<tr>
+<td>1/2（日）</td>
+<td>76 - 91</td>
+<td>L</td>
+</tr>
+<tr>
+<td>1/3（月）</td>
+<td>88 - 81</td>
+<td>W</td>
+</tr>
+</tbody>
+</table>
+<h3>🏇三河</h3>
+<ul>
+<li><strong>4勝0敗</strong></li>
+<li>金丸先生の古巣</li>
+<li>日本の未来を背負うスター選手がポンポン出てくるあたり育成が本当に上手いなと🍢</li>
+<li>どのゲームか忘れちゃいましたがケイがシェーファーを完全に抑えてリバウンドを1本も取らせなかったのが圧巻でした</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Score</th>
+<th>W/L</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>12/29（水）</td>
+<td>92 - 78</td>
+<td>W</td>
+</tr>
+<tr>
+<td>2/5（土）</td>
+<td>86 - 82</td>
+<td>W</td>
+</tr>
+<tr>
+<td>2/6（日）</td>
+<td>95 - 78</td>
+<td>W</td>
+</tr>
+<tr>
+<td>4/6（水）</td>
+<td>90 - 84</td>
+<td>W</td>
+</tr>
+</tbody>
+</table>
+<h3>🐤三遠</h3>
+<ul>
+<li><strong>4勝0敗</strong></li>
+<li>監督解任があったり大型連敗があったりで順調なシーズンではなかった三遠</li>
+<li>ポテンシャルの高い選手が多いけどチームプレイが成熟していない印象</li>
+<li>終始危なげない試合運びで快勝</li>
+<li>コロナの影響で3連戦という謎スケジュールが発生</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Score</th>
+<th>W/L</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3/23（水）</td>
+<td>91 - 65</td>
+<td>W</td>
+</tr>
+<tr>
+<td>3/26（土）</td>
+<td>87 - 71</td>
+<td>W</td>
+</tr>
+<tr>
+<td>3/27（日）</td>
+<td>88 - 80</td>
+<td>W</td>
+</tr>
+<tr>
+<td>4/20（水）</td>
+<td>92 - 81</td>
+<td>W</td>
+</tr>
+</tbody>
+</table>
+<h3>⛰信州</h3>
+<ul>
+<li><strong>2勝0敗</strong></li>
+<li>コロナや怪我人で8人しか試合に出れてなかった気がする</li>
+<li>ヤンジェミンが覚醒</li>
+<li>2試合目の終盤まで競ったファイトバックは本当に凄かった</li>
+<li>岡田くんいたら結果変わってたと思う</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Score</th>
+<th>W/L</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>12/18（土）</td>
+<td>91 - 71</td>
+<td>W</td>
+</tr>
+<tr>
+<td>12/19（日）</td>
+<td>75 - 67</td>
+<td>W</td>
+</tr>
+</tbody>
+</table>
+<h3>🐻富山</h3>
+<ul>
+<li><strong>4勝0敗</strong></li>
+<li>一番最初のゲームは天皇杯だったと思う
+<ul>
+<li>結果的にいうとスミスへの対応が確立したのと、負けたことでゲーム数が減ったのはチームとしてラッキーだった</li>
+<li>3Qまで競るけど終盤ファールトラブルに追い込んで流れを掴む流れになったゲームが多かったと思う</li>
+<li>ニカが仕事した</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Score</th>
+<th>W/L</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2/2（水）</td>
+<td>91 - 75</td>
+<td>W</td>
+</tr>
+<tr>
+<td>3/19（土）</td>
+<td>79 - 75</td>
+<td>W</td>
+</tr>
+<tr>
+<td>3/20（日）</td>
+<td>87 - 76</td>
+<td>W</td>
+</tr>
+<tr>
+<td>4/27（水）</td>
+<td>87 - 80</td>
+<td>W</td>
+</tr>
+</tbody>
+</table>
+<h3>🌾新潟</h3>
+<ul>
+<li><strong>2勝0敗</strong></li>
+<li>危なげないゲーム運びで2勝！</li>
+<li>ベンチメンバーでも安定した試合運びができると良いのだけど・・・</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Score</th>
+<th>W/L</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>12/15（水）</td>
+<td>90 - 59</td>
+<td>W</td>
+</tr>
+<tr>
+<td>3/23（水）</td>
+<td>77 - 62</td>
+<td>W</td>
+</tr>
+</tbody>
+</table>
+<h3>⚡️ 川崎</h3>
+<ul>
+<li><strong>0勝0敗</strong></li>
+<li>シーズン終盤のビッグマッチだったのにコロナで吹っ飛んだ、コロナきもい！！！</li>
+</ul>
+<h3>⚓️横浜</h3>
+<ul>
+<li><strong>1勝1敗</strong></li>
+<li>なんかbj時代から勝ち越した思い出がない横浜</li>
+<li>来シーズンのホーム開幕では河村やっつけて2連勝を期待！</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Score</th>
+<th>W/L</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10/23（土）</td>
+<td>80 - 83</td>
+<td>L</td>
+</tr>
+<tr>
+<td>10/24（日）</td>
+<td>95 - 89</td>
+<td>W</td>
+</tr>
+</tbody>
+</table>
+<h3>🌞渋谷</h3>
+<ul>
+<li><strong>2勝0敗</strong></li>
+<li>米子の試合だった気がする</li>
+<li>トラビスのとんでもアリウープ</li>
+<li>白濱の鬼ディフェンスでベンドラメを抑えたのが効いた
+<ul>
+<li>白濱はバズソーの裏番長だよね</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Score</th>
+<th>W/L</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1/29（土）</td>
+<td>109 - 77</td>
+<td>W</td>
+</tr>
+<tr>
+<td>1/30（日）</td>
+<td>83 - 79</td>
+<td>L</td>
+</tr>
+</tbody>
+</table>
+<h3>🚗東京</h3>
+<ul>
+<li><strong>3勝2敗</strong></li>
+<li>ウィ〜！！今シーズンを語る上で一番のチームA東京</li>
+<li>まさかアルバルクに島根が勝つ時が来るとは・・・しかもCSで・・・</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Score</th>
+<th>W/L</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>11/13（土）</td>
+<td>79 - 66</td>
+<td>W</td>
+</tr>
+<tr>
+<td>11/14（日）</td>
+<td>61 - 64</td>
+<td>L</td>
+</tr>
+<tr>
+<td>👑5/14（土）</td>
+<td>80 - 63</td>
+<td>W</td>
+</tr>
+<tr>
+<td>👑5/15（日）</td>
+<td>57 - 91</td>
+<td>L</td>
+</tr>
+<tr>
+<td>👑5/16（月）</td>
+<td>80 - 62</td>
+<td>W</td>
+</tr>
+</tbody>
+</table>
+<h3>🥟宇都宮</h3>
+<ul>
+<li><strong>1勝1敗</strong></li>
+<li>鵤と比江島不在</li>
+<li>2連勝したかったけどベンチメンバーも強いね・・</li>
+<li>荒谷すごい、島根にも欲しい</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Score</th>
+<th>W/L</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>12/25（土）</td>
+<td>81 - 64</td>
+<td>W</td>
+</tr>
+<tr>
+<td>12/26（日）</td>
+<td>70 - 95</td>
+<td>L</td>
+</tr>
+</tbody>
+</table>
+<h3>🥜千葉</h3>
+<ul>
+<li><strong>勝敗</strong></li>
+<li>100点ゲームでブチ破った開幕戦の興奮</li>
+<li>GAME2は完全に安藤を潰されてしまって修正力の高さを見せつけられた</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Score</th>
+<th>W/L</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10/2（土）</td>
+<td>100 - 94</td>
+<td>W</td>
+</tr>
+<tr>
+<td>10/3（日）</td>
+<td>74 - 81</td>
+<td>L</td>
+</tr>
+</tbody>
+</table>
+<h3>👹秋田</h3>
+<ul>
+<li><strong>0勝0敗</strong></li>
+<li>試合な〜し！</li>
+<li>CSで対戦できたら同期bjチーム対決で熱かったんだけど持ち越し</li>
+</ul>
+<h3>🐄北海道</h3>
+<ul>
+<li><strong>1勝1敗</strong></li>
+<li>去年島根でプレーしたブルックス率いる北海道</li>
+<li>千葉の次の節</li>
+<li>2試合ともチームがスタイルを模索してる感じだった</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Score</th>
+<th>W/L</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10/9（土）</td>
+<td>87 - 84</td>
+<td>W</td>
+</tr>
+<tr>
+<td>10/10（日）</td>
+<td>94 - 79</td>
+<td>W</td>
+</tr>
+</tbody>
+</table>
+<h2>あとがき</h2>
+<p>スサノオマジック 最高すぎる！！</p></section><hr style="margin-bottom:1.45rem"/><footer></footer></article><nav><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li class="blog-module--link--1vUq8"><a rel="prev" href="/postgresql-duplicate-key-value-violates/">← <!-- -->PostgreSQLへCSV入稿したあと単品でレコード登録するときに『duplicate key value violates unique constraint “hoge_pkey”』って怒られたときの備忘録</a></li><li class="blog-module--link--1vUq8"></li></ul></nav></main><footer style="text-align:center">Copyright © 2021. ソタ</footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/shimane-susanoo-magic-21-22/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-de6f229c0a3977155403.js"],"app":["/app-9817efa31d9f118e3830.js"],"component---src-pages-404-js":["/component---src-pages-404-js-96cbfd42055761e6cea8.js"],"component---src-pages-index-js":["/component---src-pages-index-js-08ebc0848c409e8bd1f3.js"],"component---src-pages-using-typescript-tsx":["/component---src-pages-using-typescript-tsx-9dce888ec2db9d6a13b2.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-336a0d6486579d9dfbd2.js"],"component---src-templates-tag-posts-js":["/component---src-templates-tag-posts-js-39fe51218466f497e95e.js"]};/*]]>*/</script><script src="/polyfill-de6f229c0a3977155403.js" nomodule=""></script><script src="/component---src-templates-blog-post-js-336a0d6486579d9dfbd2.js" async=""></script><script src="/5fc4d471716da74c20cd415565d95c4380c7eb4b-c0b722680beead1e4161.js" async=""></script><script src="/commons-1d874c2932fc6b7896b9.js" async=""></script><script src="/app-9817efa31d9f118e3830.js" async=""></script><script src="/framework-cbf72beb4922685f4182.js" async=""></script><script src="/webpack-runtime-79c9b8c642a4b5b914d8.js" async=""></script></body></html>

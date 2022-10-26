@@ -98,6 +98,5 @@ tags: ['noTech', '自己紹介']
 
 ## その他
 
-- [個人ブログ](https://sotaryoutarou.github.io)
-- 本職務経歴書は同じ内容のものを[ポートフォリオ](https://sotaryoutarou.github.io/who-am-i)として公開しています
+- [個人ブログ](https://sotaryoutarou.github.io)（本職務経歴書は同じ内容のものを[ポートフォリオ](https://sotaryoutarou.github.io/who-am-i)として公開しています）
 - [FaceBook](https://www.facebook.com/sota.ryotaro)
